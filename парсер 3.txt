@@ -1,0 +1,1607 @@
+
+<!DOCTYPE html>
+<html lang="ru-KZ">
+    <head>
+        <meta charset="utf-8">
+        <title>ФРЕ - БУД | Фредрикстад - Будё/Глимт</title>
+        <script defer src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+            type="text/javascript"
+            charset="UTF-8"
+            data-domain-script="5c7086ef-fec2-48f8-95b2-4f6e1a1bbd8b" data-document-language="true"
+        >
+        </script>
+<link rel="preconnect" href="https://46.ds.lsapp.eu/pq_graphql" crossorigin>
+<link rel="preconnect" href="https://46.flashscore.ninja" crossorigin>
+<link rel="preload" href="https://static.flashscore.com/res/font/LivesportFinderCyrillic-Regular_Static.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://static.flashscore.com/res/font/LivesportFinderCyrillic-Bold_Static.woff2" as="font" type="font/woff2" crossorigin>
+        <noscript>
+            <meta http-equiv="refresh" content="0;url=https://m.flashscorekz.com/" />
+        </noscript>
+        <meta name="copyright" content="Copyright (c) 2018-2025 Livesport s.r.o.">
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta property="og:title" content="Фредрикстад - Будё/Глимт">
+	    <meta property="og:description" content="НОРВЕГИЯ: Высшая лига - Тур 5">
+	    <meta property="og:image" content="https://static.flashscore.com/res/image/data/lbeNW3hl-OlZvE3N9-6aTuLu6E.png">
+	    <meta name="fb:app_id" content="2098331317105270">
+            <link rel="shortcut icon" href="https://static.flashscore.com/res/_fs/image/4_favicons/_fs/favicon.ico?v=8">
+            <link rel="apple-touch-icon" sizes="180x180" href="https://static.flashscore.com/res/_fs/image/4_favicons/_fs/touch-icon-180x180.png?v=8">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://static.flashscore.com/res/_fs/image/4_favicons/_fs/favicon-32x32.png?v=8">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://static.flashscore.com/res/_fs/image/4_favicons/_fs/favicon-16x16.png?v=8">
+        <link rel="manifest" href="/manifest/1/?v=7">
+        <meta name="theme-color" content="#001e28">
+        <meta name="apple-itunes-app" content="app-id=766443283">
+            <meta name="google-site-verification" content="CQf9bhKtJKn3oLhDRWxQLymLWtF3Umwcao53XhuANOk" />
+<meta name="facebook-domain-verification" content="knxtbulwhv1afb2torn4jxe8ydmduc" />
+
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/LivesportFinderCyrillic.6e8161c.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/core.6e578d4.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/variables.7ee389a.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/themes.a48faf2.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/common.1edbfbf.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/components_shared.409a4df.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/cookie.23addf7.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/multiLang.b294848.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/single_page_app_temp.668fee7.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/core_common.a3b5f1d.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/lsid.77e6a0b.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/componentLibraryTheme2021.2f84628.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/live_header.5311e57.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/live_sidemenu.22bd34f.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/live_sections.ce860cc.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/wizard.7606ca1.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/league_onboarding.205502f.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/live_footer.4eaa9a2.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/tabs_filters.af84bbf.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/live_tabs.8a4a927.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/headline.df31bca.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/heading.3f01506.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/fsnews_scores.448c9b6.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/rssnews.8e8d6d6.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/rssnews_scores.2f7dd73.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/player_table_spa.172da5b.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/rest_player_tables.f91f884.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/ranking.6039a7b.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/seasonCalendar.a864368.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/common_category.57c9900.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/standings_draw.c337ae7.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/banner.0c07345.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/storeBadge.f227bb4.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/all_sport_templates.d89cb3e.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/sport_templates_layouts.a5f68e5.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/detail_section_form.ee6ddb3.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/detail_sections.09e71c6.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/styles/container.46.css">
+        <link rel="stylesheet" href="https://static.flashscore.com/res/styles/container.0.css">
+            
+    <link rel="canonical" href="https://www.flashscorekz.com/">
+            <link rel="alternate" hreflang="ru-kz" href="https://www.flashscorekz.com/">
+            <link rel="alternate" hreflang="ru" href="https://www.flashscore.com.ua/">
+
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/browsercompatibility_5.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/framework.c6fdcb9.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/x/js/core_46_2266000000.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/internalTools.a09bdbf.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/legalAgeConfirmation.0e5b775.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/initBannerHandler.0f4d403.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/vendors.ac41799.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/modules.61d884c.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/serviceStatusBox.fda428e.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/detail.16effa5.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/autorack.9e697d9.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/myLeaguesMenu.eed2dfd.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/mainPageScripts.d8b98cd.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/leftMenuCategory.e4399dc.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/globalEvents.841ea9d.js"></script>
+        <script type="text/javascript" defer src="https://static.flashscore.com/res/_fs/build/notifications.a67a385.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/translations-livetable.46.b63b8695.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/translations-myteamsmenu.46.f24b04a8.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/translations-headermenu.46.1eb21e5f.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/translations-headerpromobar.46.af93cf61.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/res/_fs/build/runtime.f146ddd.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/res/_fs/build/constants.309d7cd.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/res/_fs/build/loader.74fb097.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/res/_fs/build/myTeamsMenu.e3213d3.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/translations-detail.46.d4f06f9e.js"></script>
+        <script type="text/javascript" src="https://static.flashscore.com/x/js/translations-standings.46.d6e213bb.js"></script>
+                <script>
+        window.loggingServiceConfig = {"enable":true,"server":"https:\/\/logging-service.livesport.services\/","token":"Y3uhIv5Ges46mMdAZm53akso95sYOogk","percentage_of_sessions_to_log":1};
+    </script>
+    <script defer src="https://static.flashscore.com/res/_fs/build/frontendLogger.b7f9af4.js"></script>
+
+        <script type="text/javascript">
+            // <![CDATA[
+                cjs.Api.loader.get('cjs').call(function(_cjs) {
+                    _cjs.bookmakerSettings = { bookmakersData: {"default":[{"main_bookmaker_id":"471","project_id":"46","geo_ip":"default","name":"1xBet.kz","premium_status_id":"1"},{"main_bookmaker_id":"723","project_id":"46","geo_ip":"default","name":"Winlinekz","premium_status_id":"1"},{"main_bookmaker_id":"547","project_id":"46","geo_ip":"default","name":"Fonbet.kz","premium_status_id":"1"}],"RU":[{"main_bookmaker_id":"454","project_id":"46","geo_ip":"RU","name":"Winline.ru","premium_status_id":"1"}],"GR":[{"main_bookmaker_id":"16","project_id":"46","geo_ip":"GR","name":"bet365","premium_status_id":"2"}],"CZ":[{"main_bookmaker_id":"49","project_id":"46","geo_ip":"CZ","name":"Tipsport.cz","premium_status_id":"2"}],"FR":[{"main_bookmaker_id":"160","project_id":"46","geo_ip":"FR","name":"Unibet.fr","premium_status_id":"1"},{"main_bookmaker_id":"484","project_id":"46","geo_ip":"FR","name":"ParionsSport","premium_status_id":"1"},{"main_bookmaker_id":"905","project_id":"46","geo_ip":"FR","name":"Betsson.fr","premium_status_id":"1"}],"US:USDC":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USDC","name":"BetMGM.us","premium_status_id":"1"}],"US:USIA":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIA","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIA","name":"BetMGM.us","premium_status_id":"1"}],"US:USIL":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIL","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIL","name":"BetMGM.us","premium_status_id":"1"}],"US:USKS":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USKS","name":"BetMGM.us","premium_status_id":"1"}],"US:USKY":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USKY","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USKY","name":"BetMGM.us","premium_status_id":"1"}],"US:USMS":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USMS","name":"BetMGM.us","premium_status_id":"1"}],"US:USNC":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USNC","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNC","name":"BetMGM.us","premium_status_id":"1"}],"US:USNJ":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USNJ","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNJ","name":"BetMGM.us","premium_status_id":"1"}],"US:USNV":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNV","name":"BetMGM.us","premium_status_id":"1"}],"US:USNY":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNY","name":"BetMGM.us","premium_status_id":"1"}],"US:USOH":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USOH","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USOH","name":"BetMGM.us","premium_status_id":"1"}],"US:USTN":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USTN","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USTN","name":"BetMGM.us","premium_status_id":"1"}],"US:USVT":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USVT","name":"BetMGM.us","premium_status_id":"1"}],"US:USWY":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USWY","name":"BetMGM.us","premium_status_id":"1"}],"US:USIN":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIN","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIN","name":"BetMGM.us","premium_status_id":"1"}]} };
+                });
+                //used in LiveTableStaticLeagues
+                var pageType = "sport_page", sportId = 1;
+		                    var dataLayer = dataLayer || [];
+
+		function otAfterCallback() {
+		    window.setTimeout(() => {
+		        try {
+		            if (!window.hasOTAfterCallbackProceeded) {
+		                dataLayer.push({event:'gdpr_consent',user_consent:'agree'});
+		                document.dispatchEvent(new Event('onetrust'));
+		            }
+		        } catch(e) {
+		            console.error(e);
+		        }
+		        window.hasOTAfterCallbackProceeded = true;
+		    }, 0);
+		};
+
+		function otCallback() {
+		    document.dispatchEvent(new Event("oneTrustLoaded"));
+		    window.oneTrustLoaded = true;
+
+		    if (typeof cjs === 'undefined') {
+		        return;
+		    }
+
+		    if (!window.hasOTCallbackProceeded) {
+		        cjs.Api.loader.get('cjs').call(function(_cjs) {
+		            _cjs.Api.loader.get('onetrust').fulfill(cb => { cb() });
+		        });
+		    }
+
+		    window.hasOTCallbackProceeded = true;
+		};
+
+		function OptanonWrapper() {
+		    dataLayer.push({event:"OneTrustGroupsUpdated"});
+		    try {
+		        if (typeof __tcfapi === "function") {
+		            __tcfapi("getTCData",2,(e) => {
+		                if (e !== null) {
+		                    otCallback();
+		                    if (e.eventStatus === 'useractioncomplete' || e.eventStatus === 'tcloaded') {
+		                        otAfterCallback();
+		                    };
+		                };
+		            });
+		        } else if (typeof OneTrust === "object") {
+		            otCallback();
+		            if (!OneTrust.IsAlertBoxClosed()) {
+		                OneTrust.OnConsentChanged(() => otAfterCallback());
+		            }
+		        } else {
+		            otCallback();
+		        }
+		    } catch(e) {
+		        console.error(e);
+		    }
+		};
+            // ]]>
+        </script>
+    </head>
+<body class="responsive background-add-off brand--flashscore soccer _fs flat pid_46 mgc   detail-page twoLineLayout  light-bg-1 v3 bg3 seoTopWrapperHidden"data-analytics-page-type="detail_page">
+<div class="otPlaceholder otPlaceholder--hidden">
+	<div class="skOT skOT--ot">
+		<div class="skOT__co">
+			<div class="skOT__ti"></div>
+			<div class="skOT__te"></div>
+			<div class="skOT__te"></div>
+			<div class="skOT__te"></div>
+			<div class="skOT__te"></div>
+		</div>
+		<div class="skOT__co">
+			<div class="skOT__ti"></div>
+			<div class="skOT__te"></div>
+			<div class="skOT__te"></div>
+			<div class="skOT__te"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	if(!document.cookie.match(/^(.*;)?\s*OptanonAlertBoxClosed\s*=\s*[^;]+(.*)?$/) && !window.localStorage.getItem("onetrust_placeholder")){
+		document.getElementsByClassName("otPlaceholder")[0].classList.remove("otPlaceholder--hidden");
+	}
+
+	document.addEventListener("click", function (e) {
+
+		var element = e.target.parentNode;
+    if(element === document) element = document.body;
+
+		if (element !== null && (element.classList.contains("ot-button-group") ||
+                (element.classList.contains("ot-btn-subcntr")) ||
+                (element.classList.contains("ot-btn-container")) ||
+				(element.id === "onetrust-button-group") ||
+				(element.id === "onetrust-close-btn-container") ||
+				(element.id === "ot-pc-content") ||
+				(e.target.closest(".otPlaceholder")))
+
+		)  {
+			window.localStorage.setItem("onetrust_placeholder", 1);
+			document.getElementsByClassName("otPlaceholder")[0].classList.add("otPlaceholder--hidden");
+		}
+	}, false);
+
+</script>
+<script type="text/javascript">
+    const defaultTheme = "";
+    const usersTheme = window.localStorage.getItem("theme");
+    if(!usersTheme && defaultTheme) {
+        cjs.Api.darkModeLocal.setDarkThemeAsDefault();
+    }
+
+	cjs.Api.darkModeLocal.setThemeClass()
+</script>
+
+<div id="zoneContainer-detail_background" data-zone-group="detail_background"></div>
+<section id="headerPromoBar" class="promoBar header__promoBar"></section>
+
+<link type="text/css" rel="stylesheet" href="https://static.flashscore.com/res/_fs/build/promoBar.cc92ca3.css" media="screen" />
+<script defer type="text/javascript" src="https://static.flashscore.com/res/_fs/build/headerPromoBar.1ea196b.js"></script>
+<script>
+    const promoBar = document.getElementById("headerPromoBar");
+    if (promoBar) {
+        promoBar.style.display = "none"
+    };
+
+    cjs.Api.loader.get("geoIpResolver").call((geoIp) => {
+        const hideForGeoIp = ["RU"];
+        if (!hideForGeoIp.includes(geoIp)) {
+            promoBar.style.display = "grid";
+        }
+    })
+</script><div class="seoAdWrapper"><div class="seoTop">
+	<div class="seoTop__content">
+		<h1>ФРЕ - БУД | Фредрикстад - Будё/Глимт</h1>
+	</div>
+</div>
+
+<script>
+	cjs.Api.localLsid.beforeLoad((isLoggedIn) => {
+		if (isLoggedIn) {
+			const seoTopElement = document.getElementsByClassName('seoTop')[0];
+			seoTopElement.style.display = 'none';
+			seoTopElement.classList.add('seoTopHidden');
+			document.body.classList.add('isLoggedIn');
+			document.body.classList.remove('seoTopWrapperHidden');
+		}
+	});
+</script>
+
+<div id="zoneContainer-detail_top" data-zone-group="detail_top"></div>
+</div><script type="application/javascript">
+	window.publicPath = "https://static.flashscore.com/res/_fs/build/"
+</script>
+<script defer src="https://static.flashscore.com/res/_fs/build/public-path.19c46ad.js"></script>
+<header class="header">
+    <img src="https://static.flashscore.com/res/_fs/image/2_others/bg.png" alt="" class="header__bg">
+    <div class="header__content">
+        <a class="header__logoWrapper" href="/">
+            <svg class="header__logo" preserveAspectRatio="xMinYMid meet" enable-background="new 0 0 615 100" height="100" viewBox="0 0 615 100" width="615" xmlns="http://www.w3.org/2000/svg"><g clip-rule="evenodd" fill-rule="evenodd"><g fill="#fff"><path d="m180.8 24.9h-29.3c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v39.6c0 .2.2.3.3.3h7.9c.2 0 .3-.2.3-.3v-18.6c0-1 .8-1.7 1.7-1.7h25.5c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-25.5c-1 0-1.7-.8-1.7-1.7v-8.6c0-1 .8-1.7 1.7-1.7h29c.2 0 .3-.2.3-.3v-7.9c.1-.5 0-.6-.2-.6"/><path d="m264.4 47.3c0 1-.8 1.7-1.7 1.7h-22.4c-1 0-1.7-.8-1.7-1.7v-12.1c0-1 .8-1.7 1.7-1.7h22.4c1 0 1.7.8 1.7 1.7zm7.6-14.8-6.6-6.6c-.6-.6-1.5-1-2.4-1h-23c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v39.6c0 .2.2.3.3.3h7.9c.2 0 .3-.2.3-.3v-15.2c0-1 .8-1.7 1.7-1.7h22.4c1 0 1.7.8 1.7 1.7v15.2c0 .2.2.3.3.3h7.9c.2 0 .3-.2.3-.3v-39.6c.2-.9-.2-1.8-.8-2.4z"/><path d="m222.4 74.8h-24.1c-.9 0-1.8-.4-2.4-1l-6.6-6.6c-.6-.6-1-1.5-1-2.4v-39.6c0-.2.2-.3.3-.3h7.9c.2 0 .3.2.3.3v39.3c0 1 .8 1.7 1.7 1.7h23.8c.2 0 .3.2.3.3v7.9c.1.3 0 .4-.2.4"/><path d="m319.8 53.1-6.6-6.6c-.6-.6-1.5-1-2.4-1h-19.2c-1 0-1.7-.8-1.7-1.7v-8.6c0-1 .8-1.7 1.7-1.7h27.2c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-27.5c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v9.2c0 .9.4 1.8 1 2.4l6.6 6.6c.6.6 1.5 1 2.4 1h19.2c1 0 1.7.8 1.7 1.7v8.6c0 1-.8 1.7-1.7 1.7h-27.2c-.2 0-.3.2-.3.3v7.9c0 .2.2.3.3.3h27.5c.9 0 1.8-.4 2.4-1l6.6-6.6c.6-.6 1-1.5 1-2.4v-9.2c0-.8-.3-1.7-1-2.4"/><path d="m419 53.1-6.6-6.6c-.6-.6-1.5-1-2.4-1h-19.2c-.9 0-1.7-.8-1.7-1.7v-8.6c0-1 .8-1.7 1.7-1.7h27.2c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-27.5c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v9.2c0 .9.4 1.8 1 2.4l6.6 6.6c.6.6 1.5 1 2.4 1h19.2c1 0 1.7.8 1.7 1.7v8.6c0 1-.8 1.7-1.7 1.7h-27.2c-.2 0-.3.2-.3.3v7.9c0 .2.2.3.3.3h27.5c.9 0 1.8-.4 2.4-1l6.6-6.6c.6-.6 1-1.5 1-2.4v-9.2c0-.8-.4-1.7-1-2.4"/><path d="m436.8 35.2c0-1 .8-1.7 1.7-1.7h25.5c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-25.8c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v29.9c0 .9.4 1.8 1 2.4l6.6 6.6c.6.6 1.5 1 2.4 1h25.8c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-25.5c-1 0-1.7-.8-1.7-1.7z"/><path d="m507.1 64.5c0 1-.8 1.7-1.7 1.7h-22.4c-1 0-1.7-.8-1.7-1.7v-29.3c0-1 .8-1.7 1.7-1.7h22.4c1 0 1.7.8 1.7 1.7zm7.6-32-6.6-6.6c-.6-.6-1.5-1-2.4-1h-23c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v29.9c0 .9.4 1.8 1 2.4l6.6 6.6c.6.6 1.5 1 2.4 1h23c.9 0 1.8-.4 2.4-1l6.6-6.6c.6-.6 1-1.5 1-2.4v-29.9c0-.9-.3-1.8-1-2.4z"/><path d="m371.8 24.9h-7.9c-.2 0-.3.2-.3.3v18.6c0 1-.8 1.7-1.7 1.7h-22.4c-1 0-1.7-.8-1.7-1.7v-18.6c0-.2-.2-.3-.3-.3h-7.9c-.2 0-.3.2-.3.3v49.3c0 .2.2.3.3.3h7.9c.2 0 .3-.2.3-.3v-18.6c0-1 .8-1.7 1.7-1.7h22.4c1 0 1.7.8 1.7 1.7v18.6c0 .2.2.3.3.3h7.9c.2 0 .3-.2.3-.3v-49.3c0-.2-.1-.3-.3-.3"/><path d="m558.4 43.8c0 1-.8 1.7-1.7 1.7h-22.4c-.9 0-1.7-.8-1.7-1.7v-8.6c0-.9.8-1.7 1.7-1.7h22.4c1 0 1.7.8 1.7 1.7zm8.6-8.9c0-.9-.4-1.8-1-2.4l-6.5-6.6c-.6-.6-1.5-1-2.4-1h-32.8c-.2 0-.3.2-.3.3v49.3c0 .2.2.3.3.3h7.9c.2 0 .3-.2.3-.3v-18.6c0-.9.7-1.6 1.6-1.7h11.1l11.9 20.7h9.9l-11.9-20.7h1.9c.9 0 1.8-.4 2.4-1l6.5-6.6c.6-.6 1-1.5 1-2.4v-9.3z"/><path d="m585.7 33.5h28.9c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-29.2c-.9 0-1.8.4-2.4 1l-6.6 6.6c-.6.6-1 1.5-1 2.4v29.9c0 .9.4 1.8 1 2.4l6.6 6.6c.6.6 1.5 1 2.4 1h29.2c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-28.9c-1 0-1.7-.8-1.7-1.7v-8.6c0-1 .8-1.7 1.7-1.7h20.3c.2 0 .3-.2.3-.3v-7.9c0-.2-.2-.3-.3-.3h-20.3c-1 0-1.7-.8-1.7-1.7v-8.6c0-1.4.7-2.1 1.7-2.1"/><path d="m21.1 55.1c-.5-2.6-.6-5.1-.3-7.6l-20.6-1.9c-.4 4.3-.2 8.6.6 13s2.1 8.6 3.9 12.5l18.7-8.7c-1-2.3-1.8-4.7-2.3-7.3"/><path d="m27.6 68.8-15.9 13.3c4.7 5.6 10.6 10.1 17.2 13.2l8.7-18.7c-3.8-1.9-7.3-4.5-10-7.8"/><path d="m55.1 78.9c-2.6.5-5.2.6-7.6.3l-1.8 20.6c4.3.4 8.6.2 13-.6 1.4-.3 2.9-.6 4.3-.9l-5.4-20c-.8.2-1.7.4-2.5.6"/><path d="m44.9 21.1c3.5-.6 7.1-.6 10.4 0l8.9-19.1c-7.2-2.1-15-2.7-22.9-1.3-19.7 3.5-34.7 18.2-39.6 36.4l20 5.4c2.9-10.7 11.6-19.3 23.2-21.4"/><path d="m68.8 72.5 13.3 15.8c3.3-2.8 6.3-6.1 8.8-9.6l-16.9-11.9c-1.5 2.1-3.2 4-5.2 5.7"/><path d="m99.8 45.6-20.6 1.8c.2 1.7.2 3.4 0 5.1l20.6 1.8c.3-2.8.3-5.7 0-8.7"/></g><path d="m73.3 0-19.2 41.3 83.1-41.3z" fill="#ff0046"/></g></svg>
+        </a>
+            <div id="searchWindow" class="header__block header__block--search">
+                <div role="button" class="header__button">
+                    <svg class="header__icon header__icon--search">
+                        <use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#search"></use>
+                    </svg>
+                </div>
+            </div>
+            <div id="header__block--user-menu" class="header__block header__block--user">
+                <script>
+                    cjs.Api.localLsid.beforeLoad((isLoggedIn, name) => {
+                        document.write('' +
+                                '<div id="user-menu" role="button" class="header__button header__button--user">' +
+                                '<svg class="header__icon header__icon--user">' +
+                                '<use xlink:href="' + ("/res/_fs/image/13_symbols/action.svg?serial=1727#user-logged-in") + '"/>' +
+                                '</svg>' +
+                                (isLoggedIn
+                                        ? '<span class="header__text header__text--user header__text--loggedIn">' + name + '</span>'
+                                        : '<span class="header__text header__text--user">Вход</span>') +
+                                '</div>');
+                    });
+                </script>
+            </div>
+            <div id="detail-back-button">
+                <div className="wrapperHeader">
+                    <div class="closeButton closeButton--stream">
+                        <svg class="close-ico">
+                            <use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#close"></use>
+                        </svg>
+                        Назад
+                    </div>
+                </div>
+            </div>
+        <div id="hamburger-menu"  class="header__block header__block--menu">
+            <div role="button" class="header__button">
+                <svg class="header__icon header__icon--menu">
+                    <use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#menu"></use>
+                </svg>
+            </div>
+        </div>
+        <script defer type="text/javascript" src="https://static.flashscore.com/res/_fs/build/loginClient.a22e93c.js"></script>
+        <script defer type="text/javascript" src="https://static.flashscore.com/res/_fs/build/headerMenu.b1529f5.js"></script>
+        <script defer type="text/javascript" src="https://static.flashscore.com/res/_fs/build/bonusComparisonGift.0ee35ee.js"></script>
+        <script type="text/javascript">
+            window.headerMenuEnvironment = {"lsidEnabled":true,"langBoxEnabled":true,"langBoxData":{"shortName":"ru-kz","fullName":"Pусский (Mеждународный)","list":[{"id":47,"projectId":46,"shortName":"kk","url":"\/kz\/","localLang":"Қазақша","localLangName":"Қазақша","onclickUrl":"kz"}]},"langBoxDataByGeoIps":{"US":{"shortName":"en-usa","fullName":"English","localLangName":"United States","list":[]},"BR":{"shortName":"pt-br","fullName":"Português (Brasil)","localLangName":"Português (Brasil)","list":[]},"FR":{"shortName":"fr","fullName":"Français","localLangName":"France","list":[]},"IN":{"shortName":"en-india","fullName":"English","localLangName":"India","list":[{"id":261,"projectId":46,"shortName":"hi","url":"\/hi\/","localLang":"हिंदी","localLangName":"Hindi","onclickUrl":"hi"},{"id":262,"projectId":46,"shortName":"bn","url":"\/bn\/","localLang":"বাংলা","localLangName":"Bengali","onclickUrl":"bn"},{"id":265,"projectId":46,"shortName":"te","url":"\/te\/","localLang":"తెలుగు","localLangName":"Telugu","onclickUrl":"te"},{"id":263,"projectId":46,"shortName":"ta","url":"\/ta\/","localLang":"தமிழ்","localLangName":"Tamil","onclickUrl":"ta"},{"id":264,"projectId":46,"shortName":"kn","url":"\/kn\/","localLang":"ಕನ್ನಡ","localLangName":"Kannada","onclickUrl":"kn"}]},"PL":{"shortName":"pl","fullName":"Polski","localLangName":"Polska","list":[]}}};
+            window.isFlashfootball = false;
+            window.isDetail = true;
+            window.mobileBannerConfig = null;
+        </script>
+    </div>
+        <div id="legalAgeContainer"></div>
+        <script defer type="text/javascript" src="https://static.flashscore.com/res/_fs/build/legalAgeConfirmation.0e5b775.js"></script>
+</header>
+    <script type="text/javascript">
+        cjs.defaultTopLeagues = ["6_100_SW9D1eZo","6_128_Mg9H0Flh","6_200_zcDLaZ3b","6_8_0UPxbDYA","6_106_boA2KUSu","6_8_pUAv7KCe","1_198_dYlOSQOD","1_6_xGrwqq16","1_6_KQMVOQ0g","1_6_2ZqrOpGa","1_6_ClDjv3V5","1_77_KIShoMk3","1_81_W6BOzpK2","1_98_COuk57Ci","1_102_zNSwBuue","1_176_QVmLl54o","1_8_lvUBR5F8","1_102_U9Yb3oVd","1_6_A9yxE9Ke","1_102_8CUwsgHP","1_6_GfRbsVWM","1_102_0QiGc6S6","1_102_UZE9uz56","2_9011_tItR6sEf","2_9011_nZi4fKds","2_9011_65k5lHxU","2_9012_Sd2Q088D","2_9012_hl1W8RZs","2_9012_6g0xhggi","2_9011_MP4jLdJh","2_9012_0G3fKGYb","3_5_tWHwh063","3_6_naL1J006","3_6_fT0n14Vt","3_6_YJaj0Opm","3_77_nD0vn2bU","3_98_h2HoKRSi","3_176_0fiHAulF","3_191_MLmY2yB1","3_200_IBmris38","3_8_Ewa5QKPs","3_8_OQpzcCnS","3_8_bPvnWWC7","3_102_vqGCFPFq","3_5_M75HEqVk","3_6_nVvz91uS","3_102_2iz946D6","4_62_QR1GYbvD","4_6_Cnt5FMOg","4_76_CnmCUGyG","4_181_ObxFt3lm","4_200_G2Op923t","4_8_SCGVmKHb","4_102_lt0d2PeU","5_47_MZFZnvX4","5_200_rJVAIaHo","7_6_KK4FaFV3","7_77_rBi9iqU7","7_81_Mmsc26yL","7_176_nVpEwOrl","7_8_zkpajjvm","19_24_ETdxjU8a","19_198_QRQyQVpP","19_8_EHbj07Ys","19_8_rNL5LJER","8_198_za7D2lO5","8_6_G8FL0ShI","8_6_faEPan8O","8_77_SzD3Lkgt","8_8_Stv0V7h5","8_8_nmjJVR7B","8_8_ncwd4OJg","9_76_WxHfCw7j","9_181_UJRjmLT9","9_8_CrHenuqG","9_8_hbCfpabM","9_182_Ywy81Djb","9_8_ltlih78J","10_76_nLBbqJDS","10_181_jacSiHjd","10_8_8K9IG0Td","12_6_6ecm9Xlr","12_6_CvPuKVY0","12_98_nm8RF0ON","12_154_jNqF318i","12_8_hjY9yg16","12_5_2iEGsZhr","12_8_Sp51ptwk","12_102_lCcxUj31","12_8_vHG9R78a","12_5_zTs7gNl5","12_5_8ttFi1JH","11_6_MFZy7Eom","11_6_tMoe7Y0g","11_8_UwAwNo2E","14_6_2RABlYFn","14_8_jXzWoWa5","14_8_KGO4pUqO","14_8_0SwtclaU","14_8_U7TfIXUu","14_197_8bSbHipn","14_8_hGLC5Bah","14_8_W6KG4VEb","14_8_hxHR9kGl","14_8_byRjyCJO","15_8_GS36K259","15_197_MRDsXMKF","15_8_42FbPIs2","15_8_Mmkx9baa","13_8_xjQ9xGBl","13_8_OG7nzYAD","13_8_AkPEBy3K","13_8_2i0B6Zul","13_93_KfDQ6H86","13_8_KhWRqihE","17_8064_pSDwFmA2","17_8065_YwouxX6p","18_24_OICsE7P8","18_24_lnHbQKrJ","18_24_A9VciAso","18_24_GYMw4gKo","26_8_ruJ9pBzd","25_9995_EJ1XGOEs","25_9996_Oj29TrUm","22_8_f7ITstK5","22_8_tSCgr0ZB","22_6_CtMYh31I","23_8150_v5mY2VHL","23_8150_0WT9Phuh","23_8150_nqOdP4Wh","23_8150_CrmQoWqj","23_8150_WQvE7HHH","23_8150_buZKLqDG","23_8150_4K0lj5hO","23_8150_2N8xUvQK","23_8150_YVEWtJhI","24_8_ttMTnaKq","24_8_z3LXoJZk","24_8_vXupZVde","24_8_z3VAZkC1","24_8_8xWQf8rq","24_8_nTUUgSck","34_7300_EcSVXVwf","34_7300_lptFeFBL","34_7300_ABz7kU4b","35_197_biXWRQSN","35_197_j3ZUJ1y7","35_197_lptXr60I","35_197_KbeZZGu8","35_197_vmEZ5XXJ","36_7402_8CN3d6SA","36_7404_zF9M0iH9","42_93_2mjPD8xq","42_5_tfrUHIzn","42_5_WK02yCWs","42_8_zmOsQ2kA"];
+    </script>
+<nav class="menuTop menuTop--soccer">
+	<div class="menuTop__content menuTop__group">
+		<a href="/favourites/" class="menuTop__item menuTop__myfs">
+			<svg class="menuTop__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#star"></use>
+			</svg>
+			<div class="menuTop__text">Избранное</div>
+		</a>
+		<div class="menuTop__items">
+			<a href="/" class="menuTop__item--active menuTop__item"
+			   data-sport-id="1">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#soccer"></use>
+				</svg>
+				<div class="menuTop__text">Футбол</div>
+			</a>
+			<a href="/hockey/" class="menuTop__item"
+			   data-sport-id="4">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#hockey"></use>
+				</svg>
+				<div class="menuTop__text">Хоккей</div>
+			</a>
+			<a href="/tennis/" class="menuTop__item"
+			   data-sport-id="2">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#tennis"></use>
+				</svg>
+				<div class="menuTop__text">Теннис</div>
+			</a>
+			<a href="/basketball/" class="menuTop__item"
+			   data-sport-id="3">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#basketball"></use>
+				</svg>
+				<div class="menuTop__text">Баскетбол</div>
+			</a>
+			<a href="/volleyball/" class="menuTop__item"
+			   data-sport-id="12">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#volleyball"></use>
+				</svg>
+				<div class="menuTop__text">Волейбол</div>
+			</a>
+			<a href="/handball/" class="menuTop__item"
+			   data-sport-id="7">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#handball"></use>
+				</svg>
+				<div class="menuTop__text">Гандбол</div>
+			</a>
+			<a href="/futsal/" class="menuTop__item"
+			   data-sport-id="11">
+				<svg class="menuTop__icon">
+					<use xlink:href="/res/_fs/image/13_symbols/sport.svg#futsal"></use>
+				</svg>
+				<div class="menuTop__text">Футзал</div>
+			</a>
+		</div>
+<div class="menuMinority">
+	<div class="menuMinority__title" onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });">
+		<svg class="menuMinority__arrow">
+			<use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#dropdown"></use>
+		</svg>
+		<div class="menuMinority__text"
+             data-text-long="Больше">
+		</div>
+	</div>
+	<div class="menuMinority__content" data-mobile-headline="Больше">
+		<a href="/kabaddi/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="42">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#kabaddi"></use>
+			</svg>
+			<div class="menuMinority__text" >Kabaddi</div>
+		</a>
+		<a href="/aussie-rules/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="18">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#aussie-rules"></use>
+			</svg>
+			<div class="menuMinority__text" >Авс. футбол</div>
+		</a>
+		<a href="/motorsport/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="31">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#motorsport"></use>
+			</svg>
+			<div class="menuMinority__text" >Авто/мото</div>
+		</a>
+		<a href="/american-football/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="5">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#american-football"></use>
+			</svg>
+			<div class="menuMinority__text" >Ам. футбол</div>
+		</a>
+		<a href="/badminton/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="21">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#badminton"></use>
+			</svg>
+			<div class="menuMinority__text" >Бадминтон</div>
+		</a>
+		<a href="/basketball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="3">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#basketball"></use>
+			</svg>
+			<div class="menuMinority__text" >Баскетбол</div>
+		</a>
+		<a href="/baseball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="6">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#baseball"></use>
+			</svg>
+			<div class="menuMinority__text" >Бейсбол</div>
+		</a>
+		<a href="/bandy/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="10">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#bandy"></use>
+			</svg>
+			<div class="menuMinority__text" >Бенди</div>
+		</a>
+		<a href="/boxing/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="16">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#boxing"></use>
+			</svg>
+			<div class="menuMinority__text" >Бокс</div>
+		</a>
+		<a href="/cycling/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="34">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#cycling"></use>
+			</svg>
+			<div class="menuMinority__text" >Велогонки</div>
+		</a>
+		<a href="/water-polo/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="22">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#water-polo"></use>
+			</svg>
+			<div class="menuMinority__text" >Водное поло</div>
+		</a>
+		<a href="/volleyball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="12">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#volleyball"></use>
+			</svg>
+			<div class="menuMinority__text" >Волейбол</div>
+		</a>
+		<a href="/handball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="7">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#handball"></use>
+			</svg>
+			<div class="menuMinority__text" >Гандбол</div>
+		</a>
+		<a href="/golf/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="23">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#golf"></use>
+			</svg>
+			<div class="menuMinority__text" >Гольф</div>
+		</a>
+		<a href="/darts/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="14">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#darts"></use>
+			</svg>
+			<div class="menuMinority__text" >Дартс</div>
+		</a>
+		<a href="/winter-sports/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="37">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#winter-sports"></use>
+			</svg>
+			<div class="menuMinority__text" >Зимние виды</div>
+		</a>
+		<a href="/esports/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="36">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#esports"></use>
+			</svg>
+			<div class="menuMinority__text" >Киберспорт</div>
+		</a>
+		<a href="/cricket/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="13">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#cricket"></use>
+			</svg>
+			<div class="menuMinority__text" >Крикет</div>
+		</a>
+		<a href="/mma/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="28">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#mma"></use>
+			</svg>
+			<div class="menuMinority__text" >ММА</div>
+		</a>
+		<a href="/table-tennis/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="25">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#table-tennis"></use>
+			</svg>
+			<div class="menuMinority__text" >Наст. теннис</div>
+		</a>
+		<a href="/netball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="29">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#netball"></use>
+			</svg>
+			<div class="menuMinority__text" >Нетбол</div>
+		</a>
+		<a href="/pesapallo/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="30">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#pesapallo"></use>
+			</svg>
+			<div class="menuMinority__text" >Песапалло</div>
+		</a>
+		<a href="/beach-volleyball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="17">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#beach-volleyball"></use>
+			</svg>
+			<div class="menuMinority__text" >Пляж. волейбол</div>
+		</a>
+		<a href="/beach-soccer/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="26">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#beach-soccer"></use>
+			</svg>
+			<div class="menuMinority__text" >Пляж. футбол</div>
+		</a>
+		<a href="/rugby/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="8">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#rugby-union"></use>
+			</svg>
+			<div class="menuMinority__text" >Регби</div>
+		</a>
+		<a href="/rugby-league/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="19">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#rugby-league"></use>
+			</svg>
+			<div class="menuMinority__text" >Регбилиг</div>
+		</a>
+		<a href="/horse-racing/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="35">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#horse-racing"></use>
+			</svg>
+			<div class="menuMinority__text" >Скачки</div>
+		</a>
+		<a href="/snooker/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="15">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#snooker"></use>
+			</svg>
+			<div class="menuMinority__text" >Снукер</div>
+		</a>
+		<a href="/tennis/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="2">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#tennis"></use>
+			</svg>
+			<div class="menuMinority__text" >Теннис</div>
+		</a>
+		<a href="/floorball/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="9">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#floorball"></use>
+			</svg>
+			<div class="menuMinority__text" >Флорбол</div>
+		</a>
+		<a href="/football/" class="menuMinority__item--active menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="1">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#soccer"></use>
+			</svg>
+			<div class="menuMinority__text" >Футбол</div>
+		</a>
+		<a href="/futsal/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="11">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#futsal"></use>
+			</svg>
+			<div class="menuMinority__text" >Футзал</div>
+		</a>
+		<a href="/hockey/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="4">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#hockey"></use>
+			</svg>
+			<div class="menuMinority__text" >Хоккей</div>
+		</a>
+		<a href="/field-hockey/" class="menuMinority__item"
+           onclick="cjs.Api.loader.get('sportMenu').call(function(sportMenu) { sportMenu.toggleMinority() });"
+		   data-sport-id="24">
+			<svg class="menuMinority__icon">
+				<use xlink:href="/res/_fs/image/13_symbols/sport.svg#field-hockey"></use>
+			</svg>
+			<div class="menuMinority__text" >Хоккей на траве</div>
+		</a>
+	</div>
+</div>
+	</div>
+</nav>
+<div class="container">
+<div class="container__content content">
+<div class="container__main" id="main">
+<div class="container__mainInner" id="tc">
+<div class="container__bannerZone" id="rc-top"><div id="rccontent">
+<div id="zoneContainer-detail_right_top" data-zone-group="detail_right_top"></div>
+<div class="scrolling-banner-wrap">
+<div id="zoneContainer-detail_right_zone_1" data-zone-group="detail_right_zone_1"></div>
+
+<div id="zoneContainer-detail_right_zone_2" data-zone-group="detail_right_zone_2"></div>
+
+<div id="zoneContainer-detail_right_zone_3" data-zone-group="detail_right_zone_3"></div>
+
+<div id="zoneContainer-detail_right_zone_4" data-zone-group="detail_right_zone_4"></div>
+</div><div></div></div></div><main class="container__liveTableWrapper  fullPage sport_page id="mc">
+<div id="box-over-content-revive" class="boxOverContentRevive">
+    <div class="boxOverContentRevive__placeholder">
+        <span class="boxOverContentRevive__placeholderText">AD</span>
+    </div>
+    
+<div id="zoneContainer-detail_box_over_content" data-zone-group="detail_box_over_content"></div>
+
+</div>
+<script>
+    (typeof window.initBoxOverContentIframe == 'function' || function() {
+        window.initBoxOverContentIframe = true
+    })();
+</script>
+<div id="box-over-content-b" class="boxOverContent--b"><script type="text/javascript">cjs.Api.loader.get("cjs").call(function(_cjs) { _cjs.Api.loader.get("boxContentManager").call(function(boxContentManager) { boxContentManager.setSupportedGeoIPGroups(["default","RU","GR","CZ","FR","US:USDC","US:USIA","US:USIL","US:USKS","US:USKY","US:USMS","US:USNC","US:USNJ","US:USNV","US:USNY","US:USOH","US:USTN","US:USVT","US:USWY","US:USIN"]); _cjs.Api.boxOverContentHandler.showPlaceholders(); }); });</script></div><script>
+            cjs.Api.boxOverContentHandler.showPlaceholders(true);
+            cjs.Api.loader.get("geoIpResolver").call(function () {
+            	if (!cjs.geoIP) {
+                    cjs.Api.boxOverContentHandler.clearPlaceholders();
+            	}
+            });
+          </script><div id="notifications-alert-wrapper" style="display: none;"></div><div class="page-content-line"></div>
+<div class="container__livetable">
+<div id="detail" class="container__detailInner fullPage">
+    <div class="detailSk__header">
+    <div></div>
+</div>
+<div class="duelParticipant">
+    <div class="duelParticipant__startTime">
+        <div class="detailSk__time ska__di"></div>
+    </div>
+    <div class="duelParticipant__home">
+        <div class="participant__myTeamsIcon"></div>
+        <div class="detailSk__participantImg ska__di"></div>
+        <div class="participant__participantNameWrapper">
+            <div class="detailSk__participantName ska__di"></div>
+        </div>
+    </div>
+    <div class="duelParticipant__score">
+        <div class="detailScore__matchInfo">
+            <div class="detailSk__score ska__di"></div>
+            <div class="detailSk__stage ska__di"></div>
+        </div>
+    </div>
+    <div class="duelParticipant__away">
+        <div class="participant__myTeamsIcon"></div>
+        <div class="detailSk__participantImg ska__di"></div>
+        <div class="participant__participantNameWrapper">
+            <div class="detailSk__participantName ska__di"></div>
+        </div>
+    </div>
+</div>
+<div class="tab detail__tab">
+    <div class="tab__group">
+        <div class="detailSk__tab"></div>
+        <div class="detailSk__tab"></div>
+        <div class="detailSk__tab"></div>
+        <div class="detailSk__tab"></div>
+    </div>
+</div>
+<div class="loadingContentContainer">
+    <div class="loadingOverlay">
+        <div class="loadingAnimation">
+            <div class="loadingAnimation__text">Loading...</div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script>
+	window.environment = {"event_id_c":"tl5ebinQ","eventStageTranslations":{"1":"&nbsp;","45":"Будет доигран позже","42":"Ждем...","2":"Live","12":"1-й тайм","13":"2-й тайм","6":"Дополнительное время","7":"Серия пенальти","38":"Перерыв","46":"Перерыв","3":"Завершен","10":"После дополнительного времени","11":"После серии пенальти","9":"Неявка","43":"Задержка","36":"Прерван","4":"Перенесен","5":"Отменен","37":"Прерван","54":"Тех. поражение"},"config":{"js_serial":"2266000000","js":{"time_keep_match_live":180},"app":{"icon_action_svg":"\/res\/_fs\/image\/13_symbols\/action.svg?serial=1727","lang":{"charset":"ru_RU","web":"ru-kz","dc":12,"meta_content":"ru-KZ"},"lang_combo":{"enable":true,"project_list":{"--":46,"kz":47}},"noduel_events":{"mygames":10,"main":{"default":40,"golf":30,"motorsport-auto-racing":40,"motorsport-moto-racing":40,"cycling":10,"winter-sports-ski-jumping":10,"winter-sports-alpine-skiing":10,"winter-sports-cross-country":10,"winter-sports-biathlon":10},"tournament_page":{"winter-sports-ski-jumping":1000,"winter-sports-alpine-skiing":1000,"winter-sports-cross-country":1000,"winter-sports-biathlon":1000},"participant_page":{"meetings":{"winter-sports-ski-jumping":5,"winter-sports-alpine-skiing":5,"winter-sports-cross-country":5,"winter-sports-biathlon":5},"events":{"motorsport-auto-racing":10,"motorsport-moto-racing":10,"cycling":10}},"categories":{"6576":10,"7771":10}},"mygames":{"enable":true,"position":"left","groups":{"enable":false},"past_days":1,"future_days":7,"maximum_count":500},"calendar_range":7,"google_analytics":{"enable":true},"video_highlights_live_icon":{"enable":true},"US_time_format":false,"US_style_win_loss_mark":false,"project_type":{"id":1,"name":"_fs","us_web":false},"popup":false,"js_redirect":{"geoip_to_urlpart":{"KZ":"kz","RU":""},"urlpart":""},"myteams":{"enable":true,"maximum_count":200},"has_category_page":[2,21,23,31,32,33,36],"banner":{"zone_list":{"background":{"name":"background","definitions":[{"zoneId":2945,"size":{"width":1920,"height":1200},"breakpoint":{"min":1048,"max":9999}}],"renderer":"wallpaper"},"left_menu_1":{"name":"left_menu_1","definitions":[{"zoneId":2946,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}]},"left_menu_2":{"name":"left_menu_2","definitions":[{"zoneId":2947,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"left_menu_3":{"name":"left_menu_3","definitions":[{"zoneId":3300,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"right_top":{"name":"right_top","definitions":[{"zoneId":6529,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"right_zone_1":{"name":"right_zone_1","definitions":[{"zoneId":6530,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"right_zone_2":{"name":"right_zone_2","definitions":[{"zoneId":6531,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"top":{"name":"top","definitions":[{"zoneId":2951,"size":{"width":970,"height":90},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"labelPosition":"Right","displayPlaceholder":true}},"content_bottom":{"name":"content_bottom","definitions":[{"zoneId":2953,"size":{"width":480,"height":480},"breakpoint":{"min":1,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_top":{"name":"detail_top","definitions":[{"zoneId":5061,"size":{"width":970,"height":90},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"labelPosition":"Right","displayPlaceholder":true}},"detail_content":{"name":"detail_content","definitions":[{"zoneId":2954,"size":{"width":480,"height":480},"breakpoint":{"min":1,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_background":{"name":"detail_background","definitions":[{"zoneId":16425,"size":{"width":3000,"height":2000},"breakpoint":{"min":1048,"max":9999}}],"renderer":"wallpaper"},"detail_left_menu_1":{"name":"detail_left_menu_1","definitions":[{"zoneId":16429,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}]},"detail_left_menu_2":{"name":"detail_left_menu_2","definitions":[{"zoneId":16431,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_left_menu_3":{"name":"detail_left_menu_3","definitions":[{"zoneId":16433,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_top":{"name":"detail_right_top","definitions":[{"zoneId":16435,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_1":{"name":"detail_right_zone_1","definitions":[{"zoneId":16437,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_2":{"name":"detail_right_zone_2","definitions":[{"zoneId":16439,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_3":{"name":"detail_right_zone_3","definitions":[{"zoneId":16441,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_4":{"name":"detail_right_zone_4","definitions":[{"zoneId":16443,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_box_over_content":{"name":"detail_box_over_content","definitions":[{"zoneId":16427,"size":{"width":688,"height":85},"breakpoint":{"min":728,"max":9999},"rendererOptions":{"sticky":true}},{"zoneId":16445,"size":{"width":320,"height":100},"breakpoint":{"min":320,"max":727}}]},"responsive_fixed_bottom":{"name":"responsive_fixed_bottom","definitions":[{"zoneId":3536,"size":{"width":320,"height":50},"breakpoint":{"min":320,"max":727},"refreshInterval":45},{"zoneId":3537,"size":{"width":728,"height":90},"breakpoint":{"min":728,"max":999},"refreshInterval":45}]},"responsive_detail_fixed_bottom":{"name":"responsive_detail_fixed_bottom","definitions":[{"zoneId":3538,"size":{"width":320,"height":50},"breakpoint":{"min":320,"max":727},"refreshInterval":45,"allowedClientTypes":["mobile","tablet"]},{"zoneId":3539,"size":{"width":728,"height":90},"breakpoint":{"min":728,"max":9999},"refreshInterval":45,"allowedClientTypes":["mobile","tablet"]}]},"premium_square_mobile":{"name":"premium_square_mobile","definitions":[{"zoneId":6141,"size":{"width":480,"height":480},"breakpoint":{"min":300,"max":639}}],"renderer":"dynamic"},"box_over_content":{"name":"box_over_content","definitions":[{"zoneId":9521,"size":{"width":688,"height":85},"breakpoint":{"min":728,"max":9999}},{"zoneId":9523,"size":{"width":320,"height":100},"breakpoint":{"min":320,"max":727}}],"rendererOptions":{"sticky":true}}},"show_advertisement_label":false,"advertisement_label":{"odds_forced_by_geo_ip":[]}},"project":{"id":46,"name":"FlashscoreKZ.com","default_geo_ip_country_code":"KZ","default_geo_ip_subdivision_code":false},"odds":{"layout":"default","us_layout_excluded_sports":[],"format":"eu","format_list":["eu"],"ah_override":false,"us_handicap":false,"enable":true,"iframe":true,"my_fs":false,"sport_page":false,"hide_tab":false,"odds_disabled_countries":[],"betslip":false,"betslip_detail_window":false,"betslip_window_size":[],"bookmakers_sp_allowed":[16],"betting_light_version":false,"light_live_bet_icon":false,"hide_live_bet_icon":false,"odds_comparison_show_copyright":true,"probability_to_win":false,"odds_powered_by_geo_ip":[],"odds_powered_by_geo_ip_subdivision":[],"odds_powered_by_enabled_for_summary":false,"prematch_button":{"disabled_geoIps":["GR","IT"]}},"redirector":{"types":{"event":1,"tournament_template":2,"participant":3,"player":4,"detail_page":5}},"fs_stats":{"enable":true,"url":{"mygames":"remote-stats.flashscore.com\/mg","adblocked":"","search_stats":"remote-stats.flashscore.com\/ss"}},"empty_logo_small_path":{"logo_team":"image\/empty-logo-team-small.png"},"game_notification_push":{"enable":true},"user_functions":{"server_domain":"lsid.eu","serverAPI":"https:\/\/user-internal-service.intra.livesport.services\/","api_key":"j5fk8N0nJ7aBJxBOTfKcAWVKPDfexqkj","enable":true,"use_only_local":true,"namespace":"flashscore","facebook_app_id":"2098331317105270","google_client_id":"351761376214-mkkosa9t6pfo64fq7movrgsrjtp6vf5r.apps.googleusercontent.com","apple_client_id":"com.flashscore.siwa","apple_redirect_uri":"https:\/\/user-login-proxy-service.livesport.services\/api\/v1\/proxy\/apple\/","server":"https:\/\/lsid.eu\/"},"user_function":{"use_only_local":false},"registration":{"version":1,"sign_out_in_drop_down":true,"project_has_initial_tou":true,"no_remote":false},"captcha_sitekey":"6LdnlAoTAAAAAIzaLLR8ezPKKnLeM2LozP6OQKj_","european_union_states":{"codes":["BE","BG","CZ","DK","EE","FI","FR","HR","IE","IT","CY","LT","LV","LU","HU","MT","DE","NL","PL","PT","AT","RO","GR","SK","SI","GB","ES","SE"]},"url_prefix":"","project_moved":[],"sports_without_detail":[35],"tournament_pages":{"enable":true,"disabled_sports":[],"block_summary_match_limit":10,"data_part_match_limit":100},"new_mobile_page":{"enable":false},"box_over_content":{"split":{"columns":3}},"detail_live_betting_strip":{"rotation_time":30000},"sports_with_participant_no_duel_page":[38,39,40,41,32,33,34],"match_comments":{"enable":false},"new_live_betting_icon":{"enable":true,"version":1},"live_streaming":{"disabled_bookmakers_by_geoip":[],"bookmakers_with_disabled_link":[]},"facelift":{"main_class":"flat"},"icon_list":{"info":true,"shirt":true,"tv":true},"react":{"enabled":false,"sports":false},"responsive":{"breakpoint":800,"breakpoint_mobile":640},"tv_program":{"enable":true},"mixed_feed":{"link_to_more_games":false,"homepage_enabled":false},"team_transfers":{"sports":[1,4]},"team_news":{"enabled":true},"native_notifications":{"enabled":true,"lsnp":"https:\/\/lsnp.flashscore.com\/web-","firebase":{"apiKey":"AIzaSyAW9FbqeajkSTftCCbFlcbojPETqu1IThs","authDomain":"flashscore-web-notifications.firebaseapp.com","databaseURL":"https:\/\/flashscore-web-notifications.firebaseio.com","projectId":"flashscore-web-notifications","storageBucket":"flashscore-web-notifications.appspot.com","messagingSenderId":"258573697417","appId":"1:258573697417:web:d00c8d0c079ac7a2986158"}},"feed_sign":"SW9D1eZo","detail":{"window_size":{"width":688,"height":900}},"audio_comments":{"enabled":false,"tabEnabled":false,"format":"HLS","topButtonEnabled":true},"tv":false,"apple_sign_in":{"enable":true},"advanced_tennis":{"enable":true,"point_by_point":true},"reversed_time":{"enable":false,"sports":{"3":{"stages":[22,23,24,25],"extra_time_stages":[6],"stage_time":10,"extra_time":5},"4":{"stages":[14,15,16],"extra_time_stages":[6],"stage_time":20,"extra_time":5},"5":{"stages":[22,23,24,25],"extra_time_stages":[6],"stage_time":15,"extra_time":15}}},"player_profile":{"enabled_sports":[1,4,3]},"empty_logo_path":{"face_man":"image\/empty-face-man-share.gif","face_woman":"image\/empty-face-woman-share.gif","logo_team":"image\/empty-logo-team-share.gif"},"team_logo":{"enable":true,"detail":true,"standings":false,"h2h":true,"iframe":true},"lang_box":{"enabled":true,"redirects":{"US":{"title":"Follow our live scores in English!","description":"Go to <a href=\"https:\/\/www.flashscoreusa.com\/\">FlashscoreUSA.com<\/a>","lang_combo":{"--":130},"lang_dialog_translations":{"title":"Enjoy your favorite live scores service even more on the brand new Flashscore USA website!","button":"Confirm and go","stay_button":"I want to stay on Flashscore.com"}},"AU":{"title":"Follow our live scores on our Aussie website!","description":"Go to <a href=\"https:\/\/www.flashscore.com.au\/\">Flashscore.com.au<\/a>"},"UK":{"title":"Follow our live scores on our UK website!","description":"Go to <a href=\"https:\/\/www.flashscore.co.uk\/\">Flashscore.co.uk<\/a>"},"CA":{"title":"Follow our live scores on our Canadian website!","description":"Go to <a href=\"https:\/\/www.flashscore.ca\/\">Flashscore.ca<\/a>"},"DK":{"title":"Følg vores live resultater på dansk.","description":"Gå til <a href=\"https:\/\/www.flashscore.dk\/\">Flashscore.dk<\/a>"},"BG":{"title":"Следвай нашите резултати на български!","description":"Отиди на <a href=\"https:\/\/www.flashscore.bg\/\">Flashscore.bg<\/a>"},"BR":{"title":"Acompanhe nossos resultados ao vivo em português!","description":"Siga para <a href=\"https:\/\/www.flashscore.com.br\/\">Flashscore.com.br<\/a>","lang_combo":{"--":401},"lang_dialog_translations":{"title":"Lançamos um Flashscore Brasil totalmente novo e localizado para você!","redirect":"Clique no botão para confirmar que você deseja acessá-lo.","button":"Confirmar e avançar","stay_button":"Quero continuar no Flashscore.com"}},"DE":{"title":"Verfolge unsere Livescores auf deutsch!","description":"Hier geht es zu <a href=\"https:\/\/www.flashscore.de\/\">Flashscore.de<\/a>"},"AT":{"title":"Folge unseren Live-Ergebnissen auf Deutsch!","description":"Gehe auf <a href=\"https:\/\/www.flashscore.at\/\">Flashscore.at<\/a>"},"CH":{"parent":"DE"},"GR":{"title":"Παρακολουθήστε τα ζωντανά μας αποτελέσματα στα ελληνικά!","description":"Μεταβείτε στο <a href=\"https:\/\/www.flashscore.gr\/\">Flashscore.gr<\/a>"},"ES-CT":{"parent":"ES"},"ES":{"title":"¡Sigue nuestros marcadores en directo en español!","description":"Accede a <a href=\"https:\/\/www.flashscore.es\/\">Flashscore.es<\/a>"},"BO":{"parent":"ES"},"GF":{"parent":"ES"},"GY":{"parent":"ES"},"PY":{"parent":"ES"},"SR":{"title":"Pratite naše rezultate uživo na srpskom!","description":"Idite na <a href=\"https:\/\/www.livescore.in\/rs\">LiveScore.in\/rs<\/a>"},"UY":{"parent":"ES"},"PA":{"parent":"ES"},"JM":{"parent":"ES"},"GT":{"parent":"ES"},"NI":{"parent":"ES"},"CU":{"parent":"ES"},"PH":{"title":"Sundan ng live ang mga iskor sa Tagalog!","description":"Pumunta sa <a href=\"https:\/\/www.flashscore.ph\/\">Flashscore.ph<\/a>"},"CL":{"title":"¡Sigue nuestros marcadores en vivo en español!","description":"Ingresa a <a href=\"https:\/\/www.flashscore.cl\/\">Flashscore.cl<\/a>"},"CO":{"title":"¡Sigue nuestros marcadores en vivo y en Español!","description":"Ingresa a <a href=\"https:\/\/www.flashscore.co\/\">Flashscore.co<\/a>"},"AR":{"title":"¡Seguí nuestros resultados en vivo en español!","description":"Visitá <a href=\"https:\/\/www.flashscore.com.ar\/\">Flashscore.com.ar<\/a>"},"MX":{"title":"¡Sigue los resultados en vivo en Español!","description":"Ve a <a href=\"https:\/\/www.flashscore.com.mx\/\">Flashscore.com.mx<\/a>"},"VE":{"title":"¡Sigue nuestros marcadores en vivo en Español!","description":"Ve a <a href=\"https:\/\/www.flashscore.com.ve\/\">Flashscore.com.ve<\/a>"},"PE":{"title":"¡Sigue nuestros resultados en vivo en español!","description":"Ve a <a href=\"https:\/\/www.flashscore.pe\/\">Flashscore.pe<\/a>"},"FI":{"title":"Seuraa tuloksiamme livenä suomeksi!","description":"Siirry <a href=\"https:\/\/www.flashscore.fi\/\">Flashscore.fi<\/a>-sivuille!"},"FR":{"title":"Suivez nos scores en direct en français!","description":"Rendez-vous sur <a href=\"https:\/\/www.flashscore.fr\/\">Flashscore.fr<\/a>","lang_combo":{"--":16},"lang_dialog_translations":{"title":"Nous avons lancé un nouveau site web local pour vous, Flashscore France !","redirect":"Cliquez sur le bouton suivant pour confirmer que vous souhaitez accéder au site local.","button":"Confirmez et allez-y","stay_button":"Je veux rester sur Flashscore.com"}},"GE":{"title":"ცოცხალი ანგარიშები ქართულად!","description":"<a href=\"https:\/\/www.flashscore.ge\/\">Flashscore.ge<\/a>"},"MY":{"title":"Ikuti skor langsung kami dalam Bahasa Melayu!","description":"Pergi ke <a href=\"https:\/\/www.flashscore.com.my\/\">Flashscore.com.my<\/a>"},"HR":{"title":"Pratite naše rezultate uživo na hrvatskom!","description":"Idite na <a href=\"https:\/\/www.rezultati.com\/\">Rezultati.com<\/a>"},"LT":{"title":"Sekite rezultatus lietuviškai!","description":"Eikite į <a href=\"https:\/\/www.flashscore.in\/\">Flashscore.in<\/a>"},"HU":{"title":"Kövesd az élő eredményeket magyar nyelven!","description":"Az <a href=\"https:\/\/www.eredmenyek.com\/\">Eredmenyek.com<\/a> megnyitása"},"KO":{"title":"한국어로 실시간 스코어를 확인하세요!","description":"<a href=\"https:\/\/www.flashscore.co.kr\/\">Flashscore.co.kr<\/a>로 이동"},"IN":{"title":"Follow our live scores on our Indian websites!","description":"Go to <a href=\"https:\/\/www.flashscore.in\/\">Flashscore.in<\/a>","lang_combo":{"--":26,"hi":261,"bn":262,"te":265,"ta":263,"kn":264},"lang_dialog_translations":{"title":"We just launched a brand new, fully localised Flashscore India for you!","local_project_title":"New languages available!","perex":"Pick your language and give it try!","button":"Confirm and go","local_project_button":"Confirm","stay_button":"I want to stay on Flashscore.com"}},"IT":{"title":"Segui i nostri risultati in italiano!","description":"Vai su <a href=\"https:\/\/www.flashscore.it\/\">Flashscore.it<\/a>"},"ID":{"title":"Ikutilah Skor langsung kami dalam Bahasa Indonesia!","description":"Kunjungilah <a href=\"https:\/\/www.flashscore.co.id\/\">Flashscore.co.id<\/a>"},"JP":{"title":"ぜひ、私どもの日本版ライブスコアをフォローください！","description":"<a href=\"https:\/\/www.flashscore.co.jp\/\">Flashscore.co.jp<\/a> はこちら"},"KZ":{"title":"Live нәтижелерді Қазақ тілінде бақылаңыз!","description":"<a href=\"https:\/\/www.flashscorekz.com\/\">FlashscoreKZ.com<\/a> желісіне өту"},"NL":{"title":"Volg onze live uitslagen in het Nederlands!","description":"Ga naar <a href=\"https:\/\/www.flashscore.nl\/\">Flashscore.nl<\/a>"},"PL":{"title":"Śledź nasze wyniki na żywo po polsku!","description":"Przejdź na <a href=\"https:\/\/www.flashscore.pl\/\">Flashscore.pl<\/a>","lang_combo":{"--":3},"lang_dialog_translations":{"title":"Właśnie uruchomiliśmy dla Ciebie nowy, lokalny Flashscore Polska","redirect":"Kliknij poniższy przycisk, aby potwierdzić, że chcesz uzyskać dostęp do lokalnej witryny.","button":"Potwierdź i przejdź","stay_button":"Chcę pozostać na Flashscore.com"}},"PT":{"title":"Segue os resultados ao vivo em Português!","description":"Visita <a href=\"https:\/\/www.flashscore.pt\/\">Flashscore.pt<\/a>"},"PT-BR":{"title":"Acompanhe nossos resultados ao vivo em português!","description":"Siga para <a href=\"https:\/\/www.flashscore.com.br\/\">Flashscore.com.br<\/a>"},"RO":{"title":"Urmărește scoruri live în Română!","description":"Du-te pe <a href=\"https:\/\/www.flashscore.ro\/\">Flashscore.ro<\/a>"},"SK":{"title":"Sledujte naše live výsledky v slovenčine!","description":"Prejsť na <a href=\"https:\/\/www.flashscore.sk\/\">Flashscore.sk<\/a>"},"SI":{"title":"Spremljajte rezultate v živo v Slovenščini!","description":"Obiščite <a href=\"https:\/\/www.flashscore.si\/\">Flashscore.si<\/a>"},"SE":{"title":"Följ vår livescore på svenska!","description":"Gå till <a href=\"https:\/\/www.flashscore.se\/\">Flashscore.se<\/a>"},"VN":{"title":"Theo dõi tỷ số trực tiếp bằng Tiếng Việt!","description":"Hãy đến <a href=\"https:\/\/www.flashscore.vn\/\">Flashscore.vn<\/a>"},"UA":{"title":"Стежте за нашими live результатами українською!","description":"Перейти на <a href=\"https:\/\/www.flashscore.ua\/\">Flashscore.ua<\/a>"},"VI":{"title":"Để xem trực tiếp tỉ số bằng tiếng Việt!","description":"Hãy dùng <a href=\"https:\/\/www.flashscore.vn\/\">Flashscore.vn<\/a>"},"TR":{"title":"Canlı skorları Türkçe takip edin!","description":"<a href=\"https:\/\/www.flashscore.com.tr\/\">Flashscore.com.tr<\/a>'ye gidin"},"CZ":{"title":"Sledujte naše live výsledky v češtině!","description":"Přejít na <a href=\"https:\/\/www.livesport.cz\/\">Livesport.cz<\/a>"},"JA":{"title":"私どもの日本版ライブスコアをフォローください！","description":"<a href=\"https:\/\/www.flashscore.co.jp\/\">Flashscore.co.jp<\/a> はこちら。"},"KR":{"title":"한국어로 실시간 스코어를 확인하세요!","description":"<a href=\"https:\/\/www.flashscore.co.kr\/\">Flashscore.co.kr<\/a> 바로가기"}},"show_after_visits":3},"confirmation_box":{"enabled":false},"myfs":{"enabled":true,"newsfeed":{"past_days":14,"count":15,"allowed_counts":[3,15,30]},"refresh_tolerance":4},"swap_participants":{"sports":[],"show_at_sign":false},"legal_age_confirmation":{"enabled":true,"geoip":[],"show_age_question":false,"can_rewoke_age_confirm":true,"hide_odds_before_confirm":true,"overlay_modal_geoip":["NL"]},"gambling":{"gamble_responsibly_footer":{"project_geoip":"","client_geoips":[],"hide_bottom":false},"legal_banner":{"client_geoips":[]}},"last_matches_stats_order":{"3":[595,169,713,541,696,697],"4":[596,541,169,777,715,649,781],"1":[595,596,541,649,965,599,600]},"disabled_pages":{"geoip":["TR","GR"]},"disabled_betting_in_live":{"geoip":["NL"]},"dark_mode":{"enabled":true,"theme_switcher":true,"dark_is_default":false},"sports_with_flag":[2,14,16,28,25,15,17,21],"onetrust":{"show_privacy_shield":false,"enable":true},"wizard":{"enabled":false},"myleagues":{"position_of_banner":10},"team_page":{"duel":[3,4,5,6,7,8,9,10,11,12,15,16,17,18,19,21,22,24,25,26,28,29,30,36,42]},"fsds":{"client_urls":{"default":"https:\/\/46.ds.lsapp.eu\/pq_graphql","live_odds":"https:\/\/46.ds.lsapp.eu\/pq_graphql","odds":"https:\/\/global.ds.lsapp.eu\/odds\/pq_graphql"},"pushPrefix":"\/fsds\/changes"},"fs_news":{"enabled":false,"widgets":{"live_table":{"enabled":false},"detail":{"enabled":false,"blacklisted_sport_id":[]},"tournament_page_summary_tab":{"enabled":false},"h2h_page":{"enabled":false}},"video_api":{"host":"https:\/\/media.lsmedialib.com"},"source":false,"images":{"cloud":{"endpoint":"https:\/\/livesport-ott-images.ssl.cdn.cra.cz"}}},"line_up":{"used_substitutes":{"enabled":true,"sports":[1]},"sports_with_participant_images":[1,3,4],"player_ratings":[1,4],"live_player_ratings":false,"sports_with_live_rating":[1],"fsds_source":[1,3,4],"predicted_line_up":true},"promo_bar":{"multi_language_bar":{"enabled":true,"new_languages":{"kk":"Сіздің аймағыңыз үшін Қазақ тіліндегі Flashscore ұсынылады."},"hide_for_geo_ip":["RU"]}},"frontend_logging":{"enable":true,"server":"https:\/\/logging-service.livesport.services\/","token":"Y3uhIv5Ges46mMdAZm53akso95sYOogk","percentage_of_sessions_to_log":1},"static_fs_cdn":{"enabled":true,"url":"https:\/\/static.flashscore.com"},"feed_resolver":{"local":[{"url":"https:\/\/46.flashscore.ninja","weight":1,"countries":["AL","AD","AM","AT","AZ","BY","BE","BA","BG","HR","CY","CZ","DK","EE","FO","FI","FR","GI","GR","HU","IS","IE","IL","IT","KZ","XK","LV","LI","LT","LU","MK","MD","MC","ME","NL","NO","PL","RO","RU","SM","RS","SK","SI","ES","SE","CH","TR","UA","GB"]}],"global":[],"default_url":"https:\/\/global.flashscore.ninja"},"sport_list":{"soccer":1,"tennis":2,"basketball":3,"hockey":4,"american-football":5,"baseball":6,"handball":7,"rugby-union":8,"floorball":9,"bandy":10,"futsal":11,"volleyball":12,"cricket":13,"darts":14,"snooker":15,"boxing":16,"beach-volleyball":17,"aussie-rules":18,"rugby-league":19,"badminton":21,"water-polo":22,"golf":23,"field-hockey":24,"table-tennis":25,"beach-soccer":26,"mma":28,"netball":29,"pesapallo":30,"motorsport":31,"motorsport-auto-racing":32,"motorsport-moto-racing":33,"cycling":34,"horse-racing":35,"esports":36,"winter-sports":37,"winter-sports-ski-jumping":38,"winter-sports-alpine-skiing":39,"winter-sports-cross-country":40,"winter-sports-biathlon":41,"kabaddi":42},"lang_box_dialog":{"enabled":false,"enabled_on_local":false,"hidden_flags_for_geo_ip":[],"langs_with_new_badge":[]},"full_page_match_detail":{"popup_button_tooltip_enabled":true,"popup_button_enabled":true,"open_detail_in_popup":false,"sticky_elements":{"match_header":{"is_sticky":true,"is_responsive_sticky":true}}},"single_sport":{"enabled":false},"live_table":{"standings_link_without_popup":false},"event_previews":{"enabled":false,"target_blank":true},"match_detail":{"top_statistics":{"enable":true}},"betting_types":{"1":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE"],"odds_tab":["HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","NEXT_GOAL","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"23":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"},"2":{"prematch_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","CORRECT_SCORE","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"4":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"3":{"prematch_odds":{"summary_tab":["HOME_AWAY","HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_AWAY","HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"6":{"prematch_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","HOME_DRAW_AWAY"],"odds_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","CORRECT_SCORE","HOME_DRAW_AWAY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","HOME_DRAW_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"14":{"prematch_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","CORRECT_SCORE"],"odds_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","EUROPEAN_HANDICAP","CORRECT_SCORE"]},"live_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"15":{"prematch_odds":{"summary_tab":["HOME_AWAY","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"12":{"prematch_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"5":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"18":{"prematch_odds":{"summary_tab":["HOME_AWAY","HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_AWAY","HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP","EUROPEAN_HANDICAP","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"21":{"prematch_odds":{"summary_tab":["HOME_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"10":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP","DOUBLE_CHANCE"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"26":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"17":{"prematch_odds":{"summary_tab":["HOME_AWAY","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"16":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"13":{"prematch_odds":{"summary_tab":["HOME_AWAY","HOME_DRAW_AWAY"],"odds_tab":["HOME_AWAY","HOME_DRAW_AWAY","OVER_UNDER","DOUBLE_CHANCE","ASIAN_HANDICAP"]},"live_odds":{"summary_tab":["HOME_AWAY","HOME_DRAW_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"34":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":[]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"},"36":{"prematch_odds":{"summary_tab":["HOME_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"24":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"9":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"11":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"7":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"35":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":[]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"},"42":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"28":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"31":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":[]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"},"32":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":[]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"},"33":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"},"29":{"prematch_odds":{"summary_tab":["HOME_AWAY","HOME_DRAW_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY","HOME_DRAW_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"30":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"19":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"8":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"25":{"prematch_odds":{"summary_tab":["HOME_AWAY"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_AWAY"],"odds_tab":[]},"default_bet_type":"HOME_AWAY"},"22":{"prematch_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP","BOTH_TEAMS_TO_SCORE","TO_QUALIFY","DOUBLE_CHANCE","EUROPEAN_HANDICAP","DRAW_NO_BET","CORRECT_SCORE","HALF_FULL_TIME","ODD_OR_EVEN"]},"live_odds":{"summary_tab":["HOME_DRAW_AWAY","HOME_AWAY","OVER_UNDER","ASIAN_HANDICAP"],"odds_tab":[]},"default_bet_type":"HOME_DRAW_AWAY"},"37":{"prematch_odds":{"summary_tab":["TOP_POSITION_MERGED"],"odds_tab":[]},"live_odds":{"summary_tab":[],"odds_tab":[]},"default_bet_type":"TOP_POSITION_MERGED"}},"player_match_stats":{"card_enabled":true,"card_from_lineups_enabled":false},"sphinxsearch":{"server_domain":"s.livesport.services","search_path":"\/api\/v2\/search\/","top_search_path":"\/api\/v2\/top-search\/","enable":true,"disabled_sports_in_select":[32,33],"client_server":"s.livesport.services\/api\/v2\/search\/","top_search_client_server":"s.livesport.services\/api\/v2\/top-search\/"}},"portable_apps":{"android":{"enable":false,"app-id":"eu.livesport.MyScore_kz","app-name":"MyScore KZ","url":"\/mobile\/#android","header-url":"\/mobile\/#android","footer-url":"\/mobile\/#android","apk-url":"https:\/\/t.flashscorekz.com\/android\/flashscore-com.apk","store-url":"https:\/\/play.google.com\/store\/apps\/details?id=eu.livesport.FlashScore_com","context-box-url":"\/mobile\/#android"},"info":{"name":"MyScore.kz","developer":"Flashscore"}},"ajax":{"sync_time":{"default":10,"update":5,"game":5,"live_tables":10},"goal_duration_time":60,"correction_duration_time":15,"penalty_duration_time":60,"counter_duration_time":60,"scores_changed_duration_time":60,"prematch_odds_sync_time":60,"prematch_odds_cache_time":180,"sql_cache_time":30},"cache":{"feed_x":"x"},"core_debugger":{"internal":false},"mobi":{"geoip_restriction":["GR"]},"push":{"namespace":"fs3_"}},"stats2_config":{"tournament":"GWpmNglF","tournamentStage":"r3NUJK6F","eventId":"","statsTabsConfig":{"16":{"name":"Таблица Live","url":"live","sortKey":1},"1":{"name":"Таблица","url":"table","sortKey":2,"items":{"1":{"name":"Итого","url":"overall","sortKey":1},"2":{"name":"Дома","url":"home","sortKey":2},"3":{"name":"В гостях","url":"away","sortKey":3}}},"5":{"name":"Форма","url":"form","sortKey":3,"items":{"5":{"name":"Итого","url":"overall","has_sub_items":true,"sortKey":1},"8":{"name":"Дома","url":"home","has_sub_items":true,"sortKey":2},"9":{"name":"В гостях","url":"away","has_sub_items":true,"sortKey":3}}},"6":{"name":"Больше\/меньше","url":"over_under","sortKey":4,"items":{"6":{"name":"Итого","url":"overall","has_sub_items":true,"sortKey":1},"17":{"name":"Дома","url":"home","has_sub_items":true,"sortKey":2},"18":{"name":"В гостях","url":"away","has_sub_items":true,"sortKey":3}}},"7":{"name":"Серии","url":"streaks","sortKey":5},"-1":{"name":"Сетка","url":"draw","sortKey":6},"13":{"url":"ht_ft","name":"HT\/FT","title":"Тайм\/матч","sortKey":7,"items":{"13":{"name":"Итого","url":"overall","sortKey":1},"14":{"name":"Дома","url":"home","sortKey":2},"15":{"name":"В гостях","url":"away","sortKey":3}}},"10":{"name":"Бомбардиры","url":"top_scorers","sortKey":8}},"statsOverUnderTypes":{"8":{"sort":0,"name":0.5,"default_tab_order":1},"1":{"sort":1,"name":1.5,"default_tab_order":0},"2":{"sort":2,"name":2.5,"default_tab_order":2},"3":{"sort":3,"name":3.5,"default_tab_order":0},"4":{"sort":4,"name":4.5,"default_tab_order":0},"5":{"sort":5,"name":5.5,"default_tab_order":0},"6":{"sort":6,"name":6.5,"default_tab_order":0},"7":{"sort":7,"name":7.5,"default_tab_order":0}}},"common_feed":[{"DA":1},{"DZ":1},{"DB":1},{"DD":1744974394},{"AW":1},{"DC":1752681600},{"DS":0},{"DI":-1},{"DL":1},{"DM":""},{"POS":false},{"DX":"PS,PLI,OD,HH,SCR,LT,TA,TV,DTF"},{"DEI":"https:\/\/static.flashscore.com\/res\/image\/data\/lbeNW3hl-OlZvE3N9-6aTuLu6E.png"},{"DV":1},{"DT":false},{"EI":false},{"SC":"471"},{"SB":"1"},{"SD":"1xBet.kz"}],"final_stage":"","event_stage_time":"0:0","eventStageTypeId":1,"eventStageId":1,"eventStageStartTime":1744974394,"hasLiveCentre":true,"is7Rugby":false,"event_info":{"hasPlayerStats":true,"hasStats":false,"hasMissingPlayers":true},"sport_id":1,"super_template_id":0,"sport_name":"Футбол","sport_url":"\/football\/","sport":"soccer","header":{"project_name_class":"flashscorekz-com-white","root_url":"\/","flag_id":0,"tournament":{"category":"","link":"\/football\/norway\/eliteserien\/","tournament":"Высшая лига - Тур 5","categoryLink":""},"country_name":"Норвегия","country_id":145,"parent_sport_data":null,"has_category_page":false,"has_country_page":true},"participantsData":{"home":[{"id":"bPdl4V8N","eventParticipantId":"tWOc5ps0","sport_id":1,"name":"Фредрикстад","short_name":"Фредрикстад","url_name":"fredrikstad","image_path":"https:\/\/static.flashscore.com\/res\/image\/data\/lbeNW3hl-6aTuLu6E.png","small_image_path":"https:\/\/static.flashscore.com\/res\/image\/data\/67sLfbjC-6aTuLu6E.png","detail_link":"\/team\/fredrikstad\/bPdl4V8N","rank":[],"country":"","country_id":145,"three_char_name":"ФРЕ","birthday_timestamp":"","team":"","is_team":true}],"away":[{"id":"S0WZMUNG","eventParticipantId":"ldS53OBC","sport_id":1,"name":"Будё\/Глимт","short_name":"Будё\/Глимт","url_name":"bodo-glimt","image_path":"https:\/\/static.flashscore.com\/res\/image\/data\/KKvh8Yjl-nJtu1LWt.png","small_image_path":"https:\/\/static.flashscore.com\/res\/image\/data\/CCIKVSlC-nJtu1LWt.png","detail_link":"\/team\/bodo-glimt\/S0WZMUNG","rank":[],"country":"","country_id":145,"three_char_name":"БУД","birthday_timestamp":"","team":"","is_team":true}],"sport_id":1,"is_national":false},"eventParticipantEncodedId":"ltB92yKu","odds":{"formats":[{"id":1,"ident":"eu","name_iframe":"TRANS_ODDS_FORMAT_IFRAME_EU","name_detail":"TRANS_ODDS_FORMAT_DETAIL_EU","name_title":"TRANS_ODDS_FORMAT_TITLE_EU","example":"1.50"}],"prematchOddsSettings":{"bookmakersWithLiveOffer":{"16":"y","49":"y","160":"y","454":"y","549":"y","723":"y","851":"y"},"liveOddsData":{"tableType":"live-odds","tabTitle":"Live кэфы","hasOddsComparison":false,"bettingTypeId":1,"tableHeader":[{"name":"1"},{"name":"X"},{"name":"2"}],"geoOddsComparisonSettings":{"default":true,"RU":true,"GR":true,"CZ":true,"FR":true,"US:USDC":true,"US:USIA":true,"US:USIL":true,"US:USKS":true,"US:USKY":true,"US:USMS":true,"US:USNC":true,"US:USNJ":true,"US:USNV":true,"US:USNY":true,"US:USOH":true,"US:USTN":true,"US:USVT":true,"US:USWY":true,"US:USIN":false}},"prematchOddsData":{"bettingTypeId":1,"tableHeader":[{"name":"1"},{"name":"X"},{"name":"2"}],"hasOddsComparison":true,"geoOddsComparisonSettings":{"default":true,"RU":true,"GR":true,"CZ":true,"FR":true,"US:USDC":true,"US:USIA":true,"US:USIL":true,"US:USKS":true,"US:USKY":true,"US:USMS":true,"US:USNC":true,"US:USNJ":true,"US:USNV":true,"US:USNY":true,"US:USOH":true,"US:USTN":true,"US:USVT":true,"US:USWY":true,"US:USIN":false}},"oddsBettingTypes":{"1":1,"2":3,"3":3,"4":1,"5":3,"6":3,"7":1,"8":1,"9":1,"10":1,"11":1,"12":3,"18":3,"19":1,"13":3,"14":3,"15":3,"16":1,"17":3,"21":3,"22":1,"24":1,"25":3,"26":1,"28":3,"29":3,"30":1,"23":101,"31":101,"32":101,"33":101,"34":101,"35":16,"36":3,"37":101,"38":101,"39":101,"40":101,"41":101,"42":1},"advertNote":""},"bookmakerGeoGroups":{"default":{"geo_ip":"default","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"RU":{"geo_ip":"RU","clickable":"0","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"0","show_bookmaker_logo_in_summary":"0","clickable_bookmaker_logo_in_summary":"0","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"0","clickable_bookmaker_logo_odds_comparison":"0"},"GR":{"geo_ip":"GR","clickable":"0","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"0","show_bookmaker_logo_in_summary":"0","clickable_bookmaker_logo_in_summary":"0","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"0","clickable_bookmaker_logo_odds_comparison":"0"},"CZ":{"geo_ip":"CZ","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"FR":{"geo_ip":"FR","clickable":"0","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"0","show_bookmaker_logo_in_summary":"0","clickable_bookmaker_logo_in_summary":"0","show_odds_comparison_tab":"0","show_bookmaker_logo_odds_comparison":"0","clickable_bookmaker_logo_odds_comparison":"0"},"US:USDC":{"geo_ip":"US:USDC","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USIA":{"geo_ip":"US:USIA","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USIL":{"geo_ip":"US:USIL","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USKS":{"geo_ip":"US:USKS","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USKY":{"geo_ip":"US:USKY","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USMS":{"geo_ip":"US:USMS","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNC":{"geo_ip":"US:USNC","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNJ":{"geo_ip":"US:USNJ","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNV":{"geo_ip":"US:USNV","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNY":{"geo_ip":"US:USNY","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USOH":{"geo_ip":"US:USOH","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USTN":{"geo_ip":"US:USTN","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USVT":{"geo_ip":"US:USVT","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USWY":{"geo_ip":"US:USWY","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USIN":{"geo_ip":"US:USIN","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"}},"bookmakersData":{"default":[{"main_bookmaker_id":"471","project_id":"46","geo_ip":"default","name":"1xBet.kz","premium_status_id":"1"},{"main_bookmaker_id":"723","project_id":"46","geo_ip":"default","name":"Winlinekz","premium_status_id":"1"},{"main_bookmaker_id":"547","project_id":"46","geo_ip":"default","name":"Fonbet.kz","premium_status_id":"1"}],"RU":[{"main_bookmaker_id":"454","project_id":"46","geo_ip":"RU","name":"Winline.ru","premium_status_id":"1"}],"GR":[{"main_bookmaker_id":"16","project_id":"46","geo_ip":"GR","name":"bet365","premium_status_id":"2"}],"CZ":[{"main_bookmaker_id":"49","project_id":"46","geo_ip":"CZ","name":"Tipsport.cz","premium_status_id":"2"}],"FR":[{"main_bookmaker_id":"160","project_id":"46","geo_ip":"FR","name":"Unibet.fr","premium_status_id":"1"},{"main_bookmaker_id":"484","project_id":"46","geo_ip":"FR","name":"ParionsSport","premium_status_id":"1"},{"main_bookmaker_id":"905","project_id":"46","geo_ip":"FR","name":"Betsson.fr","premium_status_id":"1"}],"US:USDC":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USDC","name":"BetMGM.us","premium_status_id":"1"}],"US:USIA":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIA","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIA","name":"BetMGM.us","premium_status_id":"1"}],"US:USIL":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIL","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIL","name":"BetMGM.us","premium_status_id":"1"}],"US:USKS":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USKS","name":"BetMGM.us","premium_status_id":"1"}],"US:USKY":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USKY","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USKY","name":"BetMGM.us","premium_status_id":"1"}],"US:USMS":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USMS","name":"BetMGM.us","premium_status_id":"1"}],"US:USNC":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USNC","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNC","name":"BetMGM.us","premium_status_id":"1"}],"US:USNJ":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USNJ","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNJ","name":"BetMGM.us","premium_status_id":"1"}],"US:USNV":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNV","name":"BetMGM.us","premium_status_id":"1"}],"US:USNY":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNY","name":"BetMGM.us","premium_status_id":"1"}],"US:USOH":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USOH","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USOH","name":"BetMGM.us","premium_status_id":"1"}],"US:USTN":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USTN","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USTN","name":"BetMGM.us","premium_status_id":"1"}],"US:USVT":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USVT","name":"BetMGM.us","premium_status_id":"1"}],"US:USWY":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USWY","name":"BetMGM.us","premium_status_id":"1"}],"US:USIN":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIN","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIN","name":"BetMGM.us","premium_status_id":"1"}]},"evaluator":{"isSwapped":false},"tabNames":{"1x2":{"urlName":"1x2-odds","shortName":"1Х2","fullName":"1Х2"},"moneyline":{"urlName":"home-away","shortName":"1 или 2","fullName":"1 или 2"},"under-over":{"urlName":"over-under","shortName":"Б\/М","fullName":"Больше\/Mеньше"},"european-handicap":{"urlName":"european-handicap","shortName":"ЕГ","fullName":"Европейский гандикап"},"double-chance":{"urlName":"double-chance","shortName":"ДИ","fullName":"Двойной исход"},"ht-ft":{"urlName":"ht-ft","shortName":"HT\/FT","fullName":"Тайм\/Матч"},"draw-no-bet":{"urlName":"draw-no-bet","shortName":"Н-в","fullName":"Ничья-возврат"},"correct-score":{"urlName":"correct-score","shortName":"ТС","fullName":"Точный счет"},"oddeven":{"urlName":"odd-even","shortName":"Ч\/Н","fullName":"Чет\/Нечет"},"to-qualify":{"urlName":"to-qualify","shortName":"Прох.","fullName":"Проход"},"both-teams-to-score":{"urlName":"both-teams-to-score","shortName":"ОЗ","fullName":"Обе забьют"},"asian-handicap":{"urlName":"asian-handicap","shortName":"AГ","fullName":"Азиатский гандикап"}},"subTabNames":{"ft":{"urlName":"full-time","fullName":"Осн. время"},"ft-include-ot":{"urlName":"ft-including-ot","fullName":"ОВ + ОТ"},"1hf":{"urlName":"1st-half","fullName":"1-й тайм"},"2hf":{"urlName":"2nd-half","fullName":"2-й тайм"},"1per":{"urlName":"1st-period","fullName":"1-й период"},"1qrt":{"urlName":"1st-qrt","fullName":"1-я четверть"},"set1":{"urlName":"set-1","fullName":"1-й сет"},"set2":{"urlName":"set-2","fullName":"2-й сет"}},"defaultBettingType":"1x2","defaultBettingScope":"ft","geoOddsComparisonSettings":{"default":true,"RU":true,"GR":true,"CZ":true,"FR":true,"US:USDC":true,"US:USIA":true,"US:USIL":true,"US:USKS":true,"US:USKY":true,"US:USMS":true,"US:USNC":true,"US:USNJ":true,"US:USNV":true,"US:USNY":true,"US:USOH":true,"US:USTN":true,"US:USVT":true,"US:USWY":true,"US:USIN":false}},"banners":{"boxOverContent":{"html":"","geoGroups":["default","RU","GR","CZ","FR","US:USDC","US:USIA","US:USIL","US:USKS","US:USKY","US:USMS","US:USNC","US:USNJ","US:USNV","US:USNY","US:USOH","US:USTN","US:USVT","US:USWY","US:USIN"]}},"initialDataLayer":"{\"event\":\"pageinfo\",\"sport\":\"soccer\",\"type\":\"detail_page\",\"id\":\"tl5ebinQ\",\"stage\":\"r3NUJK6F\",\"tournament\":\"GWpmNglF\",\"country\":\"NO\"}","pushParameters":{"domain":"fsdatacentre.com","aliases":"p1tt2:100, p2tt2:100, p3tt2:100, p4tt2:100, p5tt2:100, p6tt2:100, p7tt2:100, p8tt2:100, p9tt2:100, p10tt2:100","port":443,"namespace":"\/fs\/fs3_","projectId":46,"enabledForThisSport":false},"project_id":46,"eventPreview":null};
+</script>
+<script defer type="text/javascript" src="https://static.flashscore.com/x/js/translations-wdlicontooltip.46.d8c4f180.js"></script>
+<script type="text/javascript">
+    cjs.Api.loader.get('cjs').call(function(_cjs) {
+        sentences = [];sentences_parts = [];default_tz = 5;matches = null;mpe_alias = "p1tt2:100, p2tt2:100, p3tt2:100, p4tt2:100, p5tt2:100, p6tt2:100, p7tt2:100, p8tt2:100, p9tt2:100, p10tt2:100";mpe_debug = false;mpe_delivery = "p";odds_enable = true;project_id = 46;prev_category = null;prev_date = null;push_fail_logging = false;sport = "soccer";tudate = 1752624000;stats_live_enable = 1;country_id = 0;tournament_id = 0;participant_id = 0;series_id = 0;
+        try {
+            matches = /^([^#]+)#(.*)\breload:([0-9]+)\-([0-9])(.*)$/.exec(parent.location.href);
+        } catch (e) {}
+
+        if(matches)
+        {
+            prev_date = matches[3];
+            prev_category = matches[4];
+            // cut out reload message from url bookmark
+            parent.location.href = matches[1] + "#" +
+                    (matches[2].substr(matches[2].length - 1) == ";" ? matches[2].substr(0, matches[2].length - 1) : matches[2]) +
+                    ((matches[5].substr(0, 1) == ";" && !matches[2].length) ? matches[5].substr(1) : matches[5]);
+        }
+
+        const utilPage = _cjs.dic.get("util_page");
+        utilPage.setMixedFeed(false);
+        utilPage.setParentSportId(0);
+        utilPage.setPageType("sport_page");
+
+        _cjs.fromGlobalScope.init({
+            sportId: 1,
+            sport_name: "soccer",
+            country_id: 0,
+            tournament_id: 0,
+            country_tournament_order_fin: true,
+            prev_category: null,
+            prev_date: null,
+            startUpdater: false,
+            participant_id: 0,
+            seriesId: 0
+        });
+        _cjs.pageTab = "";
+        _cjs.allowedTvs = [780,805,1783,2263,2425,2455,2527,3091,3137,3193,3633,3715,4677,4845,5207,5283,5403,5469,6195,6263,6463,6811,6937,7701,7783,8787,8909,9049];
+        _cjs.bookmakerSettings = {
+            "bookmakersData": {"default":[{"main_bookmaker_id":"471","project_id":"46","geo_ip":"default","name":"1xBet.kz","premium_status_id":"1"},{"main_bookmaker_id":"723","project_id":"46","geo_ip":"default","name":"Winlinekz","premium_status_id":"1"},{"main_bookmaker_id":"547","project_id":"46","geo_ip":"default","name":"Fonbet.kz","premium_status_id":"1"}],"RU":[{"main_bookmaker_id":"454","project_id":"46","geo_ip":"RU","name":"Winline.ru","premium_status_id":"1"}],"GR":[{"main_bookmaker_id":"16","project_id":"46","geo_ip":"GR","name":"bet365","premium_status_id":"2"}],"CZ":[{"main_bookmaker_id":"49","project_id":"46","geo_ip":"CZ","name":"Tipsport.cz","premium_status_id":"2"}],"FR":[{"main_bookmaker_id":"160","project_id":"46","geo_ip":"FR","name":"Unibet.fr","premium_status_id":"1"},{"main_bookmaker_id":"484","project_id":"46","geo_ip":"FR","name":"ParionsSport","premium_status_id":"1"},{"main_bookmaker_id":"905","project_id":"46","geo_ip":"FR","name":"Betsson.fr","premium_status_id":"1"}],"US:USDC":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USDC","name":"BetMGM.us","premium_status_id":"1"}],"US:USIA":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIA","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIA","name":"BetMGM.us","premium_status_id":"1"}],"US:USIL":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIL","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIL","name":"BetMGM.us","premium_status_id":"1"}],"US:USKS":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USKS","name":"BetMGM.us","premium_status_id":"1"}],"US:USKY":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USKY","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USKY","name":"BetMGM.us","premium_status_id":"1"}],"US:USMS":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USMS","name":"BetMGM.us","premium_status_id":"1"}],"US:USNC":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USNC","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNC","name":"BetMGM.us","premium_status_id":"1"}],"US:USNJ":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USNJ","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNJ","name":"BetMGM.us","premium_status_id":"1"}],"US:USNV":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNV","name":"BetMGM.us","premium_status_id":"1"}],"US:USNY":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USNY","name":"BetMGM.us","premium_status_id":"1"}],"US:USOH":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USOH","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USOH","name":"BetMGM.us","premium_status_id":"1"}],"US:USTN":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USTN","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USTN","name":"BetMGM.us","premium_status_id":"1"}],"US:USVT":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USVT","name":"BetMGM.us","premium_status_id":"1"}],"US:USWY":[{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USWY","name":"BetMGM.us","premium_status_id":"1"}],"US:USIN":[{"main_bookmaker_id":"549","project_id":"46","geo_ip":"US:USIN","name":"bet365.us","premium_status_id":"1"},{"main_bookmaker_id":"851","project_id":"46","geo_ip":"US:USIN","name":"BetMGM.us","premium_status_id":"1"}]},
+            "availableBookmakers": {"default":["471","547","723","971","923"],"RU":["454"],"GR":["16"],"CZ":["49"],"FR":["141","160","484","905"],"US:USDC":["851"],"US:USIA":["549","851"],"US:USIL":["549","851"],"US:USKS":["851"],"US:USKY":["549","851"],"US:USMS":["851"],"US:USNC":["549","851"],"US:USNJ":["549","851"],"US:USNV":["851"],"US:USNY":["851"],"US:USOH":["549","851"],"US:USTN":["549","851"],"US:USVT":["851"],"US:USWY":["851"],"US:USIN":[]},
+            "geoGroups": {"default":{"geo_ip":"default","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"RU":{"geo_ip":"RU","clickable":"0","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"0","show_bookmaker_logo_in_summary":"0","clickable_bookmaker_logo_in_summary":"0","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"0","clickable_bookmaker_logo_odds_comparison":"0"},"GR":{"geo_ip":"GR","clickable":"0","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"0","show_bookmaker_logo_in_summary":"0","clickable_bookmaker_logo_in_summary":"0","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"0","clickable_bookmaker_logo_odds_comparison":"0"},"CZ":{"geo_ip":"CZ","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"FR":{"geo_ip":"FR","clickable":"0","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"0","all_bookmakers_in_odds_comparison":"0","all_prematch_bookmakers_in_match_summary":"0","all_live_bookmakers_in_match_summary":"0","show_bookmaker_logo_in_summary":"0","clickable_bookmaker_logo_in_summary":"0","show_odds_comparison_tab":"0","show_bookmaker_logo_odds_comparison":"0","clickable_bookmaker_logo_odds_comparison":"0"},"US:USDC":{"geo_ip":"US:USDC","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USIA":{"geo_ip":"US:USIA","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USIL":{"geo_ip":"US:USIL","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USKS":{"geo_ip":"US:USKS","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USKY":{"geo_ip":"US:USKY","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USMS":{"geo_ip":"US:USMS","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNC":{"geo_ip":"US:USNC","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNJ":{"geo_ip":"US:USNJ","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNV":{"geo_ip":"US:USNV","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USNY":{"geo_ip":"US:USNY","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USOH":{"geo_ip":"US:USOH","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USTN":{"geo_ip":"US:USTN","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USVT":{"geo_ip":"US:USVT","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USWY":{"geo_ip":"US:USWY","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"},"US:USIN":{"geo_ip":"US:USIN","clickable":"1","logo_to_text_match_summary":"0","logo_to_text_odds_comparison":"0","logo_to_text_bonus":"0","odds_background_in_odds_comparison":"1","all_bookmakers_in_odds_comparison":"1","all_prematch_bookmakers_in_match_summary":"1","all_live_bookmakers_in_match_summary":"1","show_bookmaker_logo_in_summary":"1","clickable_bookmaker_logo_in_summary":"1","show_odds_comparison_tab":"1","show_bookmaker_logo_odds_comparison":"1","clickable_bookmaker_logo_odds_comparison":"1"}},
+            "logos": {"urls":{"471":"https://static.flashscore.com/res/image/data/bookmakers/17-471.png","16":"https://static.flashscore.com/res/image/data/bookmakers/17-16.png","454":"https://static.flashscore.com/res/image/data/bookmakers/17-454.png","547":"https://static.flashscore.com/res/image/data/bookmakers/17-547.png","723":"https://static.flashscore.com/res/image/data/bookmakers/17-723.png","49":"https://static.flashscore.com/res/image/data/bookmakers/17-49.png","32":"https://static.flashscore.com/res/image/data/bookmakers/17-32.png","160":"https://static.flashscore.com/res/image/data/bookmakers/17-160.png","484":"https://static.flashscore.com/res/image/data/bookmakers/17-484.png","905":"https://static.flashscore.com/res/image/data/bookmakers/17-905.png","141":"https://static.flashscore.com/res/image/data/bookmakers/17-141.png","923":"https://static.flashscore.com/res/image/data/bookmakers/17-923.png","971":"https://static.flashscore.com/res/image/data/bookmakers/17-971.png","851":"https://static.flashscore.com/res/image/data/bookmakers/17-851.png","549":"https://static.flashscore.com/res/image/data/bookmakers/17-549.png"}},
+        };
+        _cjs.Api.loader.get('bookmakersData').fulfill(function(callback) {
+            callback(_cjs.bookmakerSettings);
+        });
+    });
+</script>
+<script type="text/javascript">
+    var sport_url = '/football/';
+    document.ifa = function () {
+        return true;
+    };
+    var showMoreMenu = function (menuId) {
+        document.querySelectorAll(menuId).forEach(menu => {
+            menu.querySelectorAll("div.leftMenu__item").forEach(element => {
+                if (element.classList.contains("leftMenu__item--hidden")) {
+                    element.classList.remove("leftMenu__item--hidden");
+                }
+            });
+            menu.querySelectorAll(".leftMenu__item--more").forEach(element => {
+                element.className = 'leftMenu__item--hidden';
+            });
+        });
+
+        return false;
+    };
+</script>
+<div class="banner--underContent">
+    
+</div>
+</main><aside class="container__myMenu" id="lc"><div class="container__overlay"><div class="userControls" id="userControls"></div>
+<div class="menu country-list my-leagues leftMenu myTeamsWrapper"><div class="leftMenu__head"><svg class="leftMenu__icon leftMenu__icon--pin"><use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#pin"/></svg><span class="leftMenu__title">Закрепленные лиги</span></div><div id="my-leagues-list" class="menu leftMenu__list">
+<div class="leftSkel__cont ska__chp--dark">
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__banner">
+            <div class="leftSkel__banner--item"></div>
+            <div class="leftSkel__banner--text"></div>
+        </div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div></div></div>
+<div class="banner">
+<div id="zoneContainer-detail_left_menu_1" data-zone-group="detail_left_menu_1"></div>
+</div>
+</div>    <script type="text/javascript">
+        cjs.leftMenuTopLeagues = {"1_198_dYlOSQOD":{"id":"1_198_dYlOSQOD","menuOrder":51,"flagId":"198","title":"АНГЛИЯ: Премьер-лига","name":"Премьер-лига","url":"\/football\/england\/premier-league\/","from":1752639010},"1_81_W6BOzpK2":{"id":"1_81_W6BOzpK2","menuOrder":332,"flagId":"81","title":"ГЕРМАНИЯ: Бундеслига","name":"Бундеслига","url":"\/football\/germany\/bundesliga\/","from":1752639010},"1_176_QVmLl54o":{"id":"1_176_QVmLl54o","menuOrder":464,"flagId":"176","title":"ИСПАНИЯ: Примера","name":"Примера","url":"\/football\/spain\/laliga\/","from":1752639010},"1_98_COuk57Ci":{"id":"1_98_COuk57Ci","menuOrder":503,"flagId":"98","title":"ИТАЛИЯ: Серия А","name":"Серия А","url":"\/football\/italy\/serie-a\/","from":1752639010},"1_102_zNSwBuue":{"id":"1_102_zNSwBuue","menuOrder":536,"flagId":"102","title":"КАЗАХСТАН: Премьер-Лига","name":"Премьер-Лига","url":"\/football\/kazakhstan\/premier-league\/","from":1752639010},"1_102_8CUwsgHP":{"id":"1_102_8CUwsgHP","menuOrder":537,"flagId":"102","title":"КАЗАХСТАН: Первая Лига","name":"Первая Лига","url":"\/football\/kazakhstan\/first-league\/","from":1752639010},"1_102_U9Yb3oVd":{"id":"1_102_U9Yb3oVd","menuOrder":538,"flagId":"102","title":"КАЗАХСТАН: OLIMPBET - Кубок Казахстана","name":"OLIMPBET - Кубок Казахстана","url":"\/football\/kazakhstan\/kazakhstan-cup\/","from":1752639010},"1_102_0QiGc6S6":{"id":"1_102_0QiGc6S6","menuOrder":539,"flagId":"102","title":"КАЗАХСТАН: League Cup","name":"League Cup","url":"\/football\/kazakhstan\/league-cup\/","from":1752639010},"1_102_UZE9uz56":{"id":"1_102_UZE9uz56","menuOrder":541,"flagId":"102","title":"КАЗАХСТАН: League Women","name":"League Women","url":"\/football\/kazakhstan\/league-women\/","from":1752639010},"1_77_KIShoMk3":{"id":"1_77_KIShoMk3","menuOrder":938,"flagId":"77","title":"ФРАНЦИЯ: Первая лига","name":"Первая лига","url":"\/football\/france\/ligue-1\/","from":1752639010},"1_6_KQMVOQ0g":{"id":"1_6_KQMVOQ0g","menuOrder":1146,"flagId":"6","title":"ЕВРОПА: Евро","name":"Евро","url":"\/football\/europe\/euro\/","from":1752639010},"1_6_xGrwqq16":{"id":"1_6_xGrwqq16","menuOrder":1147,"flagId":"6","title":"ЕВРОПА: Лига чемпионов","name":"Лига чемпионов","url":"\/football\/europe\/champions-league\/","from":1752639010},"1_6_ClDjv3V5":{"id":"1_6_ClDjv3V5","menuOrder":1148,"flagId":"6","title":"ЕВРОПА: Лига Европы","name":"Лига Европы","url":"\/football\/europe\/europa-league\/","from":1752639010},"1_6_GfRbsVWM":{"id":"1_6_GfRbsVWM","menuOrder":1149,"flagId":"6","title":"ЕВРОПА: Лига конференций","name":"Лига конференций","url":"\/football\/europe\/conference-league\/","from":1752639010},"1_6_A9yxE9Ke":{"id":"1_6_A9yxE9Ke","menuOrder":1150,"flagId":"6","title":"ЕВРОПА: Лига наций УЕФА","name":"Лига наций УЕФА","url":"\/football\/europe\/uefa-nations-league\/","from":1752639010},"1_6_2ZqrOpGa":{"id":"1_6_2ZqrOpGa","menuOrder":1171,"flagId":"6","title":"ЕВРОПА: Евро - Женщины","name":"Евро - Женщины","url":"\/football\/europe\/euro-women\/","from":1752639010},"1_8_lvUBR5F8":{"id":"1_8_lvUBR5F8","menuOrder":1176,"flagId":"8","title":"МИР: Чемпионат мира","name":"Чемпионат мира","url":"\/football\/world\/world-cup\/","from":1752639010}};
+        cjs.Api.loader.get('cjs').callPriority(function (_cjs) {
+            _cjs.fromGlobalScope.my_leagues_init(1);
+        });
+    </script>
+    <div id='my-teams-left-menu' class='myTeamsWrapper'><div class="leftMenu__head"><svg class="leftMenu__icon leftMenu__icon--star"><use xlink:href="/res/_fs/image/13_symbols/action.svg?serial=1727#pin"/></svg><span class="leftMenu__title">Мои команды </span></div>
+</div>
+            <script type="text/javascript">
+                cjs.Api.loader.get('cjs').callPriority(function(_cjs) {
+                    _cjs.fromGlobalScope.myTeamsInit(1);
+                });
+            </script>
+			<div id="category-left-menu"></div><div class="left_menu_categories_seo">
+<a href="/football/australia/">Австралия</a>
+<a href="/football/austria/">Австрия</a>
+<a href="/football/austria/bundesliga/">Бундеслига</a>
+<a href="/football/azerbaijan/">Азербайджан</a>
+<a href="/football/albania/">Албания</a>
+<a href="/football/algeria/">Алжир</a>
+<a href="/football/england/">Англия</a>
+<a href="/football/england/premier-league/">Премьер-лига</a>
+<a href="/football/england/championship/">Чемпионшип</a>
+<a href="/football/england/league-one/">Первая лига</a>
+<a href="/football/england/league-two/">Вторая лига</a>
+<a href="/football/england/fa-cup/">Кубок ФА</a>
+<a href="/football/england/efl-cup/">Кубок Английской лиги</a>
+<a href="/football/angola/">Ангола</a>
+<a href="/football/andorra/">Андорра</a>
+<a href="/football/antigua-barbuda/">Антигуа и Барбуда</a>
+<a href="/football/argentina/">Аргентина</a>
+<a href="/football/armenia/">Армения</a>
+<a href="/football/aruba/">Аруба</a>
+<a href="/football/bangladesh/">Бангладеш</a>
+<a href="/football/barbados/">Барбадос</a>
+<a href="/football/bahrain/">Бахрейн</a>
+<a href="/football/belarus/">Беларусь</a>
+<a href="/football/belgium/">Бельгия</a>
+<a href="/football/belgium/jupiler-league/">Высшая лига</a>
+<a href="/football/benin/">Бенин</a>
+<a href="/football/bermuda/">Бермуды</a>
+<a href="/football/bulgaria/">Болгария</a>
+<a href="/football/bolivia/">Боливия</a>
+<a href="/football/bosnia-and-herzegovina/">Босния и Герцеговина</a>
+<a href="/football/botswana/">Ботсвана</a>
+<a href="/football/brazil/">Бразилия</a>
+<a href="/football/brazil/serie-a-betano/">Serie A Betano</a>
+<a href="/football/burkina-faso/">Буркина-Фасо</a>
+<a href="/football/burundi/">Бурунди</a>
+<a href="/football/bhutan/">Бутан</a>
+<a href="/football/hungary/">Венгрия</a>
+<a href="/football/venezuela/">Венесуэла</a>
+<a href="/football/vietnam/">Вьетнам</a>
+<a href="/football/gabon/">Габон</a>
+<a href="/football/haiti/">Гаити</a>
+<a href="/football/gambia/">Гамбия</a>
+<a href="/football/ghana/">Гана</a>
+<a href="/football/guatemala/">Гватемала</a>
+<a href="/football/guinea/">Гвинея</a>
+<a href="/football/germany/">Германия</a>
+<a href="/football/germany/bundesliga/">Бундеслига</a>
+<a href="/football/germany/2-bundesliga/">Вторая Бундеслига</a>
+<a href="/football/gibraltar/">Гибралтар</a>
+<a href="/football/honduras/">Гондурас</a>
+<a href="/football/hong-kong/">Гонконг</a>
+<a href="/football/grenada/">Гренада</a>
+<a href="/football/greece/">Греция</a>
+<a href="/football/georgia/">Грузия</a>
+<a href="/football/denmark/">Дания</a>
+<a href="/football/djibouti/">Джибути</a>
+<a href="/football/dominican-republic/">Доминиканская Республика</a>
+<a href="/football/egypt/">Египет</a>
+<a href="/football/zambia/">Замбия</a>
+<a href="/football/zimbabwe/">Зимбабве</a>
+<a href="/football/israel/">Израиль</a>
+<a href="/football/india/">Индия</a>
+<a href="/football/indonesia/">Индонезия</a>
+<a href="/football/jordan/">Иордания</a>
+<a href="/football/iraq/">Ирак</a>
+<a href="/football/iran/">Иран</a>
+<a href="/football/ireland/">Ирландия</a>
+<a href="/football/iceland/">Исландия</a>
+<a href="/football/spain/">Испания</a>
+<a href="/football/spain/laliga/">Примера</a>
+<a href="/football/spain/copa-del-rey/">Кубок Испании</a>
+<a href="/football/italy/">Италия</a>
+<a href="/football/italy/serie-a/">Серия А</a>
+<a href="/football/italy/serie-b/">Серия В</a>
+<a href="/football/italy/coppa-italia/">Кубок Италии</a>
+<a href="/football/yemen/">Йемен</a>
+<a href="/football/cape-verde/">Кабо-Верде</a>
+<a href="/football/kazakhstan/">Казахстан</a>
+<a href="/football/kazakhstan/premier-league/">Премьер-Лига</a>
+<a href="/football/kazakhstan/first-league/">Первая Лига</a>
+<a href="/football/kazakhstan/kazakhstan-cup/">OLIMPBET - Кубок Казахстана</a>
+<a href="/football/cambodia/">Камбоджа</a>
+<a href="/football/cameroon/">Камерун</a>
+<a href="/football/canada/">Канада</a>
+<a href="/football/qatar/">Катар</a>
+<a href="/football/kenya/">Кения</a>
+<a href="/football/cyprus/">Кипр</a>
+<a href="/football/china/">Китай</a>
+<a href="/football/colombia/">Колумбия</a>
+<a href="/football/republic-of-the-congo/">Конго</a>
+<a href="/football/dr-congo/">Конго ДР</a>
+<a href="/football/kosovo/">Косово</a>
+<a href="/football/costa-rica/">Коста-Рика</a>
+<a href="/football/ivory-coast/">Кот-д'Ивуар</a>
+<a href="/football/cuba/">Куба</a>
+<a href="/football/kuwait/">Кувейт</a>
+<a href="/football/kyrgyzstan/">Кыргызстан</a>
+<a href="/football/curacao/">Кюрасао</a>
+<a href="/football/laos/">Лаос</a>
+<a href="/football/latvia/">Латвия</a>
+<a href="/football/lesotho/">Лесото</a>
+<a href="/football/liberia/">Либерия</a>
+<a href="/football/lebanon/">Ливан</a>
+<a href="/football/libya/">Ливия</a>
+<a href="/football/lithuania/">Литва</a>
+<a href="/football/liechtenstein/">Лихтенштейн</a>
+<a href="/football/luxembourg/">Люксембург</a>
+<a href="/football/mauritius/">Маврикий</a>
+<a href="/football/mauritania/">Мавритания</a>
+<a href="/football/macao/">Макао</a>
+<a href="/football/malawi/">Малави</a>
+<a href="/football/malaysia/">Малайзия</a>
+<a href="/football/mali/">Мали</a>
+<a href="/football/maldives/">Мальдивы</a>
+<a href="/football/malta/">Мальта</a>
+<a href="/football/morocco/">Марокко</a>
+<a href="/football/martinique/">Мартиника</a>
+<a href="/football/mexico/">Мексика</a>
+<a href="/football/mozambique/">Мозамбик</a>
+<a href="/football/moldova/">Молдова</a>
+<a href="/football/mongolia/">Монголия</a>
+<a href="/football/myanmar/">Мьянма</a>
+<a href="/football/namibia/">Намибия</a>
+<a href="/football/niger/">Нигер</a>
+<a href="/football/nigeria/">Нигерия</a>
+<a href="/football/netherlands/">Нидерланды</a>
+<a href="/football/netherlands/eredivisie/">Высшая лига</a>
+<a href="/football/nicaragua/">Никарагуа</a>
+<a href="/football/new-zealand/">Новая Зеландия</a>
+<a href="/football/norway/">Норвегия</a>
+<a href="/football/united-arab-emirates/">ОАЭ</a>
+<a href="/football/oman/">Оман</a>
+<a href="/football/pakistan/">Пакистан</a>
+<a href="/football/palestine/">Палестина</a>
+<a href="/football/panama/">Панама</a>
+<a href="/football/paraguay/">Парагвай</a>
+<a href="/football/peru/">Перу</a>
+<a href="/football/poland/">Польша</a>
+<a href="/football/portugal/">Португалия</a>
+<a href="/football/portugal/liga-portugal/">Чемпионат Португалии</a>
+<a href="/football/reunion/">Реюньон</a>
+<a href="/football/russia/">Россия</a>
+<a href="/football/rwanda/">Руанда</a>
+<a href="/football/romania/">Румыния</a>
+<a href="/football/el-salvador/">Сальвадор</a>
+<a href="/football/san-marino/">Сан-Марино</a>
+<a href="/football/sao-tome-and-principe/">Сан-Томе и Принсипи</a>
+<a href="/football/saudi-arabia/">Саудовская Аравия</a>
+<a href="/football/northern-ireland/">Северная Ирландия</a>
+<a href="/football/north-macedonia/">Северная Македония</a>
+<a href="/football/seychelles/">Сейшельские острова</a>
+<a href="/football/senegal/">Сенегал</a>
+<a href="/football/serbia/">Сербия</a>
+<a href="/football/singapore/">Сингапур</a>
+<a href="/football/syria/">Сирия</a>
+<a href="/football/slovakia/">Словакия</a>
+<a href="/football/slovenia/">Словения</a>
+<a href="/football/somalia/">Сомали</a>
+<a href="/football/sudan/">Судан</a>
+<a href="/football/suriname/">Суринам</a>
+<a href="/football/usa/">США</a>
+<a href="/football/usa/mls/">МЛС</a>
+<a href="/football/sierra-leone/">Сьерра-Леоне</a>
+<a href="/football/tajikistan/">Таджикистан</a>
+<a href="/football/thailand/">Таиланд</a>
+<a href="/football/taiwan/">Тайвань</a>
+<a href="/football/tanzania/">Танзания</a>
+<a href="/football/togo/">Того</a>
+<a href="/football/trinidad-and-tobago/">Тринидад и Тобаго</a>
+<a href="/football/tunisia/">Тунис</a>
+<a href="/football/turkmenistan/">Туркменистан</a>
+<a href="/football/turkey/">Турция</a>
+<a href="/football/uganda/">Уганда</a>
+<a href="/football/uzbekistan/">Узбекистан</a>
+<a href="/football/ukraine/">Украина</a>
+<a href="/football/uruguay/">Уругвай</a>
+<a href="/football/wales/">Уэльс</a>
+<a href="/football/faroe-islands/">Фарерские острова</a>
+<a href="/football/fiji/">Фиджи</a>
+<a href="/football/philippines/">Филиппины</a>
+<a href="/football/finland/">Финляндия</a>
+<a href="/football/france/">Франция</a>
+<a href="/football/france/ligue-1/">Первая лига</a>
+<a href="/football/croatia/">Хорватия</a>
+<a href="/football/chad/">Чад</a>
+<a href="/football/montenegro/">Черногория</a>
+<a href="/football/czech-republic/">Чехия</a>
+<a href="/football/chile/">Чили</a>
+<a href="/football/switzerland/">Швейцария</a>
+<a href="/football/sweden/">Швеция</a>
+<a href="/football/scotland/">Шотландия</a>
+<a href="/football/sri-lanka/">Шри-Ланка</a>
+<a href="/football/ecuador/">Эквадор</a>
+<a href="/football/eswatini/">Эсватини</a>
+<a href="/football/estonia/">Эстония</a>
+<a href="/football/ethiopia/">Эфиопия</a>
+<a href="/football/south-africa/">Южная Африка</a>
+<a href="/football/south-africa/betway-premiership/">Betway Premiership</a>
+<a href="/football/south-korea/">Южная Корея</a>
+<a href="/football/jamaica/">Ямайка</a>
+<a href="/football/japan/">Япония</a>
+<a href="/football/australia-oceania/">Австралия и Океания</a>
+<a href="/football/australia-oceania/world-cup/">Чемпионат мира</a>
+<a href="/football/asia/">Азия</a>
+<a href="/football/asia/asian-cup/">Кубок Азии</a>
+<a href="/football/asia/world-cup/">Чемпионат мира</a>
+<a href="/football/africa/">Африка</a>
+<a href="/football/africa/africa-cup-of-nations/">Кубок Африканских Наций</a>
+<a href="/football/africa/world-cup/">Чемпионат мира</a>
+<a href="/football/europe/">Европа</a>
+<a href="/football/europe/euro/">Евро</a>
+<a href="/football/europe/champions-league/">Лига чемпионов</a>
+<a href="/football/europe/europa-league/">Лига Европы</a>
+<a href="/football/europe/uefa-nations-league/">Лига наций УЕФА</a>
+<a href="/football/europe/euro-u21/">Чемпионат Европы до 21 года</a>
+<a href="/football/europe/euro-u19/">Чемпионат Европы до 19 лет</a>
+<a href="/football/europe/world-cup/">Чемпионат мира</a>
+<a href="/football/europe/euro-u17/">Чемпионат Европы до 17 лет</a>
+<a href="/football/world/">Мир</a>
+<a href="/football/world/world-cup/">Чемпионат мира</a>
+<a href="/football/world/olympic-games/">Олимпийские игры</a>
+<a href="/football/world/world-cup-u20/">Чемпионат мира до 20 лет</a>
+<a href="/football/world/world-cup-u17/">Чемпионат мира до 17 лет</a>
+<a href="/football/world/friendly-international/">Международные товарищеские матчи</a>
+<a href="/football/world/club-friendly/">Клубные товарищеские матчи</a>
+<a href="/football/north-central-america/">Северная и Центральная Америка</a>
+<a href="/football/north-central-america/gold-cup/">Золотой кубок</a>
+<a href="/football/north-central-america/world-cup/">Чемпионат мира</a>
+<a href="/football/south-america/">Южная Америка</a>
+<a href="/football/south-america/copa-america/">Кубок Америки</a>
+<a href="/football/south-america/copa-libertadores/">Кубок Либертадорес</a>
+<a href="/football/south-america/world-cup/">Чемпионат мира</a>
+</div><div id="left_menu_content"><div id="left_menu_skeleton"><div class="leftSkel__cont ska__chp--dark"><div class="leftSkel__head">
+            <div class="leftSkel__item leftSkel__item--head ska__dip--dark"></div>
+        </div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__banner">
+            <div class="leftSkel__banner--item"></div>
+            <div class="leftSkel__banner--text"></div>
+        </div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__banner">
+            <div class="leftSkel__banner--item"></div>
+            <div class="leftSkel__banner--text"></div>
+        </div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__item"></div>
+<div class="leftSkel__arrow">
+            <div class="leftSkel__item leftSkel__item--more"></div>
+        </div></div></div></div>
+    <script>
+        cjs.Api.loader.get('myLeagues').call(function (ml) {
+            var inputData = {
+                rawData: [{"SCN":"\u0421\u0442\u0440\u0430\u043d\u044b","SCU":"","SCC":[{"MC":24,"MCN":"\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f","ML":"\/football\/australia\/","CSI":1},{"MC":25,"MCN":"\u0410\u0432\u0441\u0442\u0440\u0438\u044f","ML":"\/football\/austria\/","CSI":1},{"MC":26,"MCN":"\u0410\u0437\u0435\u0440\u0431\u0430\u0439\u0434\u0436\u0430\u043d","ML":"\/football\/azerbaijan\/","CSI":1},{"MC":17,"MCN":"\u0410\u043b\u0431\u0430\u043d\u0438\u044f","ML":"\/football\/albania\/","CSI":1},{"MC":18,"MCN":"\u0410\u043b\u0436\u0438\u0440","ML":"\/football\/algeria\/","CSI":1},{"MC":198,"MCN":"\u0410\u043d\u0433\u043b\u0438\u044f","ML":"\/football\/england\/","CSI":1},{"MC":20,"MCN":"\u0410\u043d\u0433\u043e\u043b\u0430","ML":"\/football\/angola\/","CSI":1},{"MC":19,"MCN":"\u0410\u043d\u0434\u043e\u0440\u0440\u0430","ML":"\/football\/andorra\/","CSI":1},{"MC":21,"MCN":"\u0410\u043d\u0442\u0438\u0433\u0443\u0430 \u0438 \u0411\u0430\u0440\u0431\u0443\u0434\u0430","ML":"\/football\/antigua-barbuda\/","CSI":1},{"MC":22,"MCN":"\u0410\u0440\u0433\u0435\u043d\u0442\u0438\u043d\u0430","ML":"\/football\/argentina\/","CSI":1},{"MC":23,"MCN":"\u0410\u0440\u043c\u0435\u043d\u0438\u044f","ML":"\/football\/armenia\/","CSI":1},{"MC":229,"MCN":"\u0410\u0440\u0443\u0431\u0430","ML":"\/football\/aruba\/","CSI":1},{"MC":29,"MCN":"\u0411\u0430\u043d\u0433\u043b\u0430\u0434\u0435\u0448","ML":"\/football\/bangladesh\/","CSI":1},{"MC":30,"MCN":"\u0411\u0430\u0440\u0431\u0430\u0434\u043e\u0441","ML":"\/football\/barbados\/","CSI":1},{"MC":28,"MCN":"\u0411\u0430\u0445\u0440\u0435\u0439\u043d","ML":"\/football\/bahrain\/","CSI":1},{"MC":31,"MCN":"\u0411\u0435\u043b\u0430\u0440\u0443\u0441\u044c","ML":"\/football\/belarus\/","CSI":1},{"MC":32,"MCN":"\u0411\u0435\u043b\u044c\u0433\u0438\u044f","ML":"\/football\/belgium\/","CSI":1},{"MC":34,"MCN":"\u0411\u0435\u043d\u0438\u043d","ML":"\/football\/benin\/","CSI":1},{"MC":230,"MCN":"\u0411\u0435\u0440\u043c\u0443\u0434\u044b","ML":"\/football\/bermuda\/","CSI":1},{"MC":41,"MCN":"\u0411\u043e\u043b\u0433\u0430\u0440\u0438\u044f","ML":"\/football\/bulgaria\/","CSI":1},{"MC":36,"MCN":"\u0411\u043e\u043b\u0438\u0432\u0438\u044f","ML":"\/football\/bolivia\/","CSI":1},{"MC":37,"MCN":"\u0411\u043e\u0441\u043d\u0438\u044f \u0438 \u0413\u0435\u0440\u0446\u0435\u0433\u043e\u0432\u0438\u043d\u0430","ML":"\/football\/bosnia-and-herzegovina\/","CSI":1},{"MC":38,"MCN":"\u0411\u043e\u0442\u0441\u0432\u0430\u043d\u0430","ML":"\/football\/botswana\/","CSI":1},{"MC":39,"MCN":"\u0411\u0440\u0430\u0437\u0438\u043b\u0438\u044f","ML":"\/football\/brazil\/","CSI":1},{"MC":42,"MCN":"\u0411\u0443\u0440\u043a\u0438\u043d\u0430-\u0424\u0430\u0441\u043e","ML":"\/football\/burkina-faso\/","CSI":1},{"MC":44,"MCN":"\u0411\u0443\u0440\u0443\u043d\u0434\u0438","ML":"\/football\/burundi\/","CSI":1},{"MC":35,"MCN":"\u0411\u0443\u0442\u0430\u043d","ML":"\/football\/bhutan\/","CSI":1},{"MC":91,"MCN":"\u0412\u0435\u043d\u0433\u0440\u0438\u044f","ML":"\/football\/hungary\/","CSI":1},{"MC":205,"MCN":"\u0412\u0435\u043d\u0435\u0441\u0443\u044d\u043b\u0430","ML":"\/football\/venezuela\/","CSI":1},{"MC":206,"MCN":"\u0412\u044c\u0435\u0442\u043d\u0430\u043c","ML":"\/football\/vietnam\/","CSI":1},{"MC":78,"MCN":"\u0413\u0430\u0431\u043e\u043d","ML":"\/football\/gabon\/","CSI":1},{"MC":89,"MCN":"\u0413\u0430\u0438\u0442\u0438","ML":"\/football\/haiti\/","CSI":1},{"MC":79,"MCN":"\u0413\u0430\u043c\u0431\u0438\u044f","ML":"\/football\/gambia\/","CSI":1},{"MC":82,"MCN":"\u0413\u0430\u043d\u0430","ML":"\/football\/ghana\/","CSI":1},{"MC":85,"MCN":"\u0413\u0432\u0430\u0442\u0435\u043c\u0430\u043b\u0430","ML":"\/football\/guatemala\/","CSI":1},{"MC":86,"MCN":"\u0413\u0432\u0438\u043d\u0435\u044f","ML":"\/football\/guinea\/","CSI":1},{"MC":81,"MCN":"\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f","ML":"\/football\/germany\/","CSI":1},{"MC":304,"MCN":"\u0413\u0438\u0431\u0440\u0430\u043b\u0442\u0430\u0440","ML":"\/football\/gibraltar\/","CSI":1},{"MC":90,"MCN":"\u0413\u043e\u043d\u0434\u0443\u0440\u0430\u0441","ML":"\/football\/honduras\/","CSI":1},{"MC":222,"MCN":"\u0413\u043e\u043d\u043a\u043e\u043d\u0433","ML":"\/football\/hong-kong\/","CSI":1},{"MC":84,"MCN":"\u0413\u0440\u0435\u043d\u0430\u0434\u0430","ML":"\/football\/grenada\/","CSI":1},{"MC":83,"MCN":"\u0413\u0440\u0435\u0446\u0438\u044f","ML":"\/football\/greece\/","CSI":1},{"MC":80,"MCN":"\u0413\u0440\u0443\u0437\u0438\u044f","ML":"\/football\/georgia\/","CSI":1},{"MC":63,"MCN":"\u0414\u0430\u043d\u0438\u044f","ML":"\/football\/denmark\/","CSI":1},{"MC":64,"MCN":"\u0414\u0436\u0438\u0431\u0443\u0442\u0438","ML":"\/football\/djibouti\/","CSI":1},{"MC":66,"MCN":"\u0414\u043e\u043c\u0438\u043d\u0438\u043a\u0430\u043d\u0441\u043a\u0430\u044f \u0420\u0435\u0441\u043f\u0443\u0431\u043b\u0438\u043a\u0430","ML":"\/football\/dominican-republic\/","CSI":1},{"MC":69,"MCN":"\u0415\u0433\u0438\u043f\u0435\u0442","ML":"\/football\/egypt\/","CSI":1},{"MC":209,"MCN":"\u0417\u0430\u043c\u0431\u0438\u044f","ML":"\/football\/zambia\/","CSI":1},{"MC":210,"MCN":"\u0417\u0438\u043c\u0431\u0430\u0431\u0432\u0435","ML":"\/football\/zimbabwe\/","CSI":1},{"MC":97,"MCN":"\u0418\u0437\u0440\u0430\u0438\u043b\u044c","ML":"\/football\/israel\/","CSI":1},{"MC":93,"MCN":"\u0418\u043d\u0434\u0438\u044f","ML":"\/football\/india\/","CSI":1},{"MC":228,"MCN":"\u0418\u043d\u0434\u043e\u043d\u0435\u0437\u0438\u044f","ML":"\/football\/indonesia\/","CSI":1},{"MC":101,"MCN":"\u0418\u043e\u0440\u0434\u0430\u043d\u0438\u044f","ML":"\/football\/jordan\/","CSI":1},{"MC":95,"MCN":"\u0418\u0440\u0430\u043a","ML":"\/football\/iraq\/","CSI":1},{"MC":94,"MCN":"\u0418\u0440\u0430\u043d","ML":"\/football\/iran\/","CSI":1},{"MC":96,"MCN":"\u0418\u0440\u043b\u0430\u043d\u0434\u0438\u044f","ML":"\/football\/ireland\/","CSI":1},{"MC":92,"MCN":"\u0418\u0441\u043b\u0430\u043d\u0434\u0438\u044f","ML":"\/football\/iceland\/","CSI":1},{"MC":176,"MCN":"\u0418\u0441\u043f\u0430\u043d\u0438\u044f","ML":"\/football\/spain\/","CSI":1},{"MC":98,"MCN":"\u0418\u0442\u0430\u043b\u0438\u044f","ML":"\/football\/italy\/","CSI":1},{"MC":208,"MCN":"\u0419\u0435\u043c\u0435\u043d","ML":"\/football\/yemen\/","CSI":1},{"MC":48,"MCN":"\u041a\u0430\u0431\u043e-\u0412\u0435\u0440\u0434\u0435","ML":"\/football\/cape-verde\/","CSI":1},{"MC":102,"MCN":"\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d","ML":"\/football\/kazakhstan\/","CSI":1},{"MC":45,"MCN":"\u041a\u0430\u043c\u0431\u043e\u0434\u0436\u0430","ML":"\/football\/cambodia\/","CSI":1},{"MC":46,"MCN":"\u041a\u0430\u043c\u0435\u0440\u0443\u043d","ML":"\/football\/cameroon\/","CSI":1},{"MC":47,"MCN":"\u041a\u0430\u043d\u0430\u0434\u0430","ML":"\/football\/canada\/","CSI":1},{"MC":156,"MCN":"\u041a\u0430\u0442\u0430\u0440","ML":"\/football\/qatar\/","CSI":1},{"MC":103,"MCN":"\u041a\u0435\u043d\u0438\u044f","ML":"\/football\/kenya\/","CSI":1},{"MC":61,"MCN":"\u041a\u0438\u043f\u0440","ML":"\/football\/cyprus\/","CSI":1},{"MC":52,"MCN":"\u041a\u0438\u0442\u0430\u0439","ML":"\/football\/china\/","CSI":1},{"MC":53,"MCN":"\u041a\u043e\u043b\u0443\u043c\u0431\u0438\u044f","ML":"\/football\/colombia\/","CSI":1},{"MC":56,"MCN":"\u041a\u043e\u043d\u0433\u043e","ML":"\/football\/republic-of-the-congo\/","CSI":1},{"MC":55,"MCN":"\u041a\u043e\u043d\u0433\u043e \u0414\u0420","ML":"\/football\/dr-congo\/","CSI":1},{"MC":212,"MCN":"\u041a\u043e\u0441\u043e\u0432\u043e","ML":"\/football\/kosovo\/","CSI":1},{"MC":57,"MCN":"\u041a\u043e\u0441\u0442\u0430-\u0420\u0438\u043a\u0430","ML":"\/football\/costa-rica\/","CSI":1},{"MC":58,"MCN":"\u041a\u043e\u0442-\u0434'\u0418\u0432\u0443\u0430\u0440","ML":"\/football\/ivory-coast\/","CSI":1},{"MC":60,"MCN":"\u041a\u0443\u0431\u0430","ML":"\/football\/cuba\/","CSI":1},{"MC":107,"MCN":"\u041a\u0443\u0432\u0435\u0439\u0442","ML":"\/football\/kuwait\/","CSI":1},{"MC":108,"MCN":"\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d","ML":"\/football\/kyrgyzstan\/","CSI":1},{"MC":300,"MCN":"\u041a\u044e\u0440\u0430\u0441\u0430\u043e","ML":"\/football\/curacao\/","CSI":1},{"MC":109,"MCN":"\u041b\u0430\u043e\u0441","ML":"\/football\/laos\/","CSI":1},{"MC":110,"MCN":"\u041b\u0430\u0442\u0432\u0438\u044f","ML":"\/football\/latvia\/","CSI":1},{"MC":112,"MCN":"\u041b\u0435\u0441\u043e\u0442\u043e","ML":"\/football\/lesotho\/","CSI":1},{"MC":113,"MCN":"\u041b\u0438\u0431\u0435\u0440\u0438\u044f","ML":"\/football\/liberia\/","CSI":1},{"MC":111,"MCN":"\u041b\u0438\u0432\u0430\u043d","ML":"\/football\/lebanon\/","CSI":1},{"MC":114,"MCN":"\u041b\u0438\u0432\u0438\u044f","ML":"\/football\/libya\/","CSI":1},{"MC":116,"MCN":"\u041b\u0438\u0442\u0432\u0430","ML":"\/football\/lithuania\/","CSI":1},{"MC":115,"MCN":"\u041b\u0438\u0445\u0442\u0435\u043d\u0448\u0442\u0435\u0439\u043d","ML":"\/football\/liechtenstein\/","CSI":1},{"MC":117,"MCN":"\u041b\u044e\u043a\u0441\u0435\u043c\u0431\u0443\u0440\u0433","ML":"\/football\/luxembourg\/","CSI":1},{"MC":127,"MCN":"\u041c\u0430\u0432\u0440\u0438\u043a\u0438\u0439","ML":"\/football\/mauritius\/","CSI":1},{"MC":126,"MCN":"\u041c\u0430\u0432\u0440\u0438\u0442\u0430\u043d\u0438\u044f","ML":"\/football\/mauritania\/","CSI":1},{"MC":233,"MCN":"\u041c\u0430\u043a\u0430\u043e","ML":"\/football\/macao\/","CSI":1},{"MC":120,"MCN":"\u041c\u0430\u043b\u0430\u0432\u0438","ML":"\/football\/malawi\/","CSI":1},{"MC":121,"MCN":"\u041c\u0430\u043b\u0430\u0439\u0437\u0438\u044f","ML":"\/football\/malaysia\/","CSI":1},{"MC":123,"MCN":"\u041c\u0430\u043b\u0438","ML":"\/football\/mali\/","CSI":1},{"MC":122,"MCN":"\u041c\u0430\u043b\u044c\u0434\u0438\u0432\u044b","ML":"\/football\/maldives\/","CSI":1},{"MC":124,"MCN":"\u041c\u0430\u043b\u044c\u0442\u0430","ML":"\/football\/malta\/","CSI":1},{"MC":134,"MCN":"\u041c\u0430\u0440\u043e\u043a\u043a\u043e","ML":"\/football\/morocco\/","CSI":1},{"MC":255,"MCN":"\u041c\u0430\u0440\u0442\u0438\u043d\u0438\u043a\u0430","ML":"\/football\/martinique\/","CSI":1},{"MC":128,"MCN":"\u041c\u0435\u043a\u0441\u0438\u043a\u0430","ML":"\/football\/mexico\/","CSI":1},{"MC":135,"MCN":"\u041c\u043e\u0437\u0430\u043c\u0431\u0438\u043a","ML":"\/football\/mozambique\/","CSI":1},{"MC":130,"MCN":"\u041c\u043e\u043b\u0434\u043e\u0432\u0430","ML":"\/football\/moldova\/","CSI":1},{"MC":132,"MCN":"\u041c\u043e\u043d\u0433\u043e\u043b\u0438\u044f","ML":"\/football\/mongolia\/","CSI":1},{"MC":43,"MCN":"\u041c\u044c\u044f\u043d\u043c\u0430","ML":"\/football\/myanmar\/","CSI":1},{"MC":136,"MCN":"\u041d\u0430\u043c\u0438\u0431\u0438\u044f","ML":"\/football\/namibia\/","CSI":1},{"MC":142,"MCN":"\u041d\u0438\u0433\u0435\u0440","ML":"\/football\/niger\/","CSI":1},{"MC":143,"MCN":"\u041d\u0438\u0433\u0435\u0440\u0438\u044f","ML":"\/football\/nigeria\/","CSI":1},{"MC":139,"MCN":"\u041d\u0438\u0434\u0435\u0440\u043b\u0430\u043d\u0434\u044b","ML":"\/football\/netherlands\/","CSI":1},{"MC":141,"MCN":"\u041d\u0438\u043a\u0430\u0440\u0430\u0433\u0443\u0430","ML":"\/football\/nicaragua\/","CSI":1},{"MC":140,"MCN":"\u041d\u043e\u0432\u0430\u044f \u0417\u0435\u043b\u0430\u043d\u0434\u0438\u044f","ML":"\/football\/new-zealand\/","CSI":1},{"MC":145,"MCN":"\u041d\u043e\u0440\u0432\u0435\u0433\u0438\u044f","ML":"\/football\/norway\/","CSI":1},{"MC":196,"MCN":"\u041e\u0410\u042d","ML":"\/football\/united-arab-emirates\/","CSI":1},{"MC":146,"MCN":"\u041e\u043c\u0430\u043d","ML":"\/football\/oman\/","CSI":1},{"MC":147,"MCN":"\u041f\u0430\u043a\u0438\u0441\u0442\u0430\u043d","ML":"\/football\/pakistan\/","CSI":1},{"MC":215,"MCN":"\u041f\u0430\u043b\u0435\u0441\u0442\u0438\u043d\u0430","ML":"\/football\/palestine\/","CSI":1},{"MC":149,"MCN":"\u041f\u0430\u043d\u0430\u043c\u0430","ML":"\/football\/panama\/","CSI":1},{"MC":151,"MCN":"\u041f\u0430\u0440\u0430\u0433\u0432\u0430\u0439","ML":"\/football\/paraguay\/","CSI":1},{"MC":152,"MCN":"\u041f\u0435\u0440\u0443","ML":"\/football\/peru\/","CSI":1},{"MC":154,"MCN":"\u041f\u043e\u043b\u044c\u0448\u0430","ML":"\/football\/poland\/","CSI":1},{"MC":155,"MCN":"\u041f\u043e\u0440\u0442\u0443\u0433\u0430\u043b\u0438\u044f","ML":"\/football\/portugal\/","CSI":1},{"MC":237,"MCN":"\u0420\u0435\u044e\u043d\u044c\u043e\u043d","ML":"\/football\/reunion\/","CSI":1},{"MC":158,"MCN":"\u0420\u043e\u0441\u0441\u0438\u044f","ML":"\/football\/russia\/","CSI":1},{"MC":159,"MCN":"\u0420\u0443\u0430\u043d\u0434\u0430","ML":"\/football\/rwanda\/","CSI":1},{"MC":157,"MCN":"\u0420\u0443\u043c\u044b\u043d\u0438\u044f","ML":"\/football\/romania\/","CSI":1},{"MC":70,"MCN":"\u0421\u0430\u043b\u044c\u0432\u0430\u0434\u043e\u0440","ML":"\/football\/el-salvador\/","CSI":1},{"MC":163,"MCN":"\u0421\u0430\u043d-\u041c\u0430\u0440\u0438\u043d\u043e","ML":"\/football\/san-marino\/","CSI":1},{"MC":164,"MCN":"\u0421\u0430\u043d-\u0422\u043e\u043c\u0435 \u0438 \u041f\u0440\u0438\u043d\u0441\u0438\u043f\u0438","ML":"\/football\/sao-tome-and-principe\/","CSI":1},{"MC":165,"MCN":"\u0421\u0430\u0443\u0434\u043e\u0432\u0441\u043a\u0430\u044f \u0410\u0440\u0430\u0432\u0438\u044f","ML":"\/football\/saudi-arabia\/","CSI":1},{"MC":144,"MCN":"\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0418\u0440\u043b\u0430\u043d\u0434\u0438\u044f","ML":"\/football\/northern-ireland\/","CSI":1},{"MC":118,"MCN":"\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u041c\u0430\u043a\u0435\u0434\u043e\u043d\u0438\u044f","ML":"\/football\/north-macedonia\/","CSI":1},{"MC":168,"MCN":"\u0421\u0435\u0439\u0448\u0435\u043b\u044c\u0441\u043a\u0438\u0435 \u043e\u0441\u0442\u0440\u043e\u0432\u0430","ML":"\/football\/seychelles\/","CSI":1},{"MC":166,"MCN":"\u0421\u0435\u043d\u0435\u0433\u0430\u043b","ML":"\/football\/senegal\/","CSI":1},{"MC":167,"MCN":"\u0421\u0435\u0440\u0431\u0438\u044f","ML":"\/football\/serbia\/","CSI":1},{"MC":170,"MCN":"\u0421\u0438\u043d\u0433\u0430\u043f\u0443\u0440","ML":"\/football\/singapore\/","CSI":1},{"MC":183,"MCN":"\u0421\u0438\u0440\u0438\u044f","ML":"\/football\/syria\/","CSI":1},{"MC":171,"MCN":"\u0421\u043b\u043e\u0432\u0430\u043a\u0438\u044f","ML":"\/football\/slovakia\/","CSI":1},{"MC":172,"MCN":"\u0421\u043b\u043e\u0432\u0435\u043d\u0438\u044f","ML":"\/football\/slovenia\/","CSI":1},{"MC":174,"MCN":"\u0421\u043e\u043c\u0430\u043b\u0438","ML":"\/football\/somalia\/","CSI":1},{"MC":178,"MCN":"\u0421\u0443\u0434\u0430\u043d","ML":"\/football\/sudan\/","CSI":1},{"MC":179,"MCN":"\u0421\u0443\u0440\u0438\u043d\u0430\u043c","ML":"\/football\/suriname\/","CSI":1},{"MC":200,"MCN":"\u0421\u0428\u0410","ML":"\/football\/usa\/","CSI":1},{"MC":169,"MCN":"\u0421\u044c\u0435\u0440\u0440\u0430-\u041b\u0435\u043e\u043d\u0435","ML":"\/football\/sierra-leone\/","CSI":1},{"MC":184,"MCN":"\u0422\u0430\u0434\u0436\u0438\u043a\u0438\u0441\u0442\u0430\u043d","ML":"\/football\/tajikistan\/","CSI":1},{"MC":186,"MCN":"\u0422\u0430\u0438\u043b\u0430\u043d\u0434","ML":"\/football\/thailand\/","CSI":1},{"MC":218,"MCN":"\u0422\u0430\u0439\u0432\u0430\u043d\u044c","ML":"\/football\/taiwan\/","CSI":1},{"MC":185,"MCN":"\u0422\u0430\u043d\u0437\u0430\u043d\u0438\u044f","ML":"\/football\/tanzania\/","CSI":1},{"MC":187,"MCN":"\u0422\u043e\u0433\u043e","ML":"\/football\/togo\/","CSI":1},{"MC":189,"MCN":"\u0422\u0440\u0438\u043d\u0438\u0434\u0430\u0434 \u0438 \u0422\u043e\u0431\u0430\u0433\u043e","ML":"\/football\/trinidad-and-tobago\/","CSI":1},{"MC":190,"MCN":"\u0422\u0443\u043d\u0438\u0441","ML":"\/football\/tunisia\/","CSI":1},{"MC":192,"MCN":"\u0422\u0443\u0440\u043a\u043c\u0435\u043d\u0438\u0441\u0442\u0430\u043d","ML":"\/football\/turkmenistan\/","CSI":1},{"MC":191,"MCN":"\u0422\u0443\u0440\u0446\u0438\u044f","ML":"\/football\/turkey\/","CSI":1},{"MC":194,"MCN":"\u0423\u0433\u0430\u043d\u0434\u0430","ML":"\/football\/uganda\/","CSI":1},{"MC":202,"MCN":"\u0423\u0437\u0431\u0435\u043a\u0438\u0441\u0442\u0430\u043d","ML":"\/football\/uzbekistan\/","CSI":1},{"MC":195,"MCN":"\u0423\u043a\u0440\u0430\u0438\u043d\u0430","ML":"\/football\/ukraine\/","CSI":1},{"MC":201,"MCN":"\u0423\u0440\u0443\u0433\u0432\u0430\u0439","ML":"\/football\/uruguay\/","CSI":1},{"MC":207,"MCN":"\u0423\u044d\u043b\u044c\u0441","ML":"\/football\/wales\/","CSI":1},{"MC":231,"MCN":"\u0424\u0430\u0440\u0435\u0440\u0441\u043a\u0438\u0435 \u043e\u0441\u0442\u0440\u043e\u0432\u0430","ML":"\/football\/faroe-islands\/","CSI":1},{"MC":75,"MCN":"\u0424\u0438\u0434\u0436\u0438","ML":"\/football\/fiji\/","CSI":1},{"MC":153,"MCN":"\u0424\u0438\u043b\u0438\u043f\u043f\u0438\u043d\u044b","ML":"\/football\/philippines\/","CSI":1},{"MC":76,"MCN":"\u0424\u0438\u043d\u043b\u044f\u043d\u0434\u0438\u044f","ML":"\/football\/finland\/","CSI":1},{"MC":77,"MCN":"\u0424\u0440\u0430\u043d\u0446\u0438\u044f","ML":"\/football\/france\/","CSI":1},{"MC":59,"MCN":"\u0425\u043e\u0440\u0432\u0430\u0442\u0438\u044f","ML":"\/football\/croatia\/","CSI":1},{"MC":50,"MCN":"\u0427\u0430\u0434","ML":"\/football\/chad\/","CSI":1},{"MC":133,"MCN":"\u0427\u0435\u0440\u043d\u043e\u0433\u043e\u0440\u0438\u044f","ML":"\/football\/montenegro\/","CSI":1},{"MC":62,"MCN":"\u0427\u0435\u0445\u0438\u044f","ML":"\/football\/czech-republic\/","CSI":1},{"MC":51,"MCN":"\u0427\u0438\u043b\u0438","ML":"\/football\/chile\/","CSI":1},{"MC":182,"MCN":"\u0428\u0432\u0435\u0439\u0446\u0430\u0440\u0438\u044f","ML":"\/football\/switzerland\/","CSI":1},{"MC":181,"MCN":"\u0428\u0432\u0435\u0446\u0438\u044f","ML":"\/football\/sweden\/","CSI":1},{"MC":199,"MCN":"\u0428\u043e\u0442\u043b\u0430\u043d\u0434\u0438\u044f","ML":"\/football\/scotland\/","CSI":1},{"MC":177,"MCN":"\u0428\u0440\u0438-\u041b\u0430\u043d\u043a\u0430","ML":"\/football\/sri-lanka\/","CSI":1},{"MC":68,"MCN":"\u042d\u043a\u0432\u0430\u0434\u043e\u0440","ML":"\/football\/ecuador\/","CSI":1},{"MC":180,"MCN":"\u042d\u0441\u0432\u0430\u0442\u0438\u043d\u0438","ML":"\/football\/eswatini\/","CSI":1},{"MC":73,"MCN":"\u042d\u0441\u0442\u043e\u043d\u0438\u044f","ML":"\/football\/estonia\/","CSI":1},{"MC":74,"MCN":"\u042d\u0444\u0438\u043e\u043f\u0438\u044f","ML":"\/football\/ethiopia\/","CSI":1},{"MC":175,"MCN":"\u042e\u0436\u043d\u0430\u044f \u0410\u0444\u0440\u0438\u043a\u0430","ML":"\/football\/south-africa\/","CSI":1},{"MC":106,"MCN":"\u042e\u0436\u043d\u0430\u044f \u041a\u043e\u0440\u0435\u044f","ML":"\/football\/south-korea\/","CSI":1},{"MC":99,"MCN":"\u042f\u043c\u0430\u0439\u043a\u0430","ML":"\/football\/jamaica\/","CSI":1},{"MC":100,"MCN":"\u042f\u043f\u043e\u043d\u0438\u044f","ML":"\/football\/japan\/","CSI":1}]},{"SCN":"\u0414\u0440\u0443\u0433\u0438\u0435 \u0441\u043e\u0440\u0435\u0432\u043d\u043e\u0432\u0430\u043d\u0438\u044f","SCU":"","SCC":[{"MC":7,"MCN":"\u0410\u0432\u0441\u0442\u0440\u0430\u043b\u0438\u044f \u0438 \u041e\u043a\u0435\u0430\u043d\u0438\u044f","ML":"\/football\/australia-oceania\/","CSI":1},{"MC":5,"MCN":"\u0410\u0437\u0438\u044f","ML":"\/football\/asia\/","CSI":1},{"MC":1,"MCN":"\u0410\u0444\u0440\u0438\u043a\u0430","ML":"\/football\/africa\/","CSI":1},{"MC":6,"MCN":"\u0415\u0432\u0440\u043e\u043f\u0430","ML":"\/football\/europe\/","CSI":1},{"MC":8,"MCN":"\u041c\u0438\u0440","ML":"\/football\/world\/","CSI":1},{"MC":2,"MCN":"\u0421\u0435\u0432\u0435\u0440\u043d\u0430\u044f \u0438 \u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u0430\u044f \u0410\u043c\u0435\u0440\u0438\u043a\u0430","ML":"\/football\/north-central-america\/","CSI":1},{"MC":3,"MCN":"\u042e\u0436\u043d\u0430\u044f \u0410\u043c\u0435\u0440\u0438\u043a\u0430","ML":"\/football\/south-america\/","CSI":1}]}],
+                rawBannersData: {"banners":{"afterCategory":{"10":"\n<div id=\"zoneContainer-detail_left_menu_2\" data-zone-group=\"detail_left_menu_2\"><\/div>\n","20":"\n<div id=\"zoneContainer-detail_left_menu_3\" data-zone-group=\"detail_left_menu_3\"><\/div>\n"}},"showMoreLimit":22},
+                isTopGetter: (k) => ml.isTopByLabelKey(k),
+                topToggler: (k) => ml.toggleTop(k, event, true),
+                translations: {
+                    add: "Добавь лигу в Закрепленные лиги!",
+                    remove: "Убери лигу из Закрепленных лиг!",
+                    more: "Больше",
+                },
+                isMixedPage: false,
+                activeTournament: "",
+            };
+
+            cjs.Api.loader.get('categoryMenu').call(inputData, function (module) {
+            });
+        });
+
+    </script>
+
+    </div></aside></div><aside id="extraContent" class="extraContent" style="display:none">
+    <div class="extraContent__content">
+    </div>
+    <div class="extraContent__button">
+        Больше
+    </div>
+</aside>
+<script>
+    (function() {
+        const buttons = document.getElementsByClassName("extraContent__button");
+        Array.from(buttons).map((button) => {
+            button.addEventListener("click", () => {
+                const elem = document.getElementById("extraContent");
+                if (elem) {
+                    elem.classList.add("extraContent--active");
+                }
+            });
+        });
+    }());
+
+</script>
+<div class="legalAgeRevokeBox legalAgeRevokeBox--hidden">
+    <div class="legalAgeRevokeBox__content">
+        <div class="legalAgeRevokeBox__text">Wil jij jouw toestemming voor het tonen van reclames voor weddenschappen intrekken?</div>
+        <a class="legalAgeRevokeBox__button" href="#[legal-age]">
+            Ja, verander instellingen
+        </a>
+    </div>
+
+    <script>
+		const extraContent = document.querySelector(".extraContent").style;
+	    const legalAgeConfirmation = window.localStorage.getItem("legal_age_confirmation");
+	    const legalAgeRevokeBox = window.localStorage.getItem("legal_age_revoke_box");
+
+	    if (legalAgeConfirmation === "1" && legalAgeRevokeBox !== "1") {
+	    	document.getElementsByClassName("legalAgeRevokeBox")[0].classList.remove("legalAgeRevokeBox--hidden");
+			extraContent.setProperty('--marginBottom', 0);
+	    }
+    </script>
+</div>
+</div></div></div><footer class="footerContainer">
+    <div class="footerContainer__content">
+<div class="seoFooter">
+    <div class="seoFooter__mainGroup">
+            <div class="seoFooter__categories">
+                    <div class="seoFooter__category">
+                        <div class="seoFooter__categoryTitle"><a href="https://www.flashscorekz.com/">Футбол</a></div>
+                        <div class="seoFooter__categoryLinks">
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/kazakhstan/">Казахстан футбол</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/kazakhstan/premier-league/">Чемпионат Казахстана</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/kazakhstan/first-league/">Первая Лига</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/kazakhstan/kazakhstan-cup/">Кубок Казахстана</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/england/premier-league/">Английская премьер-лига</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/spain/laliga/">Примера</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/italy/serie-a/">Серия А</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/germany/bundesliga/">Бундеслига</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/europe/euro-women/">Евро - Женщины 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/football/world/fifa-club-world-cup/">ФИФА Клубтық Әлем Чемпионаты</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="seoFooter__category">
+                        <div class="seoFooter__categoryTitle"><a href="https://www.flashscorekz.com/tennis/">Теннис</a></div>
+                        <div class="seoFooter__categoryLinks">
+                                <div>
+                                    <a href="https://www.flashscorekz.com/tennis/atp-singles/wimbledon/">ATP Уимблдон 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/tennis/wta-singles/wimbledon/">WTA Уимблдон 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/tennis/calendar/atp/">ATP 2025 Календарь</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/tennis/calendar/wta/">WTA 2025 Календарь</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/tennis/rankings/atp/">Рейтинг ATP</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/tennis/rankings/wta/">Рейтинг WTA</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/player/bublik-alexander/t0WN9vR6/">Александр Бублик</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/player/shevchenko-alexander/jTIB3FIA/">Александр Шевченко</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/player/rybakina-elena/UDzElXdm/">Елена Рыбакина</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/player/putintseva-yulia/W2BCKjLQ/">Юлия Путинцева</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="seoFooter__category">
+                        <div class="seoFooter__categoryTitle"><a href="https://www.flashscorekz.com/">Другие виды спорта</a></div>
+                        <div class="seoFooter__categoryLinks">
+                                <div>
+                                    <a href="https://www.flashscorekz.com/basketball/europe/eurobasket/">ЕвроБаскет 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/volleyball/world/nations-league/">Волейбольная лига наций 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/volleyball/world/nations-league-women/">Волейбольная лига наций 2025 - Женщины</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/golf/calendar/pga/">PGA Tour 2025 Календарь</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/golf/calendar/dp/">DP World Tour 2025 Календарь</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/cycling/tours/tour-de-france/">Тур де Франс 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/cycling/tours/vuelta-a-espana/">Вуэльта нәтижелері 2025</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/motorsport/calendar/f1/">Формула-1 2025 Календарь</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/baseball/usa/mlb/">МЛБ </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.flashscorekz.com/american-football/usa/nfl/">НФЛ</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="seoFooter__category">
+                        <div class="seoFooter__categoryTitle"><a href="https://www.flashscorekz.com/">В тренде</a></div>
+                        <div class="seoFooter__categoryLinks">
+                                <div>
+                                    <a href="/h2h/tennis/shevchenko-alexander-jTIB3FIA/bublik-alexander-t0WN9vR6/">Шевченко - Бублик</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/baseball/los-angeles-dodgers-nwPDBpVc/milwaukee-brewers-CGzqC60o/">Лос Анджелес Доджерс - Милуоки Брюэрс</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/baseball/los-angeles-dodgers-nwPDBpVc/minnesota-twins-OjWW1naM/">Лос Анджелес Доджерс - Миннесота Твинс</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/baseball/boston-red-sox-zaXTinF3/los-angeles-dodgers-nwPDBpVc/">Бостон Ред Сокс - Лос Анджелес Доджерс</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="seoFooter__category">
+                        <div class="seoFooter__categoryTitle"><a href="https://www.flashscorekz.com/">Футбол прямые трансляции</a></div>
+                        <div class="seoFooter__categoryLinks">
+                                <div>
+                                    <a href="/h2h/football/aktobe-xAiob3nF/legia-K6kUepBs/">Актобе - Легия</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/ordabasy-SvGYfE0m/torpedo-kutaisi-UHabwVgn/">Ордабасы - Торпедо Кутаиси</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/fc-astana-M34GD2Gt/turan-vNKv8SUm/">Астана - Туран</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/yelimay-semey-GEwrHVl3/zhenis-nXUwwgG6/">Елимай - Женис</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/aktobe-xAiob3nF/tobol-C2dM0UAp/">Актобе - Тобол</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/zhetysu-taldykorgan-6JSBfhVa/ordabasy-SvGYfE0m/">Жетысу Талдыкорган - Ордабасы</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/arsenal-hA1Zm19f/ac-milan-8Sa8HInO/">Арсенал - Милан</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/fc-astana-M34GD2Gt/zimbru-chisinau-ULsoeTbO/">Астана - Зимбру</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/sd-family-rahR6oRe/shakhtar-karagandy-lW509EYi/">СД Фэмили - Шахтер Караганда</a>
+                                </div>
+                                <div>
+                                    <a href="/h2h/football/k-almaty-CrO7xXpJ/kaisar-kyzylorda-I5Qb1GNJ/">Кайрат Алматы - Кайсар</a>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+<div class="selfPromo">
+    <div class="selfPromo__mainGroup">
+        <div class="selfPromo__box selfPromo__box--project">
+            <div class="selfPromo__boxTitle" >FlashscoreKZ.com</div>
+            <div class="selfPromo__boxContent">
+                <div class="selfPromo__boxContent--links">
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/terms-of-use/" class="selfPromo__boxItem page-privacy-policy">Пользовательское соглашение</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/privacy-policy/" class="selfPromo__boxItem page-privacy-policy">Политика конфиденциальности</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/gdpr/" class="selfPromo__boxItem page-privacy-policy">GDPR и Медиа</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/advertise/" class="selfPromo__boxItem page-advertise">Реклама</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/contact/" class="selfPromo__boxItem page-contact">Контакты</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/livescore/" class="selfPromo__boxItem page-live-scores">Livescore</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/links/" class="selfPromo__boxItem page-links">Рекоменд. сайты</a>
+                        </div>
+                        <div class="selfPromo__boxItemWrapper">
+                            <a href="/faq/" class="selfPromo__boxItem page-faq">FAQ</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="selfPromo__box selfPromo__box--apps">
+            <div class="selfPromo__wrapper--texts">
+                <div class="selfPromo__boxTitle">Мобильные приложения</div>
+                <div class="selfPromo__boxContent">
+                    Наше приложение оптимизировано под ваш телефон. Скачайте бесплатно!
+                </div>
+            </div>
+            <div class="selfPromo__wrapper--stores">
+                <a href="https://apps.apple.com/ru/app/id766443283?l=ru&amp;mt=8" target="_blank"
+                                                              title="Приложение iPhone/iPad" class="selfPromo__app selfPromo__app--ios">
+                    <img class="selfPromo__appImage" src="https://static.flashscore.com/res/_fs/image/9_stores/apple/ru.svg" height="37" alt="App Store" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer__content">
+        <div class="footer__alternatives footer__alternatives--hidden" id="mobi_version">
+            <a href="http://m.flashscorekz.com/" class="footer__link">Lite версия</a>
+        </div>
+        <div class="footer__legal" id="legal_age_confirmation">
+            <a href="#[legal-age]" class="footer__link">
+              Versie met weddenschappen en odds 25+ jaar
+            </a>
+        </div>
+        <div class="footer__advert">
+            <div class="footer__advertBackground"></div>
+            <div class="footerAdvertGambling footer__advertGambling">
+
+    <div class="footer__gambleResponsiblyLink">Ставьте ответственно. <a href="http://www.gamblingtherapy.org/" target="_blank">Gambling Therapy</a>. 18+</div>
+
+</div>
+
+        </div>
+        <div class="footer__copyright">
+            <div class="footer__copyrightText">Copyright &copy; 2018-25 FlashscoreKZ.com</div>
+        <div class="footer__privacy privacySettings optanon-show-settings">
+            <span class="footer__privacyButton">Установить конфиденциальность</span>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    cjs.Api.loader.get("cjs").call((cjs) => {
+        cjs.dic.get('LinkHandler').handleLegalAgeConfirmation();
+        cjs.dic.get('LinkHandler').handleMobiLink();
+    });
+</script>
+
+<script type="text/javascript">
+    function isSafari() {
+        var userAgent = navigator.userAgent,
+            match = userAgent.match(/(opera|chrome|crios|safari|ucbrowser|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [],
+            browser,
+            tem;
+
+        if (/trident/i.test(match[1])) {
+            tem = /\brv[ :]+(\d+)/g.exec(userAgent) || [];
+            return false;
+        } else if (match[1] === "Chrome") {
+            tem = userAgent.match(/\b(OPR|Edge)\/(\d+)/);
+            if (tem && tem[1]) {
+                return false;
+            }
+        }
+        if (!browser && match.length) {
+            browser = match[0].replace(/\/.*/, "");
+            if (browser.indexOf("MSIE") === 0) {
+                return false;
+            }
+            if (userAgent.match("CriOS")) {
+                return false;
+            }
+        }
+
+        return browser === "Safari";
+    }
+
+    const isIos = Boolean(/ipad|iphone|ipod/i.test(window.navigator.userAgent));
+
+    if (isIos && isSafari()) {
+        const img = new Image(1, 1);
+        img.src = "https://flashscore.onelink.me/BvSv/2p5v0qxi";
+        img.style.position = "fixed";
+        document.body.appendChild(img);
+    }
+</script>
+    </div>
+		<div class="footer__block"></div>
+		<div class="footer__lazyLoadImage" data-background-src="https://static.flashscore.com/res/_fs/image/3_footer/mobile_screen.png">
+			<div class="footer__mobileScreen"></div>
+		</div>
+</footer>
+
+<script>
+	(() => {
+		let legalAgeElement = document.getElementById('legal_age_confirmation');
+		if(legalAgeElement){
+			legalAgeElement.style.display = "none";
+		}
+		const cb = (globalGeoIp) => {
+			const legalAgeConfirmGeoIp = [];
+			const legalAgeConfirmOverlayGeoIp = ["NL"];
+			if (legalAgeElement && 
+                (Array.isArray(legalAgeConfirmGeoIp) && legalAgeConfirmGeoIp.includes(globalGeoIp) ||
+                Array.isArray(legalAgeConfirmOverlayGeoIp) && legalAgeConfirmOverlayGeoIp.includes(globalGeoIp))
+            ) {
+				legalAgeElement.style.display = "block";
+			}
+
+			const recommendedSitesDisabledGeoIps = cjs.Api.config.get('app', 'disabled_pages', 'geoip') || [];
+			if (recommendedSitesDisabledGeoIps.includes(globalGeoIp)) {
+				document.querySelector(".selfPromo__boxItem.page-links").remove();
+			}
+		};
+		cjs.Api.loader.get("geoIpResolver").call(cb);
+
+		// Lazy load images
+		const targetElements = document.querySelectorAll('.footer__lazyLoadImage');
+		const options = {
+			threshold: 0.5
+		}
+
+		const lazyLoadCallback = (entries, observer) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const lazyElement = entry.target;
+					const backgroundImageUrl = lazyElement.getAttribute('data-background-src');
+					const childAnchor = lazyElement.querySelector('.footer__mobileScreen');
+					if (childAnchor) {
+						childAnchor.style.background = `url("${ backgroundImageUrl }") no-repeat center/191px 238px`;
+					}
+
+					observer.unobserve(lazyElement);
+				}
+			})
+		}
+
+		const observer = new IntersectionObserver(lazyLoadCallback, options);
+
+		targetElements.forEach((element) => {
+			observer.observe(element);
+		})
+	})();
+</script>
+<sport name="soccer" />
+<script>
+var dataLayer = dataLayer || []; // Google Tag Manager
+(function() {
+    var pageInfo = {};
+    var hash = window.location.hash;
+    var hashParams = new URLSearchParams(hash.startsWith('#') ? hash.slice(1) : hash);
+    var queryParams = new URLSearchParams(window.location.search);
+
+    if (pageInfo.constructor === Object && Object.entries(pageInfo).length !== 0) {
+        try {
+            pageInfo['theme'] = window.cjs.Api.darkModeLocal.isDarkModeEnabled() ? 'dark' : 'default';
+            pageInfo['theme-user'] = window.cjs.Api.darkModeLocal.isUserDefinedTheme();
+            pageInfo['theme-browser'] = window.cjs.Api.darkModeLocal.getPreferredDarkModeBasedOnBrowser() ? 'dark' : 'default';
+            pageInfo['app_consent_enabled'] = queryParams.get('app_consent_enabled') ?? undefined;
+            pageInfo['app_ga_id'] = hashParams.get('app_ga_id') ?? undefined;
+        } catch(e) { 
+        	console.error(e);
+        };
+        try {
+            pageInfo['user_id'] = cjs.Api.localLsid.getIdent();                        
+        } catch(e) { 
+        	console.error(e);
+        };
+    
+        dataLayer.push(pageInfo);
+    }
+
+    try {
+    	cjs.Api.loader.get("myGames").call(function(mg) {
+            cjs.Api.loader.get("myTeams").call(function(mt) {
+                dataLayer.push({'event': 'userMy', 'games': mg.getCount(), 'teams': mt.getCount()});
+            });
+        });
+    } catch(e) { };
+
+    // window.hasAdBlock is used in BI department (don't remove)
+    const googleAdsRequest = new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: "HEAD", mode: "no-cors" });
+    fetch(googleAdsRequest).then(() => window.hasAdBlock = "false").catch(() => window.hasAdBlock = "true");
+}());
+</script>
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PWJ3NQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PWJ3NQ');</script>
+<!-- End Google Tag Manager -->
+<script>
+	window.bannerHandlerSettings = {
+		'options': {"api":{"host":"https:\/\/content.livesportmedia.eu","connectionTimeout":1000,"connectionRetryCount":2},"containerIdPattern":"zoneContainer-{zoneName}","labelText":"\u0420\u0435\u043a\u043b\u0430\u043c\u0430","consentOptions":{"timeout":3000,"programmaticStrategy":"wait_for_consent","bettingStrategy":"wait_for_consent","requiredConsentGroups":[1,2,3,4,5,6,7,8,9,10]},"projectData":{"id":46,"url":"https:\/\/www.flashscorekz.com\/"},"deviceParams":{"platform":"web","version":"8.8.0","package":"FlashscoreKZ.com"},"replaceZoneTimeout":200,"registerZoneTimeout":400,"debugMode":false,"sandboxMode":false},
+		'zones': {"background":{"name":"background","definitions":[{"zoneId":2945,"size":{"width":1920,"height":1200},"breakpoint":{"min":1048,"max":9999}}],"renderer":"wallpaper"},"left_menu_1":{"name":"left_menu_1","definitions":[{"zoneId":2946,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}]},"left_menu_2":{"name":"left_menu_2","definitions":[{"zoneId":2947,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"left_menu_3":{"name":"left_menu_3","definitions":[{"zoneId":3300,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"right_top":{"name":"right_top","definitions":[{"zoneId":6529,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"right_zone_1":{"name":"right_zone_1","definitions":[{"zoneId":6530,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"right_zone_2":{"name":"right_zone_2","definitions":[{"zoneId":6531,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"top":{"name":"top","definitions":[{"zoneId":2951,"size":{"width":970,"height":90},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"labelPosition":"Right","displayPlaceholder":true}},"content_bottom":{"name":"content_bottom","definitions":[{"zoneId":2953,"size":{"width":480,"height":480},"breakpoint":{"min":1,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_top":{"name":"detail_top","definitions":[{"zoneId":5061,"size":{"width":970,"height":90},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"labelPosition":"Right","displayPlaceholder":true}},"detail_content":{"name":"detail_content","definitions":[{"zoneId":2954,"size":{"width":480,"height":480},"breakpoint":{"min":1,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_background":{"name":"detail_background","definitions":[{"zoneId":16425,"size":{"width":3000,"height":2000},"breakpoint":{"min":1048,"max":9999}}],"renderer":"wallpaper"},"detail_left_menu_1":{"name":"detail_left_menu_1","definitions":[{"zoneId":16429,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}]},"detail_left_menu_2":{"name":"detail_left_menu_2","definitions":[{"zoneId":16431,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_left_menu_3":{"name":"detail_left_menu_3","definitions":[{"zoneId":16433,"size":{"width":140,"height":240},"breakpoint":{"min":640,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_top":{"name":"detail_right_top","definitions":[{"zoneId":16435,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_1":{"name":"detail_right_zone_1","definitions":[{"zoneId":16437,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_2":{"name":"detail_right_zone_2","definitions":[{"zoneId":16439,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_3":{"name":"detail_right_zone_3","definitions":[{"zoneId":16441,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_right_zone_4":{"name":"detail_right_zone_4","definitions":[{"zoneId":16443,"size":{"width":300,"height":600},"breakpoint":{"min":1048,"max":9999}}],"rendererOptions":{"displaySkeleton":false}},"detail_box_over_content":{"name":"detail_box_over_content","definitions":[{"zoneId":16427,"size":{"width":688,"height":85},"breakpoint":{"min":728,"max":9999},"rendererOptions":{"sticky":true}},{"zoneId":16445,"size":{"width":320,"height":100},"breakpoint":{"min":320,"max":727}}]},"responsive_fixed_bottom":{"name":"responsive_fixed_bottom","definitions":[{"zoneId":3536,"size":{"width":320,"height":50},"breakpoint":{"min":320,"max":727},"refreshInterval":45},{"zoneId":3537,"size":{"width":728,"height":90},"breakpoint":{"min":728,"max":999},"refreshInterval":45}]},"responsive_detail_fixed_bottom":{"name":"responsive_detail_fixed_bottom","definitions":[{"zoneId":3538,"size":{"width":320,"height":50},"breakpoint":{"min":320,"max":727},"refreshInterval":45,"allowedClientTypes":["mobile","tablet"]},{"zoneId":3539,"size":{"width":728,"height":90},"breakpoint":{"min":728,"max":9999},"refreshInterval":45,"allowedClientTypes":["mobile","tablet"]}]},"premium_square_mobile":{"name":"premium_square_mobile","definitions":[{"zoneId":6141,"size":{"width":480,"height":480},"breakpoint":{"min":300,"max":639}}],"renderer":"dynamic"},"box_over_content":{"name":"box_over_content","definitions":[{"zoneId":9521,"size":{"width":688,"height":85},"breakpoint":{"min":728,"max":9999}},{"zoneId":9523,"size":{"width":320,"height":100},"breakpoint":{"min":320,"max":727}}],"rendererOptions":{"sticky":true}}},
+	};
+</script>
+<span id="mlc-4ck3s9wd8c"></span>
+<span id="mlc-aks81bkdz"></span>
+</body>
+</html>

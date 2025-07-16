@@ -1,0 +1,41 @@
+import requests
+from bs4 import BeautifulSoup
+
+# URL страницы с матчами (пример для Flashscore)
+url = "https://www.flashscore.com/match/example-match-id/#match-statistics"
+
+# Заголовки для имитации браузера
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+}
+
+# Отправка запроса
+response = requests.get(url, headers=headers)
+
+# Проверка успешности запроса
+if response.status_code == 200:
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+    # Пример извлечения данных (адаптируйте под структуру страницы)
+    match_info = {}
+    
+    # Извлечение названий команд
+    teams = soup.find_all("div", class_="participantName")
+    if len(teams) >= 2:
+        match_info["home_team"] = teams[0].text.strip()
+        match_info["away_team"] = teams[1].text.strip()
+    
+    # Извлечение счета
+    score = soup.find("div", class_="detailScore")
+    if score:
+        match_info["score"] = score.text.strip()
+    
+    # Извлечение времени матча
+    time = soup.find("div", class_="minute")
+    if time:
+        match_info["time"] = time.text.strip()
+    
+    # Вывод результата
+    print(match_info)
+else:
+    print("Ошибка при загрузке страницы")

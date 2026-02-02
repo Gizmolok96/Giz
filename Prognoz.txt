@@ -1,0 +1,810 @@
+import requests
+from datetime import datetime, timedelta
+import tkinter as tk
+from tkinter import messagebox, StringVar, CENTER, LabelFrame
+from tkinter.ttk import Combobox, Treeview, Scrollbar
+from scipy.stats import poisson
+import numpy as np
+import math
+import os
+import threading
+import json
+
+# --- API-ключи ---
+SERPER_API_KEY = "d584596e463672fbfd7296cd1faad0651f19c511"  # <-- Вставьте свой Serper API ключ!
+OPENROUTER_API_KEY = "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"  # <-- Вставьте свой OpenRouter API ключ!
+
+# --- Файл для сессии ---
+desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+file_name = f"prognoz_results_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.txt"
+file_path = os.path.join(desktop_path, file_name)
+
+with open(file_path, 'w', encoding='utf-8') as f:
+    f.write("Файл прогнозов создан. Все прогнозы этой сессии будут здесь.\n\n")
+
+
+def ask_ai_serper(messages, api_key):
+    url = "https://google.serper.dev/search"
+    headers = {
+        'X-API-KEY': api_key,
+        'Content-Type': 'application/json'
+    }
+    user_message = ""
+    for m in messages:
+        if m.get("role") == "user":
+            user_message = m.get("content", "")
+    payload = {"q": user_message}
+    try:
+        response = requests.post(url, headers=headers, json=payload, timeout=30)
+        if response.status_code == 200:
+            result = response.json()
+            summary = []
+            if "answerBox" in result and "answer" in result["answerBox"]:
+                summary.append(f"Ответ: {result['answerBox']['answer']}")
+            if "organic" in result and isinstance(result["organic"], list):
+                for idx, item in enumerate(result["organic"][:3], 1):
+                    title = item.get("title", "")
+                    link = item.get("link", "")
+                    snippet = item.get("snippet", "")
+                    summary.append(f"{idx}. {title}\n{snippet}\n{link}")
+            if not summary:
+                summary.append("Нет свежей информации по запросу.")
+            return "\n\n".join(summary)
+        else:
+            return f"Ошибка: {response.status_code}\n{response.text}"
+    except Exception as e:
+        return f"Ошибка при обращении к Serper: {e}"
+
+
+def ask_ai_openrouter(messages, api_key, model="deepseek/deepseek-chat-v3-0324:free"):
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json",
+    }
+    data = {
+        "model": model,
+        "messages": messages
+    }
+    try:
+        response = requests.post(url, headers=headers, data=json.dumps(data), timeout=60)
+        if response.status_code == 200:
+            result = response.json()
+            return result['choices'][0]['message']['content']
+        else:
+            return f"Ошибка: {response.status_code}\n{response.text}"
+    except Exception as e:
+        return f"Ошибка при обращении к OpenRouter: {e}"
+
+
+def poisk_matchey(i, sport_nom):
+    all_spisok_matchey = []
+    url1 = ""
+    if sport_nom == '1':
+        url1 = f'https://32.flashscore.ninja/32/x/feed/f_1_{i}_3_ru_1'
+    elif sport_nom == '2':
+        url1 = f'https://32.flashscore.ninja/32/x/feed/f_2_{i}_3_ru_1'
+    elif sport_nom == '3':
+        url1 = f'https://32.flashscore.ninja/32/x/feed/f_3_{i}_3_ru_1'
+    elif sport_nom == '4':
+        url1 = f'https://32.flashscore.ninja/32/x/feed/f_4_{i}_3_ru_1'
+    else:
+        return []
+    headers = {
+        'User-Agent': 'Mozilla/5.0',
+        'Accept': '*/*',
+        'x-fsign': 'SW9D1eZo',
+        'Connection': 'keep-alive'
+    }
+    try:
+        r = requests.get(url1, headers=headers, timeout=10)
+        if r.status_code != 200:
+            return []
+    except Exception:
+        return []
+    try:
+        text_stranici = r.text.split('~ZA÷')
+        for text_str in text_stranici[1:]:
+            liga = text_str.split('¬')[0]
+            games = text_str.split('~AA÷')
+            for game in games[1:]:
+                try:
+                    data_matcha = datetime.fromtimestamp(int(game.split('AD÷')[1].split('¬')[0]))
+                    data_matcha = data_matcha.strftime('%d.%m %H:%M')
+                except:
+                    data_matcha = ""
+                try:
+                    team1 = game.split('AE÷')[1].split('¬')[0]
+                except:
+                    team1 = ""
+                try:
+                    team2 = game.split('AF÷')[1].split('¬')[0]
+                except:
+                    team2 = ""
+                try:
+                    score1 = game.split('AG÷')[1].split('¬')[0]
+                except:
+                    score1 = ''
+                try:
+                    score2 = game.split('AH÷')[1].split('¬')[0]
+                except:
+                    score2 = ''
+                try:
+                    match_id = game.split('~AB÷')[1].split('¬')[0]
+                except:
+                    match_id = ''
+                full_link = f"https://www.flashscore.ru/match/{match_id}/#match-summary" if match_id else ""
+                all_spisok_matchey.append([
+                    data_matcha, liga, team1, team2, score1, score2, full_link, match_id
+                ])
+    except Exception:
+        pass
+    return all_spisok_matchey
+
+
+# --- Математические и вспомогательные функции ---
+def calculate_match_rating(home_goals_for, home_goals_against, away_goals_for, away_goals_against):
+    home_rating = sum(home_goals_for) - sum(home_goals_against)
+    away_rating = sum(away_goals_for) - sum(away_goals_against)
+    return home_rating - away_rating
+
+
+def calculate_probability_from_rating(rating):
+    home_win_prob = 1.56 * rating + 46.47
+    away_win_prob = 100 - home_win_prob
+    return max(0, min(100, home_win_prob)), max(0, min(100, away_win_prob))
+
+
+def calculate_average_goals(matches):
+    if not matches or len(matches) == 0:
+        return 0
+    total_goals = sum(match[0] for match in matches)
+    return total_goals / len(matches)
+
+
+# --- Dixon-Coles скорректированная модель Пуассона ---
+def dixon_coles_correction(goals_home, goals_away, lam_home, lam_away, rho):
+    # Коррекция только для счетов (0,0), (0,1), (1,0), (1,1), для остальных 1.0 (нет коррекции)
+    if goals_home == 0 and goals_away == 0:
+        return 1 - lam_home * lam_away * rho
+    elif goals_home == 0 and goals_away == 1:
+        return 1 + lam_home * rho
+    elif goals_home == 1 and goals_away == 0:
+        return 1 + lam_away * rho
+    elif goals_home == 1 and goals_away == 1:
+        return 1 - rho
+    else:
+        return 1.0
+
+
+def poisson_dixon_coles(avg_goals_team1, avg_goals_team2, rho=-0.12, max_goals=5):
+    # rho < 0 -- коррелирует с низкими счетами, обычно -0.1 ... -0.2
+    scores = {}
+    for goals_team1 in range(max_goals + 1):
+        for goals_team2 in range(max_goals + 1):
+            base_prob = poisson.pmf(goals_team1, avg_goals_team1) * poisson.pmf(goals_team2, avg_goals_team2)
+            correction = dixon_coles_correction(goals_team1, goals_team2, avg_goals_team1, avg_goals_team2, rho)
+            scores[(goals_team1, goals_team2)] = base_prob * correction
+    most_likely_score = max(scores, key=scores.get)
+    return most_likely_score, scores
+
+
+def calculate_total_probabilities(avg_goals_team1, avg_goals_team2, rho=-0.12):
+    # Подсчет вероятностей тоталов с учетом скоррекции Dixon-Coles
+    max_goals = 6
+    scores = {}
+    for goals_team1 in range(max_goals + 1):
+        for goals_team2 in range(max_goals + 1):
+            base_prob = poisson.pmf(goals_team1, avg_goals_team1) * poisson.pmf(goals_team2, avg_goals_team2)
+            correction = dixon_coles_correction(goals_team1, goals_team2, avg_goals_team1, avg_goals_team2, rho)
+            scores[(goals_team1, goals_team2)] = base_prob * correction
+    results = []
+    for t in [0.5, 1.5, 2.5, 3.5, 4.5]:
+        tb = sum(prob for (h, a), prob in scores.items() if h + a > t)
+        tm = sum(prob for (h, a), prob in scores.items() if h + a <= t)
+        results.append((t, tb * 100, tm * 100))
+    return results
+
+
+def predict_score(home_matches, away_matches, coef_3_0, coef_0_3, rho=-0.12):
+    avg_goals_team1 = calculate_average_goals(home_matches)
+    avg_goals_team2 = calculate_average_goals(away_matches)
+    if coef_3_0 and coef_3_0 < 6:
+        avg_goals_team1 += 0.5
+    if coef_0_3 and coef_0_3 < 6:
+        avg_goals_team2 += 0.5
+    predicted_score, scores = poisson_dixon_coles(avg_goals_team1, avg_goals_team2, rho)
+    return predicted_score, scores, avg_goals_team1, avg_goals_team2
+
+
+def calculate_draw_probability(scores):
+    draw_prob = sum([prob for (a, b), prob in scores.items() if a == b])
+    return draw_prob * 100
+
+
+def value_bet(coef, prob):
+    return (coef * prob) - 1
+
+
+def calc_margin(coef1, coefx, coef2):
+    try:
+        p1 = 1 / float(coef1)
+        px = 1 / float(coefx)
+        p2 = 1 / float(coef2)
+        margin = p1 + px + p2
+        return margin
+    except Exception:
+        return 1.0
+
+
+def fair_probs(coef1, coefx, coef2):
+    margin = calc_margin(coef1, coefx, coef2)
+    try:
+        p1 = (1 / float(coef1)) / margin
+        px = (1 / float(coefx)) / margin
+        p2 = (1 / float(coef2)) / margin
+        return p1, px, p2, margin
+    except Exception:
+        return 0.0, 0.0, 0.0, 1.0
+
+
+def get_best_value_bet(value1, value2, valuex, home_name, away_name):
+    best = max(value1, value2, valuex)
+    if best <= 0:
+        return "Валуй не найден"
+    if best == value1:
+        return f"Валуй: {home_name} (П1) ({value1:.2f})"
+    elif best == value2:
+        return f"Валуй: {away_name} (П2) ({value2:.2f})"
+    else:
+        return f"Валуй: Ничья (X) ({valuex:.2f})"
+
+
+def get_implied_probs(odd_home, odd_draw, odd_away):
+    margin = 1 / odd_home + 1 / odd_draw + 1 / odd_away
+    p_home = (1 / odd_home) / margin
+    p_draw = (1 / odd_draw) / margin
+    p_away = (1 / odd_away) / margin
+    return p_home, p_draw, p_away
+
+
+def get_float(entry, default=0.0):
+    try:
+        return float(entry.get())
+    except Exception:
+        return default
+
+
+def monte_carlo_simulate(lam_home, lam_away, simulations=20000):
+    results = {'home': 0, 'draw': 0, 'away': 0}
+    score_counter = {}
+    for _ in range(simulations):
+        h = np.random.poisson(lam_home)
+        a = np.random.poisson(lam_away)
+        if h > a:
+            results['home'] += 1
+        elif h < a:
+            results['away'] += 1
+        else:
+            results['draw'] += 1
+        score = f"{h}:{a}"
+        score_counter[score] = score_counter.get(score, 0) + 1
+    prob_home = results['home'] / simulations
+    prob_draw = results['draw'] / simulations
+    prob_away = results['away'] / simulations
+    prob_scores = {k: v / simulations for k, v in score_counter.items()}
+    return prob_home, prob_draw, prob_away, prob_scores
+
+
+def btts_probability(lam_home, lam_away):
+    p_home_0 = math.exp(-lam_home)
+    p_away_0 = math.exp(-lam_away)
+    p_both_0 = math.exp(-lam_home - lam_away)
+    prob_btts_yes = 1 - p_home_0 - p_away_0 + p_both_0
+    prob_btts_no = 1 - prob_btts_yes
+    return prob_btts_yes, prob_btts_no
+
+
+# --- Кэш для ИИ-прогнозов ---
+ai_cache = {}
+
+
+def fetch_ai_forecast(team1, team2, liga, callback=None):
+    key = f"{team1}|{team2}|{liga}"
+    if key in ai_cache:
+        if callback:
+            callback(ai_cache[key])
+        return
+
+    def worker():
+        sites = [
+            "ru.soccerway.com",
+            "whoscored.com",
+            "understat.com",
+            "flashscore.com",
+            "footystats.org",
+            "nb-bet.com"
+        ]
+        site_query = " OR ".join([f"site:{s}" for s in sites])
+        prompt_serper_sites = f"({site_query}) {team1} - {team2} статистика {liga}"
+        messages_serper_sites = [{"role": "user", "content": prompt_serper_sites}]
+        news_summary = ask_ai_serper(messages_serper_sites, SERPER_API_KEY)
+        if ("Нет свежей информации" in news_summary) or (len(news_summary.strip()) < 50):
+            prompt_serper_all = f"{team1} - {team2} статистика {liga}"
+            messages_serper_all = [{"role": "user", "content": prompt_serper_all}]
+            news_summary = ask_ai_serper(messages_serper_all, SERPER_API_KEY)
+
+        prompt_openrouter = (
+            f"Матч: {team1} (домашняя, П1) vs {team2} (гостевая, П2), лига: {liga}\n"
+            "Используй только факты из summary ниже:\n"
+            "'''\n"
+            f"{news_summary}\n"
+            "'''\n"
+            "Сделай аналитический прогноз:\n"
+            f"- Вероятность победы хозяев ({team1}, П1)\n"
+            f"- Вероятность победы гостей ({team2}, П2)\n"
+            "- Вероятность тотала П1 (то есть хозяев) больше (ТБ) и меньше (ТМ) 1.5 и 2.5\n"
+            "- Вероятность обе забьют (да/нет)\n"
+            "Форматируй вывод пунктами и кратко поясняй."
+        )
+        messages_openrouter = [
+            {
+                "role": "system",
+                "content": "Ты футбольный аналитик, анализируешь только summary пользователя."
+            },
+            {"role": "user", "content": prompt_openrouter}
+        ]
+        ai_forecast = ask_ai_openrouter(messages_openrouter, OPENROUTER_API_KEY)
+        ai_cache[key] = ai_forecast
+        if callback:
+            callback(ai_forecast)
+
+    threading.Thread(target=worker, daemon=True).start()
+
+
+# --- GUI и логика расчёта ---
+def calculate_forecast():
+    h_goals = get_float(entry_h_goals)
+    a_goals = get_float(entry_a_goals)
+    h_conceded = get_float(entry_h_conceded)
+    a_conceded = get_float(entry_a_conceded)
+    try:
+        coefficient_team1 = float(entry_coeff_p1.get())
+        coefficient_team2 = float(entry_coeff_p2.get())
+        coefficient_x = float(entry_coeff_x.get())
+        coef_3_0 = float(entry_coef_3_0.get())
+        coef_0_3 = float(entry_coef_0_3.get())
+    except Exception:
+        messagebox.showerror("Ошибка", "Проверьте ввод коэффициентов.")
+        return
+
+    home_goals_for = []
+    home_goals_against = []
+    away_goals_for = []
+    away_goals_against = []
+    for e in home_entries:
+        g_for = e[0].get().strip()
+        g_against = e[1].get().strip()
+        home_goals_for.append(int(g_for) if g_for.isdigit() else 0)
+        home_goals_against.append(int(g_against) if g_against.isdigit() else 0)
+    for e in away_entries:
+        g_against = e[0].get().strip()
+        g_for = e[1].get().strip()
+        away_goals_for.append(int(g_for) if g_for.isdigit() else 0)
+        away_goals_against.append(int(g_against) if g_against.isdigit() else 0)
+
+    avg_scored_home = h_goals if h_goals > 0 else (
+        sum(home_goals_for) / len(home_goals_for) if len(home_goals_for) else 0.0)
+    avg_conceded_home = h_conceded if h_conceded > 0 else (
+        sum(home_goals_against) / len(home_goals_against) if len(home_goals_against) else 0.0)
+    avg_scored_away = a_goals if a_goals > 0 else (
+        sum(away_goals_for) / len(away_goals_for) if len(away_goals_for) else 0.0)
+    avg_conceded_away = a_conceded if a_conceded > 0 else (
+        sum(away_goals_against) / len(away_goals_against) if len(away_goals_against) else 0.0)
+
+    lambda_season_home = avg_scored_home
+    lambda_season_away = avg_scored_away
+
+    lambda_last6_home = (avg_scored_home + avg_conceded_away) / 2
+    lambda_last6_away = (avg_scored_away + avg_conceded_home) / 2
+
+    p_home, p_draw, p_away = get_implied_probs(coefficient_team1, coefficient_x, coefficient_team2)
+    avg_total_goals = (lambda_season_home + lambda_season_away + lambda_last6_home + lambda_last6_away) / 2
+    lambda_market_home = avg_total_goals * p_home
+    lambda_market_away = avg_total_goals * p_away
+
+    w1, w2, w3 = 0.4, 0.4, 0.2
+    lambda_final_home = w1 * lambda_season_home + w2 * lambda_last6_home + w3 * lambda_market_home
+    lambda_final_away = w1 * lambda_season_away + w2 * lambda_last6_away + w3 * lambda_market_away
+
+    prob_btts_yes, prob_btts_no = btts_probability(lambda_final_home, lambda_final_away)
+
+    match_rating = calculate_match_rating(home_goals_for, home_goals_against, away_goals_for, away_goals_against)
+    rating_home_win_prob, rating_away_win_prob = calculate_probability_from_rating(match_rating)
+    fair_p1, fair_px, fair_p2, margin = fair_probs(coefficient_team1, coefficient_x, coefficient_team2)
+    fair_p1_pct = fair_p1 * 100
+    fair_px_pct = fair_px * 100
+    fair_p2_pct = fair_p2 * 100
+
+    home_matches = [(home_goals_for[i], home_goals_against[i]) for i in range(6)]
+    away_matches = [(away_goals_for[i], away_goals_against[i]) for i in range(6)]
+    # Используем скорректированную модель Dixon-Coles
+    predicted_score, scores, avg_goals_team1, avg_goals_team2 = predict_score(home_matches, away_matches, coef_3_0,
+                                                                              coef_0_3, rho=-0.12)
+    draw_probability = calculate_draw_probability(scores)
+    total_probs = calculate_total_probabilities(avg_goals_team1, avg_goals_team2, rho=-0.12)
+    combined_home_win_prob = (rating_home_win_prob + fair_p1_pct) / 2
+    combined_away_win_prob = (rating_away_win_prob + fair_p2_pct) / 2
+    value1 = value_bet(coefficient_team1, fair_p1)
+    value2 = value_bet(coefficient_team2, fair_p2)
+    valuex = value_bet(coefficient_x, fair_px)
+    best_bet = get_best_value_bet(value1, value2, valuex, entry_team1.get(), entry_team2.get())
+
+    N = 15
+    SIMULATIONS = 20000
+
+    prob_home, prob_draw, prob_away, prob_scores = monte_carlo_simulate(lambda_final_home, lambda_final_away,
+                                                                        simulations=SIMULATIONS)
+    top_scores = sorted(prob_scores.items(), key=lambda x: -x[1])[:N]
+
+    left_output.config(state=tk.NORMAL)
+    right_output.config(state=tk.NORMAL)
+    left_output.delete(1.0, tk.END)
+    right_output.delete(1.0, tk.END)
+    left_output.insert(tk.END, f"[λ] Итоговые: хозяева {lambda_final_home:.2f}, гости {lambda_final_away:.2f}\n")
+    left_output.insert(tk.END, f"λ по атаке: {avg_scored_home:.2f} (П1), {avg_scored_away:.2f} (П2)\n")
+    left_output.insert(tk.END, f"λ по обороне: {avg_conceded_home:.2f} (П1), {avg_conceded_away:.2f} (П2)\n")
+    left_output.insert(tk.END, f"λ комбинированные: {lambda_last6_home:.2f} (П1), {lambda_last6_away:.2f} (П2)\n")
+    left_output.insert(tk.END, f"Маржа букмекера: {(margin - 1) * 100:.2f}%\n")
+    left_output.insert(tk.END,
+                       f"П1: {combined_home_win_prob:.1f}% | X: {fair_px_pct:.1f}% | П2: {combined_away_win_prob:.1f}%\n")
+    left_output.insert(tk.END, f"Рейтинг: {match_rating:.1f}; Вер. ничьей (по модели): {draw_probability:.1f}%\n")
+    left_output.insert(tk.END, f"Счет (Dixon-Coles): {predicted_score[0]}:{predicted_score[1]}\n")
+    left_output.insert(tk.END, f"Value П1: {value1:.2f} | Value X: {valuex:.2f} | Value П2: {value2:.2f}\n")
+    left_output.insert(tk.END, f"{best_bet}\n")
+    left_output.insert(tk.END, f"\n[Монте-Карло, симуляций: {SIMULATIONS}]\n")
+    left_output.insert(tk.END, f"П1: {prob_home * 100:.1f}%, X: {prob_draw * 100:.1f}%, П2: {prob_away * 100:.1f}%\n")
+    left_output.insert(tk.END, f"Топ-{N} счетов по Монте-Карло:\n")
+    for score, prob in top_scores:
+        left_output.insert(tk.END, f"{score}: {prob * 100:.2f}%\n")
+    left_output.insert(tk.END, f"\nОбе забьют (ДА): {prob_btts_yes * 100:.1f}% | (НЕТ): {prob_btts_no * 100:.1f}%\n")
+    left_output.config(state=tk.DISABLED)
+    right_output.insert("1.0", "Тоталы\n", "center")
+    for t, tb, tm in total_probs:
+        right_output.insert(
+            tk.END,
+            f"ТБ {t:.1f}: {tb:.1f}%  ТМ {t:.1f}: {tm:.1f}%\n",
+            "center"
+        )
+    right_output.config(state=tk.DISABLED)
+
+    # --- Сохраняем прогноз в файл, включая тоталы ---
+    try:
+        with open(file_path, 'a', encoding='utf-8') as f:
+            f.write(f"Дата прогноза: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+            f.write(f"Лига: {entry_liga.get().strip()}\n")
+            f.write(f"П1: {entry_team1.get().strip()}  П2: {entry_team2.get().strip()}\n")
+            f.write(left_output.get("1.0", tk.END))
+            f.write('[Тоталы]\n')
+            f.write(right_output.get("1.0", tk.END))
+            f.write('-' * 60 + '\n')
+    except Exception as err:
+        print(f"Ошибка записи в файл: {err}")
+
+    # --- AI прогноз из кэша или с предзагрузкой ---
+    team1 = entry_team1.get().strip()
+    team2 = entry_team2.get().strip()
+    liga = entry_liga.get().strip()
+    key = f"{team1}|{team2}|{liga}"
+
+    def show_ai(ai_forecast):
+        left_output.config(state=tk.NORMAL)
+        text = left_output.get("1.0", tk.END)
+        if "[ИИ-прогноз] загружается..." in text:
+            pos = text.find("[ИИ-прогноз] загружается...")
+            line_start = text.count('\n', 0, pos) + 1
+            left_output.delete(f"{line_start}.0", f"{line_start + 1}.0")
+        left_output.insert(tk.END, f"\n[ИИ-прогноз]\n{ai_forecast}\n")
+        left_output.config(state=tk.DISABLED)
+        # --- Сохраняем ИИ-прогноз в файл ---
+        try:
+            with open(file_path, 'a', encoding='utf-8') as f:
+                f.write("[ИИ-прогноз]\n")
+                f.write(f"{ai_forecast}\n")
+                f.write('-' * 60 + '\n')
+        except Exception as err:
+            print(f"Ошибка записи ИИ-прогноза: {err}")
+
+    if key in ai_cache:
+        show_ai(ai_cache[key])
+    else:
+        left_output.config(state=tk.NORMAL)
+        left_output.insert(tk.END, "\n[ИИ-прогноз] загружается...\n")
+        left_output.config(state=tk.DISABLED)
+        fetch_ai_forecast(team1, team2, liga, callback=show_ai)
+
+
+# ---- GUI ----
+root = tk.Tk()
+root.title("Flashscore Прогнозы (Dixon-Coles, Монте-Карло, ИИ-анализ)")
+root.geometry("1700x780")
+root.minsize(1100, 600)
+root['bg'] = "#f2f2f7"
+
+lf_matches = LabelFrame(root, text="Матчи", font=("Arial", 12, "bold"), bg="#f2f2f7", padx=4, pady=2)
+lf_matches.grid(row=0, column=0, rowspan=4, sticky="nsew", padx=8, pady=8)
+root.grid_rowconfigure(0, weight=1)
+root.grid_columnconfigure(0, weight=5)
+root.grid_columnconfigure(1, weight=4)
+root.grid_columnconfigure(2, weight=3)
+
+sports_dict = {'Футбол': '1', 'Теннис': '2', 'Баскетбол': '3', 'Хоккей': '4'}
+sp_dates = [(datetime.now() + timedelta(i)).strftime("%d.%m.%Y") for i in range(0, 4)]
+
+frame_top = tk.Frame(lf_matches, bg="#f2f2f7")
+frame_top.pack(fill=tk.X, pady=2)
+tk.Label(frame_top, text="Вид:", bg="#f2f2f7", font=("Arial", 10)).pack(side=tk.LEFT, padx=2)
+sport_var = StringVar(value='Футбол')
+sport_combo = Combobox(frame_top, values=list(sports_dict.keys()), textvariable=sport_var, width=9, justify=CENTER,
+                       font=("Arial", 10))
+sport_combo.pack(side=tk.LEFT, padx=2)
+tk.Label(frame_top, text="Дата:", bg="#f2f2f7", font=("Arial", 10)).pack(side=tk.LEFT, padx=2)
+date_var = StringVar(value=sp_dates[0])
+date_combo = Combobox(frame_top, values=sp_dates, textvariable=date_var, width=10, justify=CENTER, font=("Arial", 10))
+date_combo.pack(side=tk.LEFT, padx=2)
+
+
+def show_matches():
+    for row in tree.get_children():
+        tree.delete(row)
+    sport_code = sports_dict[sport_var.get()]
+    date_idx = date_combo.current()
+    global matches_cache
+    matches_cache = poisk_matchey(str(date_idx), sport_code)
+    if matches_cache:
+        for m in matches_cache:
+            tree.insert(
+                '', tk.END,
+                values=(
+                    m[0], m[1], m[2], m[3], f"{m[4]}-{m[5]}"
+                )
+            )
+        info_label['text'] = f"Найдено: {len(matches_cache)}"
+    else:
+        info_label['text'] = "Нет матчей"
+
+
+tk.Button(frame_top, text="Показать матчи", command=show_matches, font="Arial 11 bold", bg="#d0ffd0", width=14).pack(
+    side=tk.LEFT, padx=4)
+tk.Button(lf_matches, text="Обновить", command=show_matches, font="Arial 11 bold", bg="#ccccff", width=14).pack(pady=4)
+info_label = tk.Label(lf_matches, text="Выберите вид и дату", font="Arial 11 bold", bg="#f2f2f7")
+info_label.pack(pady=1)
+
+frame_table = tk.Frame(lf_matches)
+frame_table.pack(expand=1, fill=tk.BOTH, padx=0, pady=2)
+columns = ("Время", "Лига", "П1", "П2", "Счёт")
+tree = Treeview(frame_table, columns=columns, show="headings", height=27)
+for c in columns:
+    if c == "Время":
+        tree.column(c, width=100, anchor=tk.CENTER)
+    elif c == "Лига":
+        tree.column(c, width=180, anchor=tk.CENTER)
+    elif c in ("П1", "П2"):
+        tree.column(c, width=120, anchor=tk.CENTER)
+    elif c == "Счёт":
+        tree.column(c, width=70, anchor=tk.CENTER)
+    tree.heading(c, text=c)
+v_scroll = Scrollbar(frame_table, orient=tk.VERTICAL, command=tree.yview)
+tree.configure(yscroll=v_scroll.set)
+tree.grid(row=0, column=0, sticky="nsew")
+v_scroll.grid(row=0, column=1, sticky="ns")
+frame_table.grid_rowconfigure(0, weight=1)
+frame_table.grid_columnconfigure(0, weight=1)
+matches_cache = []
+
+lf_info = LabelFrame(root, text="Инфо", font=("Arial", 12, "bold"), bg="#f2f2f7", padx=2, pady=2)
+lf_info.grid(row=0, column=1, columnspan=2, sticky="ew", padx=4, pady=8)
+for i in range(4):
+    lf_info.grid_columnconfigure(i, weight=0)
+
+tk.Label(lf_info, text="Лига", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=0, column=0, sticky="e", padx=(6, 2),
+                                                                              pady=2)
+entry_liga = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_liga.grid(row=0, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="П1", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=1, column=0, sticky="e", padx=(6, 2),
+                                                                            pady=2)
+entry_team1 = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_team1.grid(row=1, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="П2", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=2, column=0, sticky="e", padx=(6, 2),
+                                                                            pady=2)
+entry_team2 = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_team2.grid(row=2, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Голы (ср.) П1", bg="#f2f2f7", font=("Arial", 10, "bold")).grid(row=3, column=0, sticky="e",
+                                                                                       padx=(6, 2), pady=2)
+entry_h_goals = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_h_goals.grid(row=3, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Голы (ср.) П2", bg="#f2f2f7", font=("Arial", 10, "bold")).grid(row=4, column=0, sticky="e",
+                                                                                       padx=(6, 2), pady=2)
+entry_a_goals = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_a_goals.grid(row=4, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Голы пропущ. (ср.) П1", bg="#f2f2f7", font=("Arial", 10, "bold")).grid(row=5, column=0,
+                                                                                               sticky="e", padx=(6, 2),
+                                                                                               pady=2)
+entry_h_conceded = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_h_conceded.grid(row=5, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Голы пропущ. (ср.) П2", bg="#f2f2f7", font=("Arial", 10, "bold")).grid(row=6, column=0,
+                                                                                               sticky="e", padx=(6, 2),
+                                                                                               pady=2)
+entry_a_conceded = tk.Entry(lf_info, width=20, font=("Arial", 11, "bold"), justify='center')
+entry_a_conceded.grid(row=6, column=1, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Кэф П1", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=0, column=2, sticky="e",
+                                                                                padx=(24, 2), pady=2)
+entry_coeff_p1 = tk.Entry(lf_info, width=8, font=("Arial", 11, "bold"), justify='center')
+entry_coeff_p1.grid(row=0, column=3, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Кэф X", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=1, column=2, sticky="e",
+                                                                               padx=(24, 2), pady=2)
+entry_coeff_x = tk.Entry(lf_info, width=8, font=("Arial", 11, "bold"), justify='center')
+entry_coeff_x.grid(row=1, column=3, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="Кэф П2", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=2, column=2, sticky="e",
+                                                                                padx=(24, 2), pady=2)
+entry_coeff_p2 = tk.Entry(lf_info, width=8, font=("Arial", 11, "bold"), justify='center')
+entry_coeff_p2.grid(row=2, column=3, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="3:0", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=3, column=2, sticky="e", padx=(24, 2),
+                                                                             pady=2)
+entry_coef_3_0 = tk.Entry(lf_info, width=8, font=("Arial", 11, "bold"), justify='center')
+entry_coef_3_0.grid(row=3, column=3, sticky="w", padx=(0, 2), pady=2)
+
+tk.Label(lf_info, text="0:3", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=4, column=2, sticky="e", padx=(24, 2),
+                                                                             pady=2)
+entry_coef_0_3 = tk.Entry(lf_info, width=8, font=("Arial", 11, "bold"), justify='center')
+entry_coef_0_3.grid(row=4, column=3, sticky="w", padx=(0, 2), pady=2)
+
+tk.Button(lf_info, text="Расчёт", command=calculate_forecast, font="Arial 11 bold", bg="#d0ffd0", width=14).grid(row=7,
+                                                                                                                 column=1,
+                                                                                                                 pady=(
+                                                                                                                     12,
+                                                                                                                     2))
+
+
+def reset_fields():
+    entry_liga.delete(0, tk.END)
+    entry_team1.delete(0, tk.END)
+    entry_team2.delete(0, tk.END)
+    entry_coeff_p1.delete(0, tk.END)
+    entry_coeff_p2.delete(0, tk.END)
+    entry_coeff_x.delete(0, tk.END)
+    entry_coef_3_0.delete(0, tk.END)
+    entry_coef_0_3.delete(0, tk.END)
+    entry_h_goals.delete(0, tk.END)
+    entry_a_goals.delete(0, tk.END)
+    entry_h_conceded.delete(0, tk.END)
+    entry_a_conceded.delete(0, tk.END)
+    for e in [entry for sublist in home_entries + away_entries for entry in sublist]:
+        e.delete(0, tk.END)
+    left_output.config(state=tk.NORMAL)
+    right_output.config(state=tk.NORMAL)
+    left_output.delete(1.0, tk.END)
+    right_output.delete(1.0, tk.END)
+    left_output.config(state=tk.DISABLED)
+    right_output.config(state=tk.DISABLED)
+
+
+tk.Button(lf_info, text="Сброс", command=reset_fields, font="Arial 11 bold", bg="#ffd0d0", width=14).grid(row=7,
+                                                                                                          column=3,
+                                                                                                          pady=(12, 2))
+
+
+def create_match_table(parent, title, headers, row, column, subtitle=None):
+    frame = LabelFrame(parent, text=title, font=("Arial", 11, "bold"), bg="#f2f2f7", padx=2, pady=0)
+    frame.grid(row=row, column=column, sticky="nsew", padx=2, pady=2)
+    for i in range(2):
+        frame.grid_columnconfigure(i, weight=1)
+    if subtitle:
+        tk.Label(frame, text=subtitle, font=("Arial", 9, "italic"), bg="#f2f2f7", fg="#555").grid(row=0, column=0,
+                                                                                                  columnspan=3,
+                                                                                                  sticky="w", padx=2,
+                                                                                                  pady=(2, 0))
+        headers_row = 1
+    else:
+        headers_row = 0
+    for col, header in enumerate(headers):
+        tk.Label(frame, text=header, font=("Arial", 10, "bold"), bg="#f2f2f7").grid(row=headers_row, column=col, padx=2)
+    entries = []
+    for r in range(6):
+        e1 = tk.Entry(frame, width=4, justify='center', font=("Arial", 10, "bold"))
+        e1.grid(row=r + headers_row + 1, column=0, padx=2, pady=1)
+        tk.Label(frame, text=":", bg="#f2f2f7", font=("Arial", 11, "bold")).grid(row=r + headers_row + 1, column=1,
+                                                                                 padx=2)
+        e2 = tk.Entry(frame, width=4, justify='center', font=("Arial", 10, "bold"))
+        e2.grid(row=r + headers_row + 1, column=2, padx=2, pady=1)
+        entries.append([e1, e2])
+    return frame, entries
+
+
+home_frame, home_entries = create_match_table(
+    root,
+    "Последние матчи П1",
+    ["Заб", "", "Проп"],
+    row=1,
+    column=1,
+    subtitle="(домашние матчи)"
+)
+away_frame, away_entries = create_match_table(
+    root,
+    "Последние матчи П2",
+    ["Проп", "", "Заб"],
+    row=2,
+    column=1,
+    subtitle="(гостевые матчи)"
+)
+
+lf_output = LabelFrame(root, text="Прогноз и валуй", font=("Arial", 12, "bold"), bg="#f2f2f7", padx=2, pady=2)
+lf_output.grid(row=1, column=2, sticky="nsew", padx=2, pady=2, rowspan=2)
+left_output = tk.Text(lf_output, height=22, width=42, font=("Arial", 13, "bold"), bg="#ffffff", fg="#0a0a0a",
+                      relief="flat", wrap='word', padx=4, pady=3)
+left_output.pack(expand=1, fill=tk.BOTH, padx=0, pady=0)
+left_output.config(state=tk.DISABLED)
+
+lf_totals = LabelFrame(root, text="Тоталы", font=("Arial", 12, "bold"), bg="#f2f2f7", padx=2, pady=2)
+lf_totals.grid(row=3, column=1, columnspan=2, sticky="nsew", padx=2, pady=2)
+right_output = tk.Text(lf_totals, height=7, width=42, font=("Arial", 13, "bold"), bg="#ffffff", fg="#0a0a0a",
+                       relief="flat", wrap='word', padx=4, pady=3)
+right_output.pack(expand=1, fill=tk.BOTH, padx=0, pady=0)
+right_output.config(state=tk.DISABLED)
+right_output.tag_configure("center", justify='center')
+
+for i in range(4):
+    root.grid_rowconfigure(i, weight=1)
+for i in range(4):
+    root.grid_columnconfigure(i, weight=1)
+
+
+def fill_predictor_from_match(match):
+    entry_liga.delete(0, tk.END)
+    entry_team1.delete(0, tk.END)
+    entry_team2.delete(0, tk.END)
+    entry_liga.insert(0, match[1])
+    entry_team1.insert(0, match[2])
+    entry_team2.insert(0, match[3])
+    for e in [entry for sublist in home_entries + away_entries for entry in sublist]:
+        e.delete(0, tk.END)
+    entry_coeff_p1.delete(0, tk.END)
+    entry_coeff_p2.delete(0, tk.END)
+    entry_coeff_x.delete(0, tk.END)
+    entry_coef_3_0.delete(0, tk.END)
+    entry_coef_0_3.delete(0, tk.END)
+    entry_h_goals.delete(0, tk.END)
+    entry_a_goals.delete(0, tk.END)
+    entry_h_conceded.delete(0, tk.END)
+    entry_a_conceded.delete(0, tk.END)
+    left_output.config(state=tk.NORMAL)
+    right_output.config(state=tk.NORMAL)
+    left_output.delete(1.0, tk.END)
+    right_output.delete(1.0, tk.END)
+    left_output.config(state=tk.DISABLED)
+    right_output.config(state=tk.DISABLED)
+
+
+def on_match_click(event):
+    selected = tree.selection()
+    if selected:
+        idx = tree.index(selected[0])
+        match = matches_cache[idx]
+        fill_predictor_from_match(match)
+        # Предзапуск ИИ при выборе матча
+        team1, team2, liga = match[2], match[3], match[1]
+        fetch_ai_forecast(team1, team2, liga)
+
+
+tree.bind("<Double-1>", on_match_click)
+root.mainloop()

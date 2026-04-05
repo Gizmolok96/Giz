@@ -1,0 +1,869 @@
+package com.potolochnik.app.ui.drawing
+
+import android.content.Context
+import android.content.Intent
+import android.graphics.Color
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.tabs.TabLayout
+import com.potolochnik.app.R
+import com.potolochnik.app.data.*
+import com.potolochnik.app.databinding.ActivityDrawingBinding
+import com.potolochnik.app.ui.pricelist.AddPositionActivity
+import kotlin.math.sqrt
+
+class DrawingActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDrawingBinding
+    private lateinit var storage: AppStorage
+    private lateinit var project: Project
+    private lateinit var room: Room
+
+    private val engine = AutoCorrectionEngine()
+
+    private var currentDimIndex = 0
+    private var allConstraints = mutableListOf<DrawLine>()
+    private var inputBuffer = ""
+    private var isDimensionMode = false
+    private var isAllDone = false
+
+    companion object {
+        const val EXTRA_PROJECT_ID = "project_id"
+        const val EXTRA_ROOM_ID = "room_id"
+        const val EXTRA_AUTO_AB = "auto_ab"
+        const val EXTRA_AUTO_BC = "auto_bc"
+
+        fun start(context: Context, projectId: String, roomId: String) {
+            val intent = Intent(context, DrawingActivity::class.java).apply {
+                putExtra(EXTRA_PROJECT_ID, projectId)
+                putExtra(EXTRA_ROOM_ID, roomId)
+            }
+            context.startActivity(intent)
+        }
+
+        fun startWithRect(context: Context, projectId: String, roomId: String, ab: Double, bc: Double) {
+            val intent = Intent(context, DrawingActivity::class.java).apply {
+                putExtra(EXTRA_PROJECT_ID, projectId)
+                putExtra(EXTRA_ROOM_ID, roomId)
+                putExtra(EXTRA_AUTO_AB, ab)
+                putExtra(EXTRA_AUTO_BC, bc)
+            }
+            context.startActivity(intent)
+        }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityDrawingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        storage = AppStorage.getInstance(this)
+
+        val projectId = intent.getStringExtra(EXTRA_PROJECT_ID)!!
+        val roomId = intent.getStringExtra(EXTRA_ROOM_ID)!!
+        project = storage.getProject(projectId)!!
+        room = project.rooms.find { it.id == roomId }!!
+
+        setupToolbar()
+        setupTabs()
+        setupBlueprint()
+        setupNumpad()
+        setupBottomToolbar()
+        setupElementPanel()
+        loadExistingDrawing()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val projectId = intent.getStringExtra(EXTRA_PROJECT_ID)!!
+        val roomId = intent.getStringExtra(EXTRA_ROOM_ID)!!
+        val refreshed = storage.getProject(projectId) ?: return
+        project = refreshed
+        val refreshedRoom = project.rooms.find { it.id == roomId } ?: return
+        room = refreshedRoom
+        if (binding.calculationContent.visibility == View.VISIBLE) {
+            updateCalculationTab()
+        }
+    }
+
+    private fun setupToolbar() {
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = room.name
+        binding.toolbar.navigationIcon?.let {
+            DrawableCompat.setTint(DrawableCompat.wrap(it).mutate(), Color.WHITE)
+        }
+    }
+
+    private fun setupTabs() {
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText(getString(R.string.tab_drawing)))
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText(getString(R.string.tab_calculation)))
+
+        binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                when (tab?.position) {
+                    0 -> showDrawingTab()
+                    1 -> showCalculationTab()
+                }
+            }
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+        })
+    }
+
+    private fun showDrawingTab() {
+        binding.drawingContent.visibility = View.VISIBLE
+        binding.calculationContent.visibility = View.GONE
+    }
+
+    private fun showCalculationTab() {
+        binding.drawingContent.visibility = View.GONE
+        binding.calculationContent.visibility = View.VISIBLE
+        updateCalculationTab()
+    }
+
+    private fun setupBlueprint() {
+        binding.blueprintView.onPointAdded = { _ ->
+            updateStats()
+        }
+
+        binding.blueprintView.onTapInDimensionMode = {
+        }
+
+        binding.blueprintView.onElementAdded = { elem ->
+            room.ceilingElements.add(elem)
+            storage.saveProject(project)
+            updateElementCount()
+        }
+
+        binding.blueprintView.onElementLongPress = { elem ->
+            showDeleteElementDialog(elem)
+        }
+    }
+
+    private fun loadExistingDrawing() {
+        if (room.points.isNotEmpty()) {
+            binding.blueprintView.points = room.points
+            binding.blueprintView.lines = room.lines
+            binding.blueprintView.diagonals = room.diagonals
+            binding.blueprintView.ceilingElements = room.ceilingElements
+            binding.blueprintView.isClosed = room.isClosed
+            binding.blueprintView.showDimensions = room.showDimensions
+            binding.blueprintView.showAngles = room.showAngles
+            binding.blueprintView.snapToAxes = true
+
+            if (room.isClosed) {
+                isAllDone = true
+                showDoneBar()
+            }
+            binding.blueprintView.invalidate()
+            updateStats()
+            updateElementCount()
+        }
+
+        if (room.type == RoomType.RECTANGLE && room.points.isEmpty()) {
+            showRectInputDialog()
+        }
+
+        val autoAb = intent.getDoubleExtra(EXTRA_AUTO_AB, -1.0)
+        val autoBc = intent.getDoubleExtra(EXTRA_AUTO_BC, -1.0)
+        if (autoAb > 0 && autoBc > 0 && room.points.isEmpty()) {
+            buildRectangle(autoAb, autoBc)
+        }
+    }
+
+    private fun showRectInputDialog() {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_rect_input, null)
+        val etAB = dialogView.findViewById<EditText>(R.id.etAB)
+        val etBC = dialogView.findViewById<EditText>(R.id.etBC)
+
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.enter_rect_sizes))
+            .setView(dialogView)
+            .setPositiveButton(getString(R.string.build_drawing)) { _, _ ->
+                val ab = etAB.text.toString().toDoubleOrNull() ?: return@setPositiveButton
+                val bc = etBC.text.toString().toDoubleOrNull() ?: return@setPositiveButton
+                buildRectangle(ab, bc)
+            }
+            .setNegativeButton(getString(R.string.cancel)) { _, _ -> finish() }
+            .setCancelable(false)
+            .show()
+    }
+
+    private fun buildRectangle(ab: Double, bc: Double) {
+        val scale = 1.5f
+        val pts = listOf(
+            DrawPoint(label = "A", x = 100f, y = 100f),
+            DrawPoint(label = "B", x = 100f + (ab * scale).toFloat(), y = 100f),
+            DrawPoint(label = "C", x = 100f + (ab * scale).toFloat(), y = 100f + (bc * scale).toFloat()),
+            DrawPoint(label = "D", x = 100f, y = 100f + (bc * scale).toFloat())
+        )
+        val lns = listOf(
+            DrawLine(fromId = pts[0].id, toId = pts[1].id, measuredLength = ab),
+            DrawLine(fromId = pts[1].id, toId = pts[2].id, measuredLength = bc),
+            DrawLine(fromId = pts[2].id, toId = pts[3].id, measuredLength = ab),
+            DrawLine(fromId = pts[3].id, toId = pts[0].id, measuredLength = bc)
+        )
+
+        binding.blueprintView.points = pts.toMutableList()
+        binding.blueprintView.lines = lns.toMutableList()
+        binding.blueprintView.isClosed = true
+        binding.blueprintView.isDrawingMode = false
+
+        room.points.clear(); room.points.addAll(pts)
+        room.lines.clear(); room.lines.addAll(lns)
+        room.isClosed = true
+
+        val diag1 = DrawLine(fromId = pts[0].id, toId = pts[2].id, isDiagonal = true,
+            measuredLength = sqrt((ab * ab + bc * bc)))
+        val diag2 = DrawLine(fromId = pts[1].id, toId = pts[3].id, isDiagonal = true,
+            measuredLength = sqrt((ab * ab + bc * bc)))
+        room.diagonals.addAll(listOf(diag1, diag2))
+        binding.blueprintView.diagonals = room.diagonals
+
+        updateRoomData()
+        isAllDone = true
+        showDoneBar()
+        binding.blueprintView.fitToScreen()
+        updateStats()
+    }
+
+    private fun setupNumpad() {
+        val numKeys = listOf(
+            binding.btn1, binding.btn2, binding.btn3,
+            binding.btn4, binding.btn5, binding.btn6,
+            binding.btn7, binding.btn8, binding.btn9,
+            binding.btn0
+        )
+        numKeys.forEachIndexed { i, btn ->
+            val digit = if (i < 9) (i + 1).toString() else "0"
+            btn.setOnClickListener {
+                inputBuffer += digit
+                binding.tvDimDisplay.text = inputBuffer
+            }
+        }
+
+        binding.btnBackspace.setOnClickListener {
+            if (inputBuffer.isNotEmpty()) {
+                inputBuffer = inputBuffer.dropLast(1)
+                binding.tvDimDisplay.text = if (inputBuffer.isEmpty()) "0" else inputBuffer
+            }
+        }
+
+        binding.btnConfirm.setOnClickListener {
+            confirmDimension()
+        }
+
+        binding.btnUndo.setOnClickListener {
+            if (currentDimIndex > 0 && isDimensionMode) {
+                currentDimIndex--
+                allConstraints[currentDimIndex].measuredLength = null
+                inputBuffer = ""
+                binding.tvDimDisplay.text = "0"
+                binding.tvDimLabel.text = ""
+                showCurrentPrompt()
+                binding.blueprintView.highlightLine(currentDimIndex)
+            }
+        }
+
+        binding.btnDelete.setOnClickListener {
+            showDeleteRoomConfirm()
+        }
+    }
+
+    private fun setupBottomToolbar() {
+        binding.btnSnap.setOnClickListener {
+            binding.blueprintView.snapToAxes = !binding.blueprintView.snapToAxes
+            val msg = if (binding.blueprintView.snapToAxes)
+                getString(R.string.snap_on) else getString(R.string.snap_off)
+            Snackbar.make(binding.root, msg, Snackbar.LENGTH_SHORT).show()
+            binding.btnSnap.alpha = if (binding.blueprintView.snapToAxes) 1.0f else 0.5f
+        }
+
+        binding.btnEditMode.setOnClickListener {
+            binding.blueprintView.isEditMode = !binding.blueprintView.isEditMode
+            val msg = if (binding.blueprintView.isEditMode)
+                getString(R.string.edit_mode_on) else getString(R.string.edit_mode_off)
+            Snackbar.make(binding.root, msg, Snackbar.LENGTH_SHORT).show()
+        }
+
+        binding.btnFitScreen.setOnClickListener {
+            binding.blueprintView.fitToScreen()
+        }
+
+        binding.btnZoomIn.setOnClickListener { binding.blueprintView.zoomIn() }
+        binding.btnZoomOut.setOnClickListener { binding.blueprintView.zoomOut() }
+
+        // Fix 5: keyboard icon always shows the numpad when in dimension mode
+        binding.btnKeyboard.setOnClickListener {
+            if (isDimensionMode) {
+                binding.numpadContainer.visibility = View.VISIBLE
+            }
+        }
+
+        // Fix 3: undo last drawn wall point (supports multiple undos)
+        binding.btnUndoPoint.setOnClickListener {
+            if (!isDimensionMode) {
+                binding.blueprintView.undoLastPoint()
+                updateStats()
+            }
+        }
+
+        binding.btnAddElement.setOnClickListener {
+            showElementPickerDialog()
+        }
+    }
+
+    private fun setupElementPanel() {
+        binding.btnCancelElement.setOnClickListener {
+            exitElementMode()
+        }
+    }
+
+    private fun showElementPickerDialog() {
+        val elementTypes = CeilingElementType.values()
+        val labels = elementTypes.map { it.label }.toTypedArray()
+
+        AlertDialog.Builder(this)
+            .setTitle("Добавить элемент")
+            .setItems(labels) { _, which ->
+                enterElementMode(elementTypes[which])
+            }
+            .setNegativeButton(getString(R.string.cancel), null)
+            .show()
+    }
+
+    private fun enterElementMode(type: CeilingElementType) {
+        binding.blueprintView.elementPlacementType = type
+        binding.blueprintView.cancelPendingElement()
+        binding.elementModeBar.visibility = View.VISIBLE
+
+        val isLine = type == CeilingElementType.LINE ||
+            type == CeilingElementType.LIGHT_LINE ||
+            type == CeilingElementType.CORNICE ||
+            type == CeilingElementType.FLOATING_PROFILE
+
+        binding.tvElementModeHint.text = if (isLine)
+            "«${type.label}» — нажмите начало, затем конец"
+        else
+            "«${type.label}» — нажмите на чертёж для размещения"
+    }
+
+    private fun exitElementMode() {
+        binding.blueprintView.elementPlacementType = null
+        binding.blueprintView.cancelPendingElement()
+        binding.elementModeBar.visibility = View.GONE
+    }
+
+    private fun updateElementCount() {
+        val count = room.ceilingElements.size
+        binding.btnAddElement.text = if (count > 0) "Эл. ($count)" else "Эл."
+    }
+
+    private fun showDeleteElementDialog(elem: CeilingElement) {
+        AlertDialog.Builder(this)
+            .setTitle("Удалить элемент")
+            .setMessage("Удалить «${elem.type.label}» с чертежа?")
+            .setPositiveButton("Удалить") { _, _ ->
+                binding.blueprintView.ceilingElements.remove(elem)
+                room.ceilingElements.remove(elem)
+                storage.saveProject(project)
+                updateElementCount()
+                binding.blueprintView.invalidate()
+                Snackbar.make(binding.root, "Элемент удалён", Snackbar.LENGTH_SHORT).show()
+            }
+            .setNegativeButton(getString(R.string.cancel), null)
+            .show()
+    }
+
+    private fun applyAutoDiagonals() {
+        val diagPairs = engine.generateDiagonals(binding.blueprintView.points)
+        val existingKeys = binding.blueprintView.diagonals.map { "${it.fromId}-${it.toId}" }.toSet()
+        diagPairs.forEach { (fromId, toId) ->
+            val key = "$fromId-$toId"
+            if (key !in existingKeys) {
+                binding.blueprintView.diagonals.add(
+                    DrawLine(fromId = fromId, toId = toId, isDiagonal = true)
+                )
+            }
+        }
+        room.diagonals.clear()
+        room.diagonals.addAll(binding.blueprintView.diagonals)
+        binding.blueprintView.invalidate()
+        updateStats()
+    }
+
+    private fun startDimensionInput() {
+        if (room.autoDiagonals) {
+            applyAutoDiagonals()
+        }
+
+        isDimensionMode = true
+        allConstraints.clear()
+        allConstraints.addAll(binding.blueprintView.lines)
+        allConstraints.addAll(binding.blueprintView.diagonals)
+
+        currentDimIndex = 0
+        inputBuffer = ""
+        binding.numpadContainer.visibility = View.VISIBLE
+        binding.redBanner.visibility = View.VISIBLE
+        showCurrentPrompt()
+    }
+
+    private fun showCurrentPrompt() {
+        if (currentDimIndex >= allConstraints.size) {
+            finishDimensionInput()
+            return
+        }
+        val constraint = allConstraints[currentDimIndex]
+        val pointMap = binding.blueprintView.points.associateBy { it.id }
+        val fromLabel = pointMap[constraint.fromId]?.label ?: "?"
+        val toLabel   = pointMap[constraint.toId]?.label   ?: "?"
+
+        if (constraint.isDiagonal) {
+            binding.redBanner.setBackgroundColor(android.graphics.Color.parseColor("#FF8C00"))
+            binding.redBanner.text = "ДИАГОНАЛЬ $fromLabel — $toLabel  (✓ пропустить)"
+            binding.tvDimLabel.text = "Диаг. $fromLabel–$toLabel"
+        } else {
+            binding.redBanner.setBackgroundColor(android.graphics.Color.parseColor("#F44336"))
+            binding.redBanner.text = getString(R.string.specify_length, fromLabel, toLabel)
+            binding.tvDimLabel.text = "Длина $fromLabel–$toLabel, см"
+        }
+
+        binding.tvDimDisplay.text = if (inputBuffer.isEmpty()) "0" else inputBuffer
+        binding.blueprintView.activeLineId = constraint.id
+        binding.blueprintView.activeDimIndex = currentDimIndex
+        binding.blueprintView.invalidate()
+    }
+
+    private fun confirmDimension() {
+        if (!isDimensionMode || currentDimIndex >= allConstraints.size) return
+
+        val constraint = allConstraints[currentDimIndex]
+        val value = inputBuffer.toDoubleOrNull()
+
+        if (value == null || value <= 0) {
+            if (constraint.isDiagonal) {
+                inputBuffer = ""
+                binding.tvDimDisplay.text = "0"
+                currentDimIndex++
+                if (currentDimIndex >= allConstraints.size) {
+                    finishDimensionInput()
+                } else {
+                    showCurrentPrompt()
+                    binding.blueprintView.invalidate()
+                }
+                return
+            } else {
+                Toast.makeText(this, "Введите длину стороны", Toast.LENGTH_SHORT).show()
+                return
+            }
+        }
+
+        constraint.measuredLength = value
+        inputBuffer = ""
+        binding.tvDimDisplay.text = "0"
+        currentDimIndex++
+
+        // Live redraw: rebuild as far as we have measurements after every confirmed side
+        if (!constraint.isDiagonal) {
+            try {
+                val vw = binding.blueprintView.width.toFloat().coerceAtLeast(600f)
+                val vh = binding.blueprintView.height.toFloat().coerceAtLeast(600f)
+                engine.correctPartial(
+                    binding.blueprintView.points,
+                    binding.blueprintView.lines,
+                    targetW = vw * 0.85f,
+                    targetH = vh * 0.85f
+                )
+            } catch (_: Exception) {}
+        }
+
+        if (currentDimIndex >= allConstraints.size) {
+            finishDimensionInput()
+        } else {
+            showCurrentPrompt()
+            updateStats()
+            binding.blueprintView.invalidate()
+        }
+    }
+
+    private fun finishDimensionInput() {
+        isDimensionMode = false
+        binding.numpadContainer.visibility = View.GONE
+        binding.redBanner.visibility = View.GONE
+        binding.blueprintView.activeDimIndex = -1
+        binding.blueprintView.activeLineId = null
+
+        try {
+            val vw = binding.blueprintView.width.toFloat().coerceAtLeast(600f)
+            val vh = binding.blueprintView.height.toFloat().coerceAtLeast(600f)
+            // Fix 1: only pass diagonals that actually have measurements
+            // so skipping diagonals never corrupts the blueprint
+            val measuredDiags = binding.blueprintView.diagonals
+                .filter { it.measuredLength != null && it.measuredLength!! > 0 }
+            engine.correct(
+                binding.blueprintView.points,
+                binding.blueprintView.lines,
+                measuredDiags,
+                targetW = vw * 0.85f,
+                targetH = vh * 0.85f
+            )
+        } catch (e: Exception) {
+        }
+
+        binding.blueprintView.invalidate()
+        updateRoomData()
+        isAllDone = true
+        showDoneBar()
+        updateStats()
+        binding.blueprintView.fitToScreen()
+    }
+
+    private fun showDoneBar() {
+        binding.doneBanner.visibility = View.VISIBLE
+        binding.doneBanner.text = getString(R.string.ready_built)
+    }
+
+    private fun updateRoomData() {
+        room.points.clear()
+        room.points.addAll(binding.blueprintView.points)
+        room.lines.clear()
+        room.lines.addAll(binding.blueprintView.lines)
+        room.diagonals.clear()
+        room.diagonals.addAll(binding.blueprintView.diagonals)
+        room.isClosed = binding.blueprintView.isClosed
+
+        val perim = engine.calculatePerimeter(room.lines)
+        room.perimeter = perim / 100.0
+
+        room.area = estimateAreaFromSides(room.lines, room.points)
+
+        if (room.estimateItems.isEmpty()) {
+            val extras = engine.calculateExtraCorners(room.points)
+            room.estimateItems = createDefaultEstimateItems(room.area, extras)
+        } else {
+            // Update ALL sq.m items with the actual calculated area
+            room.estimateItems.filter { it.unit == "кв.м" }.forEach { it.quantity = room.area }
+        }
+
+        storage.saveProject(project)
+    }
+
+    private fun estimateAreaFromSides(lines: List<DrawLine>, points: List<DrawPoint>): Double {
+        if (points.size < 3) return 0.0
+        val pixelPerim = lines.filter { !it.isDiagonal }.sumOf { line ->
+            val p1 = points.find { it.id == line.fromId } ?: return@sumOf 0.0
+            val p2 = points.find { it.id == line.toId } ?: return@sumOf 0.0
+            val dx = (p2.x - p1.x).toDouble()
+            val dy = (p2.y - p1.y).toDouble()
+            sqrt(dx * dx + dy * dy)
+        }
+        val measuredPerim = engine.calculatePerimeter(lines)
+        if (pixelPerim <= 0) return 0.0
+
+        val pixelArea = engine.calculateArea(points)
+        val scale = measuredPerim / pixelPerim
+        return (pixelArea * scale * scale) / 10000.0
+    }
+
+    private fun updateStats() {
+        val pts = binding.blueprintView.points
+        val lns = binding.blueprintView.lines.filter { !it.isDiagonal }
+        val diags = binding.blueprintView.diagonals
+
+        val sidesText = lns.joinToString(", ") { line ->
+            val fromLabel = pts.find { it.id == line.fromId }?.label ?: "?"
+            val toLabel = pts.find { it.id == line.toId }?.label ?: "?"
+            val len = line.measuredLength?.toInt() ?: 0
+            "$fromLabel$toLabel=$len"
+        }
+
+        val diagText = diags.joinToString(", ") { d ->
+            val fromLabel = pts.find { it.id == d.fromId }?.label ?: "?"
+            val toLabel = pts.find { it.id == d.toId }?.label ?: "?"
+            val len = d.measuredLength?.toInt() ?: 0
+            "$fromLabel$toLabel=$len"
+        }
+
+        val area = if (room.area > 0) room.area else 0.0
+        val perim = if (room.perimeter > 0) room.perimeter else 0.0
+
+        binding.tvAreaPerimeter.text = getString(R.string.area_perimeter, area, perim)
+        binding.tvSides.text = "${getString(R.string.sides)}$sidesText"
+        binding.tvDiagonals.visibility = if (diags.isNotEmpty()) View.VISIBLE else View.GONE
+        binding.tvDiagonals.text = "${getString(R.string.diagonals_label)}$diagText"
+        binding.tvCorners.text = getString(R.string.corners_count, pts.size)
+    }
+
+    private fun updateCalculationTab() {
+        binding.tvCalcRoomName.text = room.name
+        binding.tvCalcTotal.text = "${room.totalPrice.toInt()} ₽"
+        binding.tvCalcAreaValue.text = "S = ${String.format("%.2f", room.area)}"
+        binding.tvCalcPerimValue.text = "P = ${String.format("%.2f", room.perimeter)}"
+        binding.etRoomName.setText(room.name)
+        binding.etComment.setText(room.comment)
+
+        binding.calcItemsContainer.removeAllViews()
+        room.estimateItems.forEachIndexed { index, item ->
+            val row = layoutInflater.inflate(R.layout.item_calc_row, binding.calcItemsContainer, false)
+            row.findViewById<TextView>(R.id.tvItemName).text = item.name
+            row.findViewById<TextView>(R.id.tvItemPrice).text = "${(item.pricePerUnit * item.quantity).toInt()} ₽"
+            row.findViewById<TextView>(R.id.tvItemUnit).text =
+                if (item.unit == "кв.м") "${item.pricePerUnit.toInt()} ₽ / кв.м"
+                else "${item.pricePerUnit.toInt()} ₽ / шт"
+
+            val etQty = row.findViewById<EditText>(R.id.etItemQty)
+            etQty.setText(
+                if (item.unit == "кв.м") String.format("%.2f", item.quantity)
+                else item.quantity.toInt().toString()
+            )
+            etQty.addTextChangedListener(object : TextWatcher {
+                override fun afterTextChanged(s: Editable?) {
+                    val qty = s.toString().toDoubleOrNull() ?: return
+                    item.quantity = qty
+                    row.findViewById<TextView>(R.id.tvItemPrice).text =
+                        "${(item.pricePerUnit * item.quantity).toInt()} ₽"
+                    updateCalcTotal()
+                    storage.saveProject(project)
+                }
+                override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+                override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            })
+
+            row.findViewById<android.widget.ImageButton>(R.id.btnDeleteItem).setOnClickListener {
+                AlertDialog.Builder(this)
+                    .setMessage("Удалить позицию «${item.name}»?")
+                    .setPositiveButton("Удалить") { _, _ ->
+                        room.estimateItems.removeAt(index)
+                        storage.saveProject(project)
+                        updateCalculationTab()
+                    }
+                    .setNegativeButton("Отмена", null)
+                    .show()
+            }
+
+            binding.calcItemsContainer.addView(row)
+        }
+
+        binding.etRoomName.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                room.name = s.toString()
+                storage.saveProject(project)
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
+        binding.etComment.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+                room.comment = s.toString()
+                storage.saveProject(project)
+            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+        })
+
+        binding.btnAddPosition.setOnClickListener {
+            val intent = AddPositionActivity.start(
+                this,
+                intent.getStringExtra(EXTRA_PROJECT_ID)!!,
+                intent.getStringExtra(EXTRA_ROOM_ID)!!
+            )
+            startActivity(intent)
+        }
+    }
+
+    private fun updateCalcTotal() {
+        binding.tvCalcTotal.text = "${room.totalPrice.toInt()} ₽"
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.drawing_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed()
+                true
+            }
+            R.id.action_settings -> {
+                showSettingsDialog()
+                true
+            }
+            R.id.action_save -> {
+                saveCurrentBlueprint()
+                true
+            }
+            R.id.action_done -> {
+                if (!binding.blueprintView.isClosed && binding.blueprintView.points.size >= 3) {
+                    binding.blueprintView.closeFigureManually()
+                    startDimensionInput()
+                } else if (binding.blueprintView.isClosed && !isDimensionMode) {
+                    startDimensionInput()
+                }
+                true
+            }
+            R.id.action_clear_blueprint -> {
+                showClearBlueprintConfirm()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    private fun showSettingsDialog() {
+        val items = arrayOf(
+            getString(R.string.settings_auto_triangle),
+            getString(R.string.settings_auto_correct),
+            getString(R.string.settings_area_no_diag),
+            getString(R.string.settings_auto_diag),
+            getString(R.string.settings_calc_sides),
+            getString(R.string.settings_show_angles),
+            getString(R.string.settings_show_dims)
+        )
+        val checked = booleanArrayOf(
+            room.autoTriangle,
+            room.autoCorrection,
+            room.areaWithoutDiag,
+            room.autoDiagonals,
+            room.calcSides,
+            room.showAngles,
+            room.showDimensions
+        )
+
+        AlertDialog.Builder(this)
+            .setMultiChoiceItems(items, checked) { _, which, isChecked ->
+                when (which) {
+                    0 -> room.autoTriangle = isChecked
+                    1 -> room.autoCorrection = isChecked
+                    2 -> room.areaWithoutDiag = isChecked
+                    3 -> {
+                        room.autoDiagonals = isChecked
+                        if (isChecked && binding.blueprintView.isClosed) {
+                            applyAutoDiagonals()
+                        }
+                    }
+                    4 -> room.calcSides = isChecked
+                    5 -> {
+                        room.showAngles = isChecked
+                        binding.blueprintView.showAngles = isChecked
+                        binding.blueprintView.invalidate()
+                    }
+                    6 -> {
+                        room.showDimensions = isChecked
+                        binding.blueprintView.showDimensions = isChecked
+                        binding.blueprintView.invalidate()
+                    }
+                }
+                storage.saveProject(project)
+            }
+            .setPositiveButton(getString(R.string.ok)) { _, _ -> }
+            .show()
+    }
+
+    /** Saves the current drawing state to storage at any point (mid-draw or finished). */
+    private fun saveCurrentBlueprint() {
+        room.points.clear()
+        room.points.addAll(binding.blueprintView.points)
+        room.lines.clear()
+        room.lines.addAll(binding.blueprintView.lines)
+        room.diagonals.clear()
+        room.diagonals.addAll(binding.blueprintView.diagonals)
+        room.ceilingElements.clear()
+        room.ceilingElements.addAll(binding.blueprintView.ceilingElements)
+        room.isClosed = binding.blueprintView.isClosed
+
+        if (room.isClosed && room.lines.isNotEmpty()) {
+            try {
+                val perim = engine.calculatePerimeter(room.lines)
+                room.perimeter = perim / 100.0
+                room.area = estimateAreaFromSides(room.lines, room.points)
+            } catch (_: Exception) {}
+        }
+
+        storage.saveProject(project)
+        Snackbar.make(binding.root, "Чертёж сохранён ✓", Snackbar.LENGTH_SHORT).show()
+    }
+
+    // Fix 2: clear the entire blueprint (points + lines + diagonals) without deleting the room
+    private fun showClearBlueprintConfirm() {
+        AlertDialog.Builder(this)
+            .setTitle("Очистить чертёж")
+            .setMessage("Удалить все стены и точки чертежа? Комната останется в проекте.")
+            .setPositiveButton("Очистить") { _, _ -> clearBlueprint() }
+            .setNegativeButton(getString(R.string.cancel), null)
+            .show()
+    }
+
+    private fun clearBlueprint() {
+        binding.blueprintView.points.clear()
+        binding.blueprintView.lines.clear()
+        binding.blueprintView.diagonals.clear()
+        binding.blueprintView.ceilingElements.clear()
+        binding.blueprintView.isClosed = false
+        binding.blueprintView.activeDimIndex = -1
+        binding.blueprintView.activeLineId = null
+        binding.blueprintView.invalidate()
+
+        isDimensionMode = false
+        isAllDone = false
+        allConstraints.clear()
+        currentDimIndex = 0
+        inputBuffer = ""
+
+        binding.numpadContainer.visibility = View.GONE
+        binding.redBanner.visibility = View.GONE
+        binding.doneBanner.visibility = View.GONE
+
+        room.points.clear()
+        room.lines.clear()
+        room.diagonals.clear()
+        room.ceilingElements.clear()
+        room.isClosed = false
+        room.area = 0.0
+        room.perimeter = 0.0
+        storage.saveProject(project)
+
+        updateStats()
+    }
+
+    private fun showDeleteRoomConfirm() {
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.delete))
+            .setMessage("Удалить ${room.name}?")
+            .setPositiveButton(getString(R.string.delete)) { _, _ ->
+                project.rooms.remove(room)
+                storage.saveProject(project)
+                finish()
+            }
+            .setNegativeButton(getString(R.string.cancel), null)
+            .show()
+    }
+
+    override fun onBackPressed() {
+        if (isDimensionMode) {
+            AlertDialog.Builder(this)
+                .setMessage("Выйти без сохранения размеров?")
+                .setPositiveButton("Выйти") { _, _ -> super.onBackPressed() }
+                .setNegativeButton(getString(R.string.cancel), null)
+                .show()
+        } else if (binding.blueprintView.elementPlacementType != null) {
+            exitElementMode()
+        } else {
+            super.onBackPressed()
+        }
+    }
+}
